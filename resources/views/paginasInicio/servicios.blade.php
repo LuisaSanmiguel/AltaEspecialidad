@@ -30,10 +30,10 @@
                 </div>
             </div>
                <div class="col-md-4 col-lg-offset-8">
-                <div class="recuadro bounceInUp" data-wow-delay="0.2s">
+               <a href="/desarrollo"> <div class="recuadro bounceInUp" data-wow-delay="0.2s">
                       <i class="fa fa-cogs icono iconoxl" aria-hidden="true"></i>
                <h5 class="tituloServicio">Desarrollo Tecnológico <br>para entidades públicas</h5>
-                </div>
+                </div></a>
             </div>
                <div class="col-md-4 col-lg-offset-8">
                <a href="/virtual"> <div class="recuadro bounceInUp" data-wow-delay="0.2s">

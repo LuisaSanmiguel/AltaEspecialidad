@@ -21,6 +21,9 @@ Route::get('/team','TeamController@index')->name('team');
 
 Route::get('/servicios','ServiciosController@index')->name('servicios');
 
+
+Route::get('/desarrollo','DesarrolloController@index')->name('desarrollo');
+
 Route::get('/virtual','VirtualController@index')->name('virtual');
 
 Route::get('/GestionPublica','GestionPublicaController@index')->name('GestionPublica');

@@ -73,5 +73,15 @@ font-size: 120px;
 
 .ContenidoProg{
     border-top: 4px solid #efb827 ;
-
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 120px;
+     text-align: center;
+    margin-top: 9px;
+    background: white;
+    color:#000;
+}
+.tituloSiex{
+ 
+    color:#000;
 }
