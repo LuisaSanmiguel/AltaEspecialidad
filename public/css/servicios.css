@@ -1,0 +1,20 @@
+
+
+.recuadro{
+    padding-top: 20px;
+border-top: 4px solid #efb827;
+padding-bottom: 20px;
+height: 190px;
+background: #950808;
+text-align: center;
+/* #eee26e; */
+}
+
+.iconoxl{
+color:white;
+font-size: 120px;
+}
+
+.tituloServicio{
+    color:white;
+}
