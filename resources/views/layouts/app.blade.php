@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Alta ESpecialidad SAS</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -20,16 +20,16 @@
     <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
    
 
-    <link href="\assets\font-awesome\css\font-awesome.css" rel="stylesheet">
+    <link href="{{asset('\assets\font-awesome\css\font-awesome.css')}}" rel="stylesheet">
   
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <!-- Styles -->
-    <link href="\css\navStyle.css" rel="stylesheet">
-     <link href="\css\inicio.css" rel="stylesheet">
-      <link href="\css\team.css" rel="stylesheet">
-      <link href="\css\servicios.css" rel="stylesheet">
-      <link href="\css\virtual.css" rel="stylesheet">
+    <link href="{{asset('css\navStyle.css')}}" rel="stylesheet">
+     <link href="{{asset('css\inicio.css')}}" rel="stylesheet">
+      <link href="{{asset('css\team.css')}}" rel="stylesheet">
+      <link href="{{asset('css\servicios.css')}}" rel="stylesheet">
+      <link href="{{asset('css\virtual.css')}}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -55,21 +55,27 @@
                          <li class="nav-item">
                                 <a class="nav-link" href="/">{{ __('Inicio') }}</a>
                             </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="/team">Quiénes Somos</a>
-                            </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="/servicios">Servicios</a>
+                                <a class="nav-link" href="{{route('servicios')}}">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('virtual')}}">Escuela Virtual</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="">Contactenos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('team')}}">Conozcanos</a>
                             </li>
                         @guest
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Ingreso') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
-                            @endif
+                            @endif --}}
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -108,4 +114,24 @@
     
     </div>
 </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            ciudades()
+        })
+        $('#departamento').on('click', function(){
+          ciudades()
+        })
+
+      function ciudades(){
+        let departamento = $('#departamento').val()
+        $('#ciudad').empty()
+        $.get('/ciudad/'+departamento, function(response, state){
+                for(i=0; i<response.length; i++){
+                console.log(response[i])
+                $('#ciudad').append('<option value="'+response[i].id+'">'+response[i].nombre+'</option>')
+            }
+        })
+      }
+    </script>
 </html>
