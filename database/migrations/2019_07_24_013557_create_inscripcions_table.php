@@ -14,7 +14,7 @@ class CreateInscripcionsTable extends Migration
     public function up()
     {
         Schema::create('inscripcions', function (Blueprint $table) {
- $table->bigIncrements('id');
+            $table->bigIncrements('id');
             $table->string('direccion');
             $table->string('telefono');
             $table->unsignedBigInteger('ciudad_id');
@@ -24,6 +24,7 @@ class CreateInscripcionsTable extends Migration
             
             $table->foreign('ciudad_id')->references('id')->on('ciudades');
             $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }

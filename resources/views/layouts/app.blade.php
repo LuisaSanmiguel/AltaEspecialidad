@@ -67,6 +67,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('team')}}">Conozcanos</a>
                             </li>
+
+                           {{-- <li class="nav-item">
+                                <a href="/inscripcion" data-toggle="modal" data-target="#form">Formacion Virtual</a></li>
+                                --}}
                         @guest
                             {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Ingreso') }}</a>
@@ -105,7 +109,8 @@
         </main>
     </div>
 
-  <div class="row stickyBott">  <div class="col-4"><span>©Altas Especialidad SAS. 
+  <div class="row stickyBott"> 
+   <div class="col-4"><span>©Altas Especialidad SAS. 
     Todos los Derechos Reservados.
     </span></div>
     <div class="col-4 "><span> </span></div>
@@ -114,6 +119,7 @@
     
     </div>
 </body>
+<<<<<<< HEAD
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -134,4 +140,27 @@
         })
       }
     </script>
+=======
+
+
+
+
+
+
+
+
+
+
+        
+<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>	
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/wow.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  
+
+>>>>>>> f7eda212315d6060b67e2fe84e0a9bff306d5bfc
 </html>

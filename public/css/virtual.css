@@ -75,11 +75,14 @@ font-size: 120px;
     border-top: 4px solid #efb827 ;
     padding-top: 20px;
     padding-bottom: 10px;
-    height: 120px;
+    height: 130px;
      text-align: center;
     margin-top: 9px;
     background: white;
     color:#000;
+    -webkit-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+    -moz-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+    box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
 }
 .tituloSiex{
  

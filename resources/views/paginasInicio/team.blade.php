@@ -76,7 +76,7 @@
                                 Representante Legal
                             </p>
                             <div class="avatar">
-                                <img alt="" class="img-responsive img-circle" src="/img/team/MG_LUIS_GILBERTO_MOYA.jpg"/>
+                                <img alt="" class="img-responsive img-circle" src="{{asset('img/team/MG_LUIS_GILBERTO_MOYA.jpg')}}"/>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                                 Contadora
                             </p>
                             <div class="avatar">
-                                <img class="img-responsive img-circle" src="/img/team/GLORIA_MARIA_YEPES.jpg" width="200"/>
+                                <img class="img-responsive img-circle" src="{{asset('img/team/GLORIA_MARIA_YEPES.jpg')}}" width="200"/>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                                 Asistente Administrativo
                             </p>
                             <div class="avatar">
-                                <img alt="" class="img-responsive img-circle" src="/img/team/YURY_ALEJANDRA_RODRIGUEZ.png"/>
+                                <img alt="" class="img-responsive img-circle" src="{{asset('img/team/YURY_ALEJANDRA_RODRIGUEZ.png')}}"/>
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                     <div class="team boxed-grey">
                         <div class="inner">
                             <div class="avatar">
-                                <img alt="" class="img-responsive img-circle" src="/img/team/OSCAR_JAVIER_AMORTEGUI.png"/>
+                                <img alt="" class="img-responsive img-circle" src="{{asset('img/team/OSCAR_JAVIER_AMORTEGUI.png')}}"/>
                             </div>
                             <h5>
                                 Oscar Javier Amortegui
@@ -153,7 +153,7 @@
                     <div class="team boxed-grey">
                         <div class="inner">
                             <div class="avatar">
-                                <img alt="" class="img-responsive img-circle" src="/img/team/DEIVITH_BECERRA.png"/>
+                                <img alt="" class="img-responsive img-circle" src="{{asset('img/team/DEIVITH_BECERRA.png')}}"/>
                             </div>
                             <h5>
                                 Deivith Becerra
@@ -170,7 +170,7 @@
                     <div class="team boxed-grey">
                         <div class="inner">
                             <div class="avatar">
-                                <img alt="" class="img-responsive img-circle" src="/img/team/LUISA_SANMIGUEL.jpg"/>
+                                <img alt="" class="img-responsive img-circle" src="{{asset('img/team/LUISA_SANMIGUEL.jpg')}}"/>
                             </div>
                             <h5>
                                 Luisa Patricia Sanmiguel

@@ -30,8 +30,6 @@ class InscripcionController extends Controller
     		$user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
-
-
     	// creacion de inscripcion
     	$inscripcion = new Inscripcion;
     	$inscripcion->direccion = $request->direccion;
@@ -40,11 +38,13 @@ class InscripcionController extends Controller
     	$inscripcion->typeDoc = $request->typeDoc;
     	$inscripcion->numDc = $request->numDc;
         $inscripcion->user_id = $user->id;
+
     	$inscripcion->save();
 
         //creacion del curso
         $curso =  new CursoInscripcion;
         $curso->curso_id = $request->cursos;
+
         $curso->inscripcion_id = $inscripcion->id;
         $curso->save();
 
