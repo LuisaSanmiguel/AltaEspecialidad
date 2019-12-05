@@ -1,0 +1,14 @@
+
+.avatar img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+
+.wow{
+    padding-top: 20px;
+border-top: 4px solid #eee26e;
+padding-bottom: 20px;
+/* #eee26e; */
+}

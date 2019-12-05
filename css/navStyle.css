@@ -1,0 +1,38 @@
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  
+  }
+
+  
+.stickyBott {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background:#930404fa;
+    height: 40px;
+    text-align: center;
+    color: white;
+    padding-top: 7px;
+  
+  }
+  .navbar-brand{
+      font-family: 'FelixTitlingW00';
+  }
+ 
+
+  .imagenIntermedia{
+  
+    width: 90px;
+    z-index: 1;
+  
+  
+}
+
+
+
+

@@ -1,0 +1,215 @@
+
+.msgEmpresa{
+    margin-top: 20px;
+    font-family: 'Calistoga', cursive;
+    font-size: 14px;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
+.msgServicio{
+    margin-top: 1%;
+    margin-left: 2%;
+    font-family: 'Calistoga', cursive;
+    font-size: 12px;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
+.bannerDer{
+    background:#1b2228;
+   
+}
+
+.servicios{
+   padding-left: 10%;
+   text-align: -webkit-center;}
+
+
+.cajaicono{
+    text-align: center;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    background:#930404fa;
+    padding-top: 5px;
+    width: 40px;
+    height: 40px;
+
+}
+
+.intro{
+    padding-top: 7%;
+    padding-left: 9%;
+}
+
+.icono{
+  
+color: aliceblue;
+font-size: 20pt;
+
+
+}
+
+
+.titlemot{
+    color:white;
+    font-family: 'Calistoga', cursive;
+    font-size: 14px;
+}
+
+.tituloDer{
+    color: white;
+    margin-top: inherit;
+    font-family: 'FelixTitlingW00';
+  
+    position: inherit;
+    margin-bottom: 14px;;
+} 
+
+.txtDireccion{
+    color: white;
+    margin-top: inherit;
+    position: inherit;
+    ;
+   
+
+}
+
+.maps{ position: inherit;
+text-align: center;
+background:#1b2228;}
+/* Pantalla mayor a 768------------------------------------------------ */
+   
+
+
+@media (min-width:768px) {
+        
+    
+        .imagenIntermedia{
+            right: 140px;
+            width: 250px;
+            z-index: 1;
+            position: fixed;
+           
+        }  
+
+        .bannerDer{
+        
+            border-bottom-left-radius: 0%;
+            color: white;
+            height: 100%;
+            
+        }
+
+        a:hover,a:focus{
+            text-decoration-line: none;
+        }
+        .msgEmpresa{
+            font-family: 'Calistoga', cursive;
+            font-size: 30px;
+            text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+        }
+        .msgServicio{
+            margin-top: 1%;
+            margin-left: 2%;
+            font-family: 'Calistoga', cursive;
+            font-size: 17px;
+            text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+            text-align: left;
+        }
+
+        .titlemot{
+            color:white;
+            font-family: 'Calistoga', cursive;
+            font-size: 17px;
+        }
+        
+        .tituloDer{
+            margin-top: 14%;
+            font-family: 'FelixTitlingW00';
+        
+        }
+        
+        .servicios{
+            padding-left: 20%;}
+        
+        
+        .cajaicono{
+            text-align: center;
+            border-radius: 50% 50% 50% 50%;
+            box-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+        background:#930404fa;
+        padding-top: 5px;
+        width: 40px;
+        height: 40px;
+        
+            }
+    }
+        
+
+
+    /* Pantalla mayor a 1000------------------------------ */
+
+        @media (min-width: 1000px) {
+            .msgEmpresa{
+                font-family: 'Calistoga', cursive;
+                font-size: 30px;
+                text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+            }
+        
+            .msgServicio{
+                margin-top: 1%;
+                margin-left: 2%;
+                font-family: 'Calistoga', cursive;
+                font-size: 17px;
+                text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+                text-align: left;
+            }
+
+            
+
+            .titlemot{
+                color:white;
+                font-family: 'Calistoga', cursive;
+                font-size: 17px;
+            }
+            
+            .tituloDer{
+                margin-top: 14%;
+                font-family: 'FelixTitlingW00';
+            
+            }
+            .servicios{
+                padding-left: 20%;}
+            
+            
+            .cajaicono{
+                text-align: center;
+                border-radius: 50% 50% 50% 50%;
+                box-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+            background:#930404fa;
+            padding-top: 5px;
+            width: 40px;
+            height: 40px;
+            
+            }
+            .imagenIntermedia{
+            right: 220px;
+            width: 250px;
+            z-index: 1;
+            position: fixed;
+        }
+
+        .content{
+            height: 500px !important;
+        }
+        .FilaInicial{
+        height: inherit;
+
+        }
+        .bannerDer{
+          
+            border-bottom-left-radius: 0%;
+         box-shadow: maroon ;
+         height: 100%;
+        }
+    }
+
