@@ -11,7 +11,7 @@
 .stickyBott {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 103%;
     z-index: 1;
     background:#930404fa;
     height: 40px;

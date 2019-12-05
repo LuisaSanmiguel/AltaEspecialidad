@@ -30,6 +30,13 @@
       <link href="\css\team.css" rel="stylesheet">
       <link href="\css\servicios.css" rel="stylesheet">
       <link href="\css\virtual.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+    {{-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> --}}
+
+    <!-- Fonts -->
+   
+    <link href="css/animate.css" rel="stylesheet" /> --}}
+  
 </head>
 <body>
     <div id="app">
@@ -61,6 +68,10 @@
                               <li class="nav-item">
                                 <a class="nav-link" href="/servicios">Servicios</a>
                             </li>
+
+                           {{-- <li class="nav-item">
+                                <a href="/inscripcion" data-toggle="modal" data-target="#form">Formacion Virtual</a></li>
+                                --}}
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Ingreso') }}</a>
@@ -99,7 +110,8 @@
         </main>
     </div>
 
-  <div class="row stickyBott">  <div class="col-4"><span>©Altas Especialidad SAS. 
+  <div class="row stickyBott"> 
+   <div class="col-4"><span>©Altas Especialidad SAS. 
     Todos los Derechos Reservados.
     </span></div>
     <div class="col-4 "><span> </span></div>
@@ -108,4 +120,25 @@
     
     </div>
 </body>
+
+
+
+
+
+
+
+
+
+
+        
+<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>	
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/wow.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  
+
 </html>

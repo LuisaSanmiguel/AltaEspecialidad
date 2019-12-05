@@ -29,3 +29,9 @@ Route::get('/virtual','VirtualController@index')->name('virtual');
 Route::get('/GestionPublica','GestionPublicaController@index')->name('GestionPublica');
 
 Route::get('/ContAdmPub','ContAdmPubController@index')->name('Contenido_Administracion_Publica');
+
+Route::get('/frontend/inscripcion', 'InscripcionController@inscripcionForm')->name('inscripcion');
+
+Route::get('ciudad/{departamento}', 'InscripcionController@ciudades')->name('ciudades');
+
+Route::post('inscripcion/store', 'InscripcionController@inscripcionSave')->name('inscripcion.save');
