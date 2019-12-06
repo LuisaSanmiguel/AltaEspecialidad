@@ -37,7 +37,7 @@
             <div class="container">
                
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('/img/logoRojo2.png') }}" width="150px"/>
+                <img src="{{ asset('/img/logoOrigin.png') }}" width="80px"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -65,7 +65,10 @@
                                 <a class="nav-link" href="">Contactenos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('team')}}">Conozcanos</a>
+                                <a class="nav-link" href="{{route('team')}}">Conózcanos</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{{route('clientes')}}">Clientes</a>
                             </li>
 
                            {{-- <li class="nav-item">
@@ -119,36 +122,6 @@
     
     </div>
 </body>
-<<<<<<< HEAD
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            ciudades()
-        })
-        $('#departamento').on('click', function(){
-          ciudades()
-        })
-
-      function ciudades(){
-        let departamento = $('#departamento').val()
-        $('#ciudad').empty()
-        $.get('/ciudad/'+departamento, function(response, state){
-                for(i=0; i<response.length; i++){
-                console.log(response[i])
-                $('#ciudad').append('<option value="'+response[i].id+'">'+response[i].nombre+'</option>')
-            }
-        })
-      }
-    </script>
-=======
-
-
-
-
-
-
-
-
 
 
         
@@ -162,5 +135,4 @@
  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   
 
->>>>>>> f7eda212315d6060b67e2fe84e0a9bff306d5bfc
 </html>

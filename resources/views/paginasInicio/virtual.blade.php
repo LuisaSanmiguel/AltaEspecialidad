@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     {{-- programa 2---------------------------------------------- --}}
-                    {{-- <div class="row">
+                    <div class="row">
                         <div class="col-sm-4 col-lg-offset-8">
                             <div class="programas bounceInUp" data-wow-delay="0.2s">
                                 <p class="tituloPrograma">
@@ -205,7 +205,7 @@
                               </h5>
                           </div>
                       </div>
-                  </div> --}}
+                  </div>
                   <br><br>
                   <div class="float-right">
                       <a class=" btn btn-register" style="float: right;" href="{{ route('login') }}">

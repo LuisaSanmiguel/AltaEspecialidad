@@ -20,12 +20,7 @@
                     <div class="team boxed-grey">
                         <div class="inner">
                             <h4>
-                                Ofrecer tanto a clientes como usuarios en general, 
-                        asesoría especializada y un sitio web, anidados en un
-                         sistema integral que permite la interacción inmediata
-                          entre las partes interesadas, regidas por las normas 
-                          del debido proceso y dentro de las políticas de 
-                          calidad y cero papel.
+                               Las personas naturales o jurídicas de derecho público o privadas tendrán a su disposición un bufete de abogados, contadores e ingenieros, así como un equipo de otras disciplinas capaces de brindar seguridad Jurídica y solidez en sus negocios basados en tecnología de punta y herramientas informáticas
                             </h4>
                         </div>
                     </div>
@@ -65,7 +60,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+       
+
+      <div class="col-md-3">
                 <div class="wow bounceInUp" data-wow-delay="0.2s">
                     <div class="team boxed-grey">
                         <div class="inner">
@@ -82,7 +79,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+
+     <div class="col-md-3">
+                <div class="wow bounceInUp" data-wow-delay="0.2s">
+                    <div class="team boxed-grey">
+                        <div class="inner">
+                            <h5>
+                                Fernanda Castro Rubiano
+                            </h5>
+                            <p class="subtitle">
+                                Subgerente
+                            </p>
+                            <div class="avatar">
+                                <img alt="" class="img-responsive img-circle" src="{{asset('img/team/Fernanda_Castro_Rubiano.jpg')}}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
                 <div class="wow bounceInUp" data-wow-delay="0.8s">
                     <div class="team boxed-grey">
                         <div class="inner">
@@ -99,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="wow bounceInUp" data-wow-delay="1s">
                     <div class="team boxed-grey">
                         <div class="inner">

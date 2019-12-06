@@ -26,7 +26,7 @@
                                     <img src="\img\logoBlancoSiex.png" width="150px">
                                     </img>
                                     <p class="">
-                                        SIEX - SISTEMA DE EXPEDIENTES JUDICIALES
+                                        SIEX - SISTEMA INTEGRAL DE EXPEDIENTES VIRTUALES
                                     </p>
                                 </div>
                             </a>
@@ -42,10 +42,19 @@
                                 </div>
                             </a>
                         </div>
+
                         <div class="col-sm-12 col-md-4 col-lg-offset-8">
                             <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
+                              <img src="\img\siexERP.png" width="170px">
+                                    </img>
+                                    <p class="">
+                                        SIEX - ERP para Entidades Públicas
+                                    </p>
                             </div>
                         </div>
+
+
+
                     </div>
                 </div>
             </div>
