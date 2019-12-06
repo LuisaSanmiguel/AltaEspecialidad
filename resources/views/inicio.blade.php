@@ -6,8 +6,8 @@
         <div class="col-lg-8 col-md-8 col-sm-12 ">
             <div class="col-11 intro">
                 <p class="msgEmpresa">
-                    Contamos con un grupo de empresas 
-             especializadas que brindan servicios de alta calidad en:
+                    Contamos con un grupo de trabajo  
+             especializados, que brindan servicios de alta calidad en:
                 </p>
                 <div class="row servicios">
                     <div class="col-sm-12 col-md-1">
