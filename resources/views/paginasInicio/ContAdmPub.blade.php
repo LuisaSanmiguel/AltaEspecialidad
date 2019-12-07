@@ -265,7 +265,7 @@ El Módulo está diseñado en función a un formato teórico-práctico y se estr
 </section>
 <div class="container">
     <div class="col-md-7">
-        <a href="{{route('registro')}}" class="btn btn-primary float-right">Registrase</a>
+        <a href="{{route('registro')}}" class="btn btn-primary float-right">Registrarse</a>
     </div>
 </div>
 <br><br><br><br>

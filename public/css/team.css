@@ -17,9 +17,10 @@ padding-bottom: 20px;
     padding-top: 7px;
 color:#930404fa;
 padding-bottom: 7px;
+background: white;
 padding-left:10px;
 padding-right:10px;
-border-bottom: 2px solid #930404fa;
+border-top: 2px solid #930404fa;
 border-left: 2px solid #930404fa;
 border-bottom-left-radius: 0%;
 border-bottom-right-radius: 0%;
@@ -133,6 +134,7 @@ color:#930404fa;
       }
       .tab-content > .active {
         display: block;
+        background: white;
       }
       .fade {
         opacity: 0;
@@ -143,3 +145,6 @@ color:#930404fa;
       .fade.in {
         opacity: 1;
       }
+
+
+   

@@ -14,42 +14,60 @@
                 </br>
             </div>
         </div>
-        <div class="row">
+
+
+       
+
+           <div class="row">
+                <div class="col-lg-12 ">
+                 
+                            <h2>
+                            Programas Disponibles 
+                            </h2>
+                </div>
+            </div>
+         <div class="row">
             <div class="col-md-12 col-lg-offset-8">
                 <div class="wow bounceInUp" data-wow-delay="0.2s">
                     <div class="row">
-                        <div class="col-sm-4 col-lg-offset-8">
-                            <strong>
-                                <p class="subtitle">
-                                    PROGRAMAS ACADÉMICOS
-                                </p>
-                            </strong>
-                        </div>
-                        <div class="col-sm-4 col-lg-offset-8">
-                            <strong>
-                                <p class="subtitle">
-                                    REGISTRO
-                                </p>
-                            </strong>
-                        </div>
-                        <div class="col-sm-4 col-lg-offset-8">
-                            <strong>
-                                <p class="subtitle">
-                                    COSTO
-                                </p>
-                            </strong>
-                        </div>
+                            <div class="col-sm-4 col-lg-offset-8">
+                                <strong>
+                                    <p class="subtitle">
+                                        PROGRAMAS ACADÉMICOS
+                                    </p>
+                                </strong>
+                            </div>
+                            {{-- <div class="col-sm-4 col-lg-offset-8">
+                                <strong>
+                                    <p class="subtitle">
+                                        REGISTRO
+                                    </p>
+                                </strong>
+                            </div> --}}
+                            <div class="col-sm-4 col-lg-offset-8">
+                                <strong>
+                                    <p class="subtitle">
+                                        COSTO
+                                    </p>
+                                </strong>
+                            </div>
+
+
                     </div>
+
+
                     {{-- primer programa --}}
                     <div class="row">
                         <div class="col-sm-4 col-lg-offset-8">
-                            <div class="programas bounceInUp" data-wow-delay="0.2s">
-                                <p class="tituloPrograma">
+                         <a href="/GestionPublica" class="botonA">
+                            <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
+                                <p class="tituloProgramaDisp">
                                     Escuela de formación en Gestión Pública
                                 </p>
                             </div>
+                             </a>
                         </div>
-                        <div class="col-sm-4 col-lg-offset-8">
+                        {{-- <div class="col-sm-4 col-lg-offset-8">
                             <a href="/GestionPublica">
                                 <div class="programasgratis bounceInUp" data-wow-delay="0.2s">
                                     <strong>
@@ -59,16 +77,78 @@
                                     </strong>
                                 </div>
                             </a>
-                        </div>
+                        </div> --}}
+
+
                         <div class="col-sm-4 col-lg-offset-8">
                             <div class="programasgratis bounceInUp" data-wow-delay="0.2s">
                                 <strong>
-                                    <p class="tituloServiciog">
-                                        ¡Gratis!
+                                    <p class="tituloGratis">
+                                        ¡GRATIS!
+                                    </p>
+                                   
+                                </strong>  
+                                
+                           
+                            </div>
+                        </div>
+                    
+                   <div class="col-sm-4 col-lg-offset-8">
+                             <a class="ingresoAulaTx" href="/home">
+                             <div class="ingresoAula bounceInUp" data-wow-delay="0.2s">
+                           
+                              
+                                    <strong>
+                                        <h4 class="ingresoAulaTx">
+                                            Ingreso al Aula Virtual
+                                        </h4>
+                                    </strong>
+                                </div>
+                            </a>
+                        </div>
+
+        </div>
+ </div>
+
+     </div>
+ </div>
+
+        <div class="row">
+            <div class="col-lg-12 ">
+                <br>
+                    <br>
+                        <h2>
+                         Próximamente 
+                        </h2>
+            </div>
+        </div>
+
+               <div class="col-md-12 col-lg-offset-8">
+                <div class="wow2 bounceInUp" data-wow-delay="0.2s">
+                    <div class="row">
+                            <div class="col-sm-4 col-lg-offset-8">
+                                <strong>
+                                    <p class="subtitle">
+                                        PROGRAMAS ACADÉMICOS
                                     </p>
                                 </strong>
                             </div>
-                        </div>
+                            {{-- <div class="col-sm-4 col-lg-offset-8">
+                                <strong>
+                                    <p class="subtitle">
+                                        REGISTRO
+                                    </p>
+                                </strong>
+                            </div> --}}
+                            <div class="col-sm-4 col-lg-offset-8">
+                                <strong>
+                                    <p class="subtitle">
+                                        COSTO
+                                    </p>
+                                </strong>
+                            </div>
+
+
                     </div>
                     {{-- programa 2---------------------------------------------- --}}
                     <div class="row">
@@ -79,23 +159,25 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-sm-4 col-lg-offset-8">
+                        {{-- <div class="col-sm-4 col-lg-offset-8">
                             <div class="programas bounceInUp" data-wow-delay="0.2s">
                                 <p class="tituloPrograma">
                                     Próximamente
                                 </p>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-sm-4 col-lg-offset-8">
                             <div class="programasgratis bounceInUp" data-wow-delay="0.2s">
                                 <strong>
-                                    <p class="tituloServiciog">
-                                        ¡Gratis!
+                                    <p class="tituloGratis">
+                                        ¡GRATIS!
                                     </p>
                                 </strong>
                             </div>
                         </div>
                     </div>
+
+                    
                     <div class="row">
                         <div class="col-sm-4 col-lg-offset-8">
                             <div class="programas bounceInUp" data-wow-delay="0.2s">
@@ -131,17 +213,7 @@
                                 </h5>
                             </div>
                         </div>
-                        <div class="ingresoAula col-sm-4 col-lg-offset-8">
-                            <a class="ingresoAulaTx" href="/home">
-                                <div class=" bounceInUp" data-wow-delay="0.2s">
-                                    <strong>
-                                        <h4 class="tituloServiciog">
-                                            Ingreso al Aula Virtual
-                                        </h4>
-                                    </strong>
-                                </div>
-                            </a>
-                        </div>
+                        
                     </div>
                     <div class="row">
                         <div class="col-sm-4 col-lg-offset-8">

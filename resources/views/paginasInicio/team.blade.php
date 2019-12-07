@@ -7,7 +7,7 @@
    
 
             <div class="row">
-
+                 <div class="col-lg-12 col-lg-offset-8">
 
                         <ul class="nav nav-tabs" id="myTab">
                             <li class=" tabs active"><a class="tituloTabs" data-toggle="tab" href="#home">Quiénes Somos</a></li>
@@ -16,7 +16,7 @@
                             <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#menu3">Nuestro Equipo</a></li>
                         </ul>
 
-   
+                </div>
 
                     <div class="col-lg-12 col-lg-offset-8">
                         <div class="tab-content">

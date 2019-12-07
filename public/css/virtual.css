@@ -8,48 +8,158 @@ height: 50px;
 background: #950808;
 text-align: center;
 margin-top: 9px;
+
 /* #eee26e; */
 }
 
-
-.programasgratis{
+.programasDisp{
     padding-top: 10px;
-border-top: 4px solid #950808 ;
+border-top: 4px solid #efb827;
+padding-bottom: 10px;
+height: 50px;
+background: #950808;
+text-align: center;
+margin-top: 9px;
+-webkit-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+-moz-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+/* #eee26e; */
+}
+
+.programasDisp:hover {
+    padding-top: 10px;
+border-bottom: 4px solid #950808;
 padding-bottom: 10px;
 height: 50px;
 background: #efb827;
 text-align: center;
 margin-top: 9px;
+color:#950808;    -webkit-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+-moz-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+
+/* #eee26e; */
+}
+.tituloProgramaDisp:hover, .botonA:hover, .tituloProgramaDisp:focus, .botonA:focus{
+  
+color:#950808 !important;
+
+/* #eee26e; */
+}
+
+.tituloProgramaDisp{
+  
+    color:#fff !important;
+    
+    /* #eee26e; */
+    }
+
+.wow2{
+    padding-top: 20px;
+border-top: 4px solid #950808;
+padding-bottom: 20px;
+/* #eee26e; */
+}
+
+.programasgratis{
+    padding-top: 5px;
+border-bottom: 4px solid #efb827 ;
+/* border-bottom-style: double; */
+border-top: 4px solid #efb827 ;
+/* border-top-style: double; */
+padding-bottom: 10px;
+height: 50px;
+background: #950808;
+-webkit-animation: myfirst 2s linear 2s infinite alternate; /* Safari 4.0 - 8.0 */
+  animation: myfirst 2s linear 2s infinite alternate;
+text-align: center;
+margin-top: 9px;
+-webkit-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+-moz-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
 
 
 /* #eee26e; */
 }
 
-
- .ingresoAulaTx:focus,  
- .ingresoAulaTx:hover{
- 
-   text-decoration:none;
-   color:#950808;
+@-webkit-keyframes myfirst {
+  
+    0%  {background-color:#efb827; left:0px; top:0px;}
+   
    }
-.ingresoAula{
- padding-top: 10px;
-border-top: 4px solid #950808 ;
-padding-bottom: 10px;
-height: 59px;
-background: #efb827;
-text-align: center;
-text-decoration: none;
-}
-.ingresoAula2{
-    padding-top: 10px;
-   border-top: 4px solid #efb827 ;
-   padding-bottom: 10px;
-   height: 59px;
-   background: #efb827;
-   text-align: center;
-}
+   
+   /* Standard syntax */
+   @keyframes myfirst {
+     0%  {background-color:#efb827; left:0px; top:0px;}
+   
+   }
 
+   
+   .ingresoAulaTx{
+   
+   text-decoration:none;
+   color:#950808 !important;
+
+   }
+        .ingresoAulaTx:focus,  
+        .ingresoAulaTx:hover{
+        
+        text-decoration:none;
+        color:#efb827 !important;
+
+        }
+
+        .ingresoAula{
+            padding-top: 10px;
+        border-top: 4px solid #950808 ;
+        padding-bottom: 10px;
+        height: 50px;
+        background: #efb827;
+        text-align: center;
+        margin-top: 9px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+        -moz-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+        box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+        }
+
+        .ingresoAula:hover, .ingresoAula:focus{
+            padding-top: 10px;
+        border-bottom: 4px solid #efb827;
+        padding-bottom: 10px;
+        height: 50px;
+        background: #950808;
+        text-align: center;
+        margin-top: 9px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+        -moz-box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+        box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
+        }
+
+
+        .ingresoAula2{
+            padding-top: 10px;
+        border-top: 4px solid #950808 ;
+        padding-bottom: 10px;
+        height: 50px;
+        background: #efb827;
+        text-align: center;
+        margin-top: 9px;
+        text-align: center;
+        text-decoration: none;
+  
+        }
+
+
+        .ingresoAulaTx2{
+   
+            text-decoration:none;
+            color:#950808 !important;
+         
+            }
 
 /* #eee26e; */
 
@@ -63,8 +173,19 @@ font-size: 120px;
     color:white;
 
 }
+
 .tituloServiciog{
     color:#950808;
+
+}
+
+
+
+
+.tituloGratis{
+    color:#fff;
+    font-size:18px;
+    text-shadow: 2px -2px 18px rgb(0, 0, 0);
 }
 
 .contenidoPrograma{

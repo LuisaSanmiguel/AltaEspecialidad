@@ -28,26 +28,57 @@
                     </div>
                     {{-- primer programa --}}
                     <div class="row">
-                        <div class="col-sm-12 col-lg-offset-8">
+                        <div class="col-lg-8 ">
                             <a href="/ContAdmPub">
-                                <div class="programas bounceInUp" data-wow-delay="0.2s">
-                                    <p class="tituloPrograma">
+                                  <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
+                                    <p class="tituloProgramaDisp">
                                         Nuevas Estrategia de Administración de Pública
                                     </p>
                                 </div>
                             </a>
                         </div>
-                    </div>
+                   
+
+                             <div class="col-lg-4 ">
+                            <a class="ingresoAulaTx" href="/registro">
+                                <div class="ingresoAula bounceInUp" data-wow-delay="0.2s">
+                                    <strong>
+                                        <p class="ingresoAulaTx">
+                                            Matricularse
+                                        </p>
+                                    </strong>
+                                </div>
+                            </a>
+                        </div> 
+                        
+                        </div>
                     {{-- programa 2---------------------------------------------- --}}
                     <div class="row">
-                        <div class="col-sm-12 col-lg-offset-8">
+                        <div class="col-sm-8 ">
                             <div class="programas bounceInUp" data-wow-delay="0.2s">
                                 <p class="tituloPrograma">
                                     Derecho de Policía y Derecho Procesal Policivo
                                 </p>
                             </div>
                         </div>
+
+
+                        
+                             <div class="col-lg-4 ">
+                            <a class="ingresoAulaTx2" href="#">
+                                <div class="ingresoAula2 bounceInUp" data-wow-delay="0.2s">
+                                    <strong>
+                                        <p class="ingresoAulaTx2">
+                                            Proximamente...
+                                        </p>
+                                    </strong>
+                                </div>
+                            </a>
+                        </div> 
                     </div>
+
+
+
                 </div>
             </div>
         </div>
