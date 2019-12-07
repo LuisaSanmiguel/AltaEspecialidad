@@ -21,6 +21,8 @@
    
 
     <link href="{{asset('\assets\font-awesome\css\font-awesome.css')}}" rel="stylesheet">
+
+    
   
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -30,6 +32,9 @@
       <link href="{{asset('css\team.css')}}" rel="stylesheet">
       <link href="{{asset('css\servicios.css')}}" rel="stylesheet">
       <link href="{{asset('css\virtual.css')}}" rel="stylesheet">
+
+      
+  
 </head>
 <body>
     <div id="app">
@@ -124,15 +129,19 @@
 </body>
 
 
-        
-<script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>	
-	<script src="js/jquery.scrollTo.js"></script>
-	<script src="js/wow.min.js"></script>
+     
+<script src="/js/jquery.min.js"></script> 
+<script src="/js/bootstrap.min.js"></script>   
+   
+    <script src="/js/jquery.easing.min.js"></script>	
+	<script src="/js/jquery.scrollTo.js"></script>
+	
     <!-- Custom Theme JavaScript -->
-    <script src="js/custom.js"></script>
+
  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   
+<script type="text/javascript" >
+
+</script>
 
 </html>
