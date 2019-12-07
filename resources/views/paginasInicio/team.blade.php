@@ -417,5 +417,12 @@
 
 @section('js')
 
+<script type="text/javascript" >
 
+$(document).ready(function(){
+ 
+ $('.nav-tabs a[href="#home"]').tab('show')
+});
+
+</script>
 @stop

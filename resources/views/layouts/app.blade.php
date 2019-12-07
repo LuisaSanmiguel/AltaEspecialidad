@@ -128,10 +128,10 @@
     </div>
 </body>
 
-
+{{-- 
      
 <script src="/js/jquery.min.js"></script> 
-<script src="/js/bootstrap.min.js"></script>   
+<script src="/js/bootstrap.min.js"></script>    --}}
    
     <script src="/js/jquery.easing.min.js"></script>	
 	<script src="/js/jquery.scrollTo.js"></script>
@@ -140,8 +140,7 @@
 
  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   
-<script type="text/javascript" >
-
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </html>
