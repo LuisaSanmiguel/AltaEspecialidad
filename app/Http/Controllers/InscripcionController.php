@@ -29,18 +29,26 @@ class InscripcionController extends Controller
         
         $usuario = User::where('email','=',$request->email)->get();
 
-        if($usuario->count() > 0 )
-        {
-        	return 'existen '.$usuario->count();
-        }   
-        else{
-        //creacion del usuario
-    	$user = new User;
-        $user->name = $request->name;
-    	$user->email = $request->email;
-        $user->password = Hash::make($request->password);
-        $user->save();
-        }
+             
+           if($usuario->isNotEmpty())
+                {   
+                    $usuario = User::where('email','=',$request->email)->first();
+                    $usr= $usuario->id;
+                    $user = User::find($usr);
+                }   
+
+            else{
+            //creacion del usuario
+                $user = new User;
+                $user->name = $request->name;
+                $user->email = $request->email;
+                $user->password = Hash::make($request->password);
+                $user->save();
+                $usr= $user->id;
+
+            }
+        
+
     	// creacion de inscripcion
     	$inscripcion = new Inscripcion;
     	$inscripcion->direccion = $request->direccion;
@@ -48,7 +56,7 @@ class InscripcionController extends Controller
         $inscripcion->ciudad_id = $request->ciudad;
     	$inscripcion->typeDoc = $request->typeDoc;
     	$inscripcion->numDc = $request->numDc;
-        $inscripcion->user_id = $user->id;
+        $inscripcion->user_id = $usr;
 
     	$inscripcion->save();
 
@@ -59,9 +67,10 @@ class InscripcionController extends Controller
         $curso->inscripcion_id = $inscripcion->id;
         $curso->save();
 
+
         if($curso){
-            Auth::login($user);
-            Mail::to($user->email)->send(new WelcomeMail($user));
+            // Auth::login($user);
+            // Mail::to($user->email)->send(new WelcomeMail($user));
     	   return redirect('/home');
         } else{
            return redirect('/');

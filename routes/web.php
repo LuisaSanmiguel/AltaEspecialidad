@@ -34,6 +34,7 @@ Route::get('/GestionPublica','GestionPublicaController@index')->name('GestionPub
 Route::resource('Carreras', 'CarrerasController');
 
 Route::get('/Cursos/{id}','CursosController@index')->name('Cursos');
+
 Route::get('/detalleCurso/{id}','CursosController@show')->name('detalleCurso');
 
 Route::get('/ContAdmPub','ContAdmPubController@index')->name('Contenido_Administracion_Publica');
@@ -42,3 +43,5 @@ Route::get('registro/{id}', 'InscripcionController@inscripcionForm')->name('regi
 
 Route::get('ciudad/{departamento}', 'InscripcionController@ciudades')->name('ciudades');
 Route::post('inscripcion/store', 'InscripcionController@inscripcionSave')->name('inscripcion.save');
+
+Route::get('/homeCursos', 'HomeCursosController@index')->name('homeCursos');

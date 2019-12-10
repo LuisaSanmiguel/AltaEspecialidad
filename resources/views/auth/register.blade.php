@@ -135,6 +135,8 @@
                             <div class="col-md-6">
                                 <select class="form-control" id="ciudad" name="ciudad" placeholder="seleccione un departamento">
                                         </select>
+
+                                          {{-- <input type="text" name="ciudad" value="1023"> --}}
                             </div>
                         </div>
                          <div class="form-group row">

@@ -51,7 +51,7 @@
                    
 
                              <div class="col-lg-4 ">
-                            <a class="ingresoAulaTx" href="/registro">
+                            <a class="ingresoAulaTx" href="{{route("registro", $curso->id)}}"> 
                                 <div class="ingresoAula bounceInUp" data-wow-delay="0.2s">
                                     <strong>
                                         <p class="ingresoAulaTx">
@@ -133,7 +133,7 @@
                    
 
                              <div class="col-lg-4 ">
-                            <a class="ingresoAulaTx" href="/registro">
+                            <a class="ingresoAulaTx" href="{{route("registro", $curso->id)}}">
                                 <div class="ingresoAula bounceInUp" data-wow-delay="0.2s">
                                     <strong>
                                         <p class="ingresoAulaTx">

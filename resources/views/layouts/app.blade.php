@@ -64,7 +64,7 @@
                                 <a class="nav-link" href="{{route('servicios')}}">Servicios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('virtual')}}">Escuela Virtual</a>
+                                <a class="nav-link" href="{{ __('Carreras') }}">Escuela Virtual</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="">Contactenos</a>
