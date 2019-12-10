@@ -30,9 +30,15 @@ Route::get('/virtual','VirtualController@index')->name('virtual');
 
 Route::get('/GestionPublica','GestionPublicaController@index')->name('GestionPublica');
 
+// Route::get('/Carrera','CarreraController@index')->name('Carrera');
+Route::resource('Carreras', 'CarrerasController');
+
+Route::get('/Cursos/{id}','CursosController@index')->name('Cursos');
+Route::get('/detalleCurso/{id}','CursosController@show')->name('detalleCurso');
+
 Route::get('/ContAdmPub','ContAdmPubController@index')->name('Contenido_Administracion_Publica');
 
-Route::get('registro', 'InscripcionController@inscripcionForm')->name('registro');
+Route::get('registro/{id}', 'InscripcionController@inscripcionForm')->name('registro');
 
 Route::get('ciudad/{departamento}', 'InscripcionController@ciudades')->name('ciudades');
 Route::post('inscripcion/store', 'InscripcionController@inscripcionSave')->name('inscripcion.save');

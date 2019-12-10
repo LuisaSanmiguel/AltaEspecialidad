@@ -7,13 +7,17 @@
             <div class="card">
                 <div class="card-header">
                     <center>
-                        <h4>{{ __('Registro para el curso Nuevas Estrategia de Administración de Pública') }}</h4>
+                    @foreach($cursos as $curso)
+                        <h4>Registro para el curso {{$curso->curso}} </h4>
                     </center>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('inscripcion.save') }}" class="form" enctype="multipart/form-data" method="POST">
                         @csrf
-                        <input type="hidden" name="cursos" value="1">
+                         
+    
+                          <input type="hidden" name="cursos" value="{{$curso->id}}">
+                          @endforeach
                         <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right" for="tipo">
                                 {{ __('tipo') }}

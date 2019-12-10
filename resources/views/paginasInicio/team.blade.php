@@ -295,7 +295,7 @@
                                                                                             Yury Alejandra Rodriguez
                                                                                         </h5>
                                                                                         <p class="subtitle">
-                                                                                            Asistente Administrativo
+                                                                                            Dirección Administrativa
                                                                                         </p>
                                                                                         <div class="avatar">
                                                                                             <img alt="" class="img-responsive img-circle" src="{{asset('img/team/YURY_ALEJANDRA_RODRIGUEZ.png')}}"/>
@@ -337,7 +337,7 @@
                                                                                             Oscar Javier Amortegui
                                                                                         </h5>
                                                                                         <p class="subtitle">
-                                                                                            Programador Web
+                                                                                            Director de Proyectos
                                                                                         </p>
                                                                                     </div>
                                                                                 </div>

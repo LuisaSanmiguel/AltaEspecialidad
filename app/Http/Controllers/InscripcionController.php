@@ -17,19 +17,30 @@ use Auth;
 class InscripcionController extends Controller
 {
 
-	public function inscripcionForm(){
+	public function inscripcionForm($id){
     $departamentos = Departamento::all();
-		$cursos = Curso::all();
+         $cursos = Curso::where('id','=',$id)->get();
+
 		return view('auth.register', compact('cursos', 'departamentos'));
 	}
 
     public function inscripcionSave(Request $request){
+
+        
+        $usuario = User::where('email','=',$request->email)->get();
+
+        if($usuario->count() > 0 )
+        {
+        	return 'existen '.$usuario->count();
+        }   
+        else{
         //creacion del usuario
-    		$user = new User;
+    	$user = new User;
         $user->name = $request->name;
-    		$user->email = $request->email;
+    	$user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
+        }
     	// creacion de inscripcion
     	$inscripcion = new Inscripcion;
     	$inscripcion->direccion = $request->direccion;
