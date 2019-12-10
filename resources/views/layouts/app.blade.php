@@ -33,6 +33,11 @@
       <link href="{{asset('css\servicios.css')}}" rel="stylesheet">
       <link href="{{asset('css\virtual.css')}}" rel="stylesheet">
 
+
+        <link href="{{asset('\css\lightbox.css')}}" rel="stylesheet">
+        <link href="{{asset('\css\screen.css')}}" rel="stylesheet">
+        {{-- <link href="{{asset('\css\foundation.css')}}" rel="stylesheet"> --}}
+
       
   
 </head>
@@ -44,6 +49,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ asset('/img/logoOrigin.png') }}" width="80px"/>
                 </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -64,7 +70,7 @@
                                 <a class="nav-link" href="{{route('servicios')}}">Servicios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ __('Carreras') }}">Escuela Virtual</a>
+                                <a class="nav-link" href="{{route('Carreras') }}">Escuela Virtual</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="">Contactenos</a>
@@ -111,6 +117,7 @@
                 </div>
             </div>
         </nav>
+        
  <div style="height:85px;"></div>
         <main class="py-4">
             @yield('content')
@@ -118,29 +125,35 @@
     </div>
 
   <div class="row stickyBott"> 
-   <div class="col-4"><span>©Altas Especialidad SAS. 
-    Todos los Derechos Reservados.
-    </span></div>
-    <div class="col-4 "><span> </span></div>
-    <div class="col-4 "><span>
-    ¡Garantizamos tu seguridad jurídica…! </span></div>
+        <div class="col-4">
+            <span>©Altas Especialidad SAS. 
+            Todos los Derechos Reservados.
+            </span>
+         </div>
+        <div class="col-4 "><span> </span></div>
+            <div class="col-4 "><span>
+            ¡Garantizamos tu seguridad jurídica…! </span>
+            </div>
     
     </div>
+
+        
+    
 </body>
 
-{{-- 
-     
-<script src="/js/jquery.min.js"></script> 
-<script src="/js/bootstrap.min.js"></script>    --}}
-   
-    <script src="/js/jquery.easing.min.js"></script>	
-	<script src="/js/jquery.scrollTo.js"></script>
-	
+
+
+{{-- <script src="/js/bootstrap.min.js"></script>    --}}
+   <script src="/js/jquery.min.js"></script> 
+   	
     <!-- Custom Theme JavaScript -->
 
  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>     
+   <script type="text/javascript" src="\js\jquery.smint.js" ></script>
+    <script type="text/javascript" src="\js\lightbox.js" ></script>
+  <script type="text/javascript" src="\js\foundation.min.js" ></script>
+       
 </html>

@@ -20,7 +20,7 @@
                         <div class="col-sm-12 ">
                             <strong>
                                 <p class="subtitle">
-                               INSCRITO A  CURSOS
+                               INSCRITO A CURSOS
                                 </p>
                             </strong>
                         </div>

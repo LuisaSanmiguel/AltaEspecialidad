@@ -109,7 +109,7 @@
                             </a>
                         </div>
                         <div class="col-md-4 col-lg-offset-8">
-                            <a href="/virtual">
+                            <a href="/Carreras">
                                 <div class="recuadro bounceInUp" data-wow-delay="0.2s">
                                     <i aria-hidden="true" class="fa fa-laptop iconoxl">
                                     </i>
