@@ -26,7 +26,7 @@
                         <div class="col-sm-12 col-md-4 col-lg-offset-8">
                             
                                 <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
-                                    <img src="\img\Clientes\ContraloriaArchipielago.png" height="70px">
+                                    <img src="{{asset('img\Clientes\ContraloriaArchipielago.png')}}" height="70px">
                                     </img>
                                     <p class="clienteTitulo" style="font-size:xx-small;">CONTRALORIA GENERAL DEL DEPARTAMENTO ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CATALINA ISLAS
 
@@ -39,7 +39,7 @@
                         <div class="col-sm-12 col-md-4 col-lg-offset-8">
                           
                                 <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
-                                    <img src="\img\Clientes\dptoArchipielago.jpg" height="70px">
+                                    <img src="{{asset('img\Clientes\dptoArchipielago.jpg')}}" height="70px">
                                     </img>
                                     <p class="clienteTitulo" style="font-size:xx-small;">
                                        DEPARTAMENTO ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CATALINA ISLAS 
@@ -51,7 +51,7 @@
 
                         <div class="col-sm-12 col-md-4 col-lg-offset-8">
                             <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
-                              <img src="\img\Clientes\dptoGdot.jpg" height="70px">
+                              <img src="{{asset('img\Clientes\dptoGdot.jpg')}}" height="70px">
                                     </img>
                                     <p class="clienteTitulo" style="font-size:xx-small;">
                                         DEPARTAMENTO DE CUNDINAMARCA - MUNICIPIO DE GIRARDOT 
@@ -72,7 +72,7 @@
 
                             <div class="col-sm-12 col-md-3 col-lg-offset-8">
                                     <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
-                                    <img src="\img\Clientes\dptoSanAndres.jpg" height="70px">
+                                    <img src="{{asset('img\Clientes\dptoSanAndres.jpg')}}" height="70px">
                                             </img>
                                             <p class="clienteTitulo" style="font-size:xx-small;">
                                             DEPARTAMENTO DE SAN ANDRES - MUNICIPIO DE PROVIDENCIA ISLAS 
@@ -88,7 +88,7 @@
 
                                 <div class="col-sm-12 col-md-3 col-lg-offset-8">
                                     <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
-                                    <img src="\img\Clientes\ConcejoIslas.jpg" height="70px">
+                                    <img src="{{asset('img\Clientes\ConcejoIslas.jpg')}}" height="70px">
                                             </img>
                                             <p class="clienteTitulo" style="font-size:xx-small;">
                                                 CONCEJO MUNICIPAL DE PROVIDENCIA Y  SANTA CATALINA ISLAS 

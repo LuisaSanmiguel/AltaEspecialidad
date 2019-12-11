@@ -204,7 +204,7 @@
                                                                 <div class="col-sm-12 col-lg-offset-8">
                                                         <a class="tituloSiex" href="http://siex.com.co/">
                                                             <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
-                                                                <img src="\img\logoBlancoSiex.png" width="150px">
+                                                                <img src="{{asset('img\logoBlancoSiex.png')}}" width="150px">
                                                                 </img>
                                                                 <p class="">
                                                                     SIEX - SISTEMA INTEGRAL DE EXPEDIENTES VIRTUALES
@@ -245,7 +245,7 @@
                                                                                 Este ERP es un sistema integra para la administración pública, que administra desde los recursos financieros, contratación, planeación y jurídica de las entidades del estado.   
  
                                                                          <BR> 
-                                   <img class="SImg" width="90%" src="\img\productos\ERP.jpg">
+                                   <img class="SImg" width="90%" src="{{asset('img\productos\ERP.jpg')}}">
                                                     </img><BR>
                                                                         El término ERP se refiere a Enterprise Resource Planning, que significa “sistema de planificación de recursos empresariales”. Estos programas se hacen cargo de distintas operaciones internas de una empresa, desde producción a distribución o incluso recursos humanos. 
 
@@ -258,7 +258,7 @@
                                                               <div class="col-sm-12 col-lg-offset-8">
                                             <a class="tituloSiex" href="https://siex-providenciaislas.com.co/">
                                                 <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
-                                                <img src="\img\siexERP.png" width="170px">
+                                                <img src="{{asset('img\siexERP.png')}}" width="170px">
                                                     </img>
                                                     <p class="">
                                                         SIEX - ERP para Entidades Públicas
@@ -295,7 +295,7 @@
                                                                                     </p>
 
                                                                                                                  <BR> 
-                                                                               <img class="SImg" width="90%" src="\img\productos\CONSULTA.png"></img>
+                                                                               <img class="SImg" width="90%" src="{{asset('img\productos\CONSULTA.png')}}"></img>
                                                                                
                                                                                <BR>
                                                                         </div>
@@ -346,7 +346,7 @@
                                                                     
 
                                                                         
-                                                                            <img src="\img\masporlasislas.png" width="150px">
+                                                                            <img src="{{asset('img\masporlasislas.png')}}" width="150px">
                                                                             </img>
                                                                             <p class="">
                                                                                 SIEX - Providencia Isla
