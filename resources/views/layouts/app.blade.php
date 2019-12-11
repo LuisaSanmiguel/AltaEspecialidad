@@ -156,4 +156,23 @@
     <script type="text/javascript" src="\js\lightbox.js" ></script>
   <script type="text/javascript" src="\js\foundation.min.js" ></script>
        
+    <script type="text/javascript">
+        $(document).ready(function(){
+            ciudades()
+        })
+        $('#departamento').on('click', function(){
+          ciudades()
+        })
+
+      function ciudades(){
+        let departamento = $('#departamento').val()
+        $('#ciudad').empty()
+        $.get('/ciudad/'+departamento, function(response, state){
+                for(i=0; i<response.length; i++){
+                console.log(response[i])
+                $('#ciudad').append('<option value="'+response[i].id+'">'+response[i].nombre+'</option>')
+            }
+        })
+      }
+    </script>
 </html>
