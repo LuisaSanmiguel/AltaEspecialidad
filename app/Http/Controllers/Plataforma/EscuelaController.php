@@ -1,10 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Plataforma;
+
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class DesarrolloController extends Controller
+use App\Model\Carrera;
+
+class EscuelaController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -20,7 +24,11 @@ class DesarrolloController extends Controller
      */
     public function index()
     {
-        return view('/paginasInicio/desarrollo');
+          
+        $carreras = Carrera::all();
+
+        return view('plataforma\Escuelas\EscuelaIndex', compact('carreras')); 
+    
     }
     
 }

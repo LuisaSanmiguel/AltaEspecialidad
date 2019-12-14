@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\PaginaInicio;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Carrera;
-use App\Curso;
-use App\Caracteristica;
-use App\caracteristicas_cursos;
-use App\Tipo;
+use App\Model\Carrera;
+use App\Model\Curso;
+use App\Model\Caracteristica;
+use App\Model\caracteristicas_cursos;
+use App\Model\Tipo;
 
 class CursosController extends Controller
 {
@@ -32,7 +32,7 @@ class CursosController extends Controller
      
         $tipo = Tipo::all();
 
-        return view('paginasInicio/Cursos', compact('carreras','cursos','tipo')); 
+        return view('paginaInicio/Cursos', compact('carreras','cursos','tipo')); 
     
     }
 
@@ -45,7 +45,7 @@ class CursosController extends Controller
         $caracteristicas_curso = caracteristicas_cursos::all();
         $tipos = Tipo::all();
 
-        return view('paginasInicio/detalleCurso', compact('carreras','cursos','tipos','caracteristicas','caracteristicas_curso')); 
+        return view('paginaInicio/detalleCurso', compact('carreras','cursos','tipos','caracteristicas','caracteristicas_curso')); 
     
     }
     

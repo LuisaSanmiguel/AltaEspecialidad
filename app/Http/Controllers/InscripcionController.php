@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Inscripcion;
-use App\Curso;
-use App\User;
-use App\Departamento;
-use App\Ciudad;
-use App\CursoInscripcion;
+use App\Model\Inscripcion;
+use App\Model\Curso;
+use App\Model\User;
+use App\Model\Departamento;
+use App\Model\Ciudad;
+use App\Model\CursoInscripcion;
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;

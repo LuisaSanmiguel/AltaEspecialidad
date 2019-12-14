@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\PaginaInicio;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ClientesController extends Controller
@@ -20,7 +20,7 @@ class ClientesController extends Controller
      */
     public function index()
     {
-        return view('/paginasInicio/clientes');
+        return view('/paginaInicio/clientes');
     }
     
 }

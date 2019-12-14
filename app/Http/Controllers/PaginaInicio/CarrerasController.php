@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\PaginaInicio;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ContAdmPubController extends Controller
+use App\Model\Carrera;
+class CarrerasController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -20,7 +21,12 @@ class ContAdmPubController extends Controller
      */
     public function index()
     {
-        return view('/paginasInicio/ContAdmPub');
+  
+        
+        $carreras = Carrera::all();
+
+        return view('paginaInicio/Carreras', compact('carreras')); 
+    
     }
     
 }

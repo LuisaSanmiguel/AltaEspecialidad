@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\PaginaInicio;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class VirtualController extends Controller
+class ServiciosController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -20,7 +21,7 @@ class VirtualController extends Controller
      */
     public function index()
     {
-        return view('/paginasInicio/virtual');
+        return view('/paginaInicio/servicios');
     }
     
 }

@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\inscripcion;
-use App\CursoInscripcion;
-use App\Curso;
-use App\Carrera;
+use App\Model\User;
+use App\Model\inscripcion;
+use App\Model\CursoInscripcion;
+use App\Model\Curso;
+use App\Model\Carrera;
 use Auth;
 
 class HomeCursosController extends Controller

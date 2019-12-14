@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-offset-8">
-                            <a href="/desarrollo">
+                            <a href="{{route('desarrollo') }}">
                                 <div class="recuadro bounceInUp" data-wow-delay="0.2s">
                                     <i aria-hidden="true" class="fa fa-cogs icono iconoxl">
                                     </i>
@@ -109,7 +109,7 @@
                             </a>
                         </div>
                         <div class="col-md-4 col-lg-offset-8">
-                            <a href="/Carreras">
+                            <a href="{{route('Carreras') }}">
                                 <div class="recuadro bounceInUp" data-wow-delay="0.2s">
                                     <i aria-hidden="true" class="fa fa-laptop iconoxl">
                                     </i>

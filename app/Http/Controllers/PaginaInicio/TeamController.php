@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\PaginaInicio;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ServiciosController extends Controller
+class TeamController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -20,7 +20,6 @@ class ServiciosController extends Controller
      */
     public function index()
     {
-        return view('/paginasInicio/servicios');
+        return view('/paginaInicio/team');
     }
-    
 }

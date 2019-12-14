@@ -39,6 +39,6 @@ class User extends Authenticatable
 
     public function inscripcion()
     {
-        return $this->hasOne('App\Inscripcion');
+        return $this->hasOne('App\Model\Inscripcion');
     }
 }

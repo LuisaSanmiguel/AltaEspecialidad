@@ -1,10 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Plataforma;
+
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class TeamController extends Controller
+use App\Model\Curso;
+
+class CursoController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -20,6 +24,11 @@ class TeamController extends Controller
      */
     public function index()
     {
-        return view('/paginasInicio/team');
+          
+        $cursos = Curso::all();
+
+        return view('plataforma\Cursos\CursoIndex', compact('cursos')); 
+    
     }
+    
 }

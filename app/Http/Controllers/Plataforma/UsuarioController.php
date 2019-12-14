@@ -1,11 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Plataforma;
+
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-use App\Carrera;
-class CarrerasController extends Controller
+use App\User;
+
+class UsuarioController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -21,11 +24,10 @@ class CarrerasController extends Controller
      */
     public function index()
     {
-  
-        
-        $carreras = Carrera::all();
+          
+        $users = User::all();
 
-        return view('paginasInicio/Carreras', compact('carreras')); 
+        return view('plataforma\Usuarios\UsuariosIndex', compact('users')); 
     
     }
     

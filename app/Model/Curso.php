@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,12 +13,15 @@ class Curso extends Model
     }
 
     public function tipos(){
-        return $this->belongsTo('App\Tipo', 'id_tipo');
+        return $this->belongsTo('App\Model\Tipo', 'id_tipo');
     }
   
     public function caracteristicas_cursos(){
-        return $this->belongsToMany('App\caracteristicas_cursos');
+        return $this->belongsToMany('App\Model\caracteristicas_cursos');
     }      
 
+    public function cursoinscripcion(){
+        return $this->belongsToMany('App\Model\CursoInscripcion');
+    }
 
 }
