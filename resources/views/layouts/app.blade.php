@@ -86,9 +86,9 @@
                                 <a href="/inscripcion" data-toggle="modal" data-target="#form">Formacion Virtual</a></li>
                                 --}}
                         @guest
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">Ingresar al Aula</a>
-                            </li>
+                            </li> --}}
                             {{-- @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
