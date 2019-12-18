@@ -39,8 +39,10 @@
                                     <a href="{{route("contenido", $curso->id) }}">
                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                             <p class="tituloProgramaDisp">
+                                             {{ $curso->nombre }}
+                                             en
                                             {{ $curso->curso }}
-                                            {{ $curso->id }}
+                                           
                                             </p>
                                         </div>
                                     </a>
