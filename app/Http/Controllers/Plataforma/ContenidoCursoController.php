@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Model\Curso;
-
+use App\Model\Tipo;
 class ContenidoCursoController extends Controller
 {
     /**
@@ -25,8 +25,12 @@ class ContenidoCursoController extends Controller
     public function index($id)
     {
           
-        $cursos = Curso::where('id','=', $id)->get();
-
+        $cursos = Curso::where('cursos.id','=', $id)
+        ->join('tipos', 'cursos.id_tipo', '=', 'tipos.id')
+        ->select('cursos.id','cursos.curso','cursos.fecha_ini','tipos.nombre')
+        ->get();
+       
+//  return $cursos;
         return view('plataforma\ContenidoCurso\contenidoCurso', compact('cursos')); 
     
     }

@@ -23,7 +23,8 @@
                             <div class="col-lg-12 col-lg-offset-8">
 
                                     <ul class="nav nav-tabs" id="myTab">
-                                        <li class=" tabs active"><a class="tituloTabs" data-toggle="tab" href="#home">Diplomado</a></li>
+                              
+                                        <li class=" tabs active"><a class="tituloTabs" data-toggle="tab" href="#home">{{strtoupper($curso->nombre)}}</a></li>
                                   @if($curso->id==1)
                                         <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#menu1">Capacitaciones</a></li>
                                 @endif
@@ -43,7 +44,7 @@
                           <li class="list-group-item"><b>DOCUMENTO:</b> {{Auth::user()->inscripcion->typeDoc}} - {{Auth::user()->inscripcion->numDc}}</li>
                           <li class="list-group-item"><b>CODIGO:</b> ({{Auth::user()->id}})</li>
                       
-                          <li class="list-group-item"><b>DIPLOMADO:</b> {{ strtoupper($curso->curso) }}</li>
+                          <li class="list-group-item"><b>{{strtoupper($curso->nombre)}}</b> {{ strtoupper($curso->curso) }}</li>
                           <li class="list-group-item"><b>FECHA DE INICIO: </b>{{date('d-m-Y', strtotime($curso->fecha_ini))}}</li>
                           @endforeach
                         </ul>
