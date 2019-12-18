@@ -14,6 +14,7 @@
                             <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#menu1">Objeto Social</a></li>
                                <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#menu2">Capacitaciones</a></li>
                             <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#menu3">Nuestro Equipo</a></li>
+                             <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#menu4">Integraciones</a></li>
                         </ul>
 
                 </div>
@@ -399,6 +400,53 @@
                                                                 </div>
 
                                             </div>
+
+
+
+                                                <div id="menu4" class="tab-pane">
+
+                                                 <div class="col-lg-6 col-lg-offset-8">
+                                                                        <br>
+                                                                            <br>
+                                                                                <h2 style="text-align:left;">
+                                                                                 Reunión de Integración 2017
+                                                                                </h2>
+                                                                        
+                                                                    </div>
+                                                    
+                                                        <a class="example-image-link" href="{{asset('\img\integracion\integracion 2017 (1).jpeg')}}" data-lightbox="example-set"  data-title="Integración Alta Especialidad 2017">
+                                                        <img class="example-image" src="{{asset('\img\integracion\integracion 2017 (2).jpeg')}}" alt="" /></a>
+
+                                                    
+                                                        <a class="example-image-link" href="{{asset('\img\integracion\integracion 2017 (3).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2017">
+                                                        <img class="example-image" src="{{asset('\img\integracion\integracion 2017 (3).jpeg')}}" alt="" /></a>
+                                            
+
+
+                   <div class="col-lg-6 col-lg-offset-8">
+                                                                        <br>
+                                                                            <br>
+                                                                                <h2 style="text-align:left;">
+                                                                                 Reunión de Integración 2019
+                                                                                </h2>
+                                                                        
+                                                                    </div>
+                                                        
+                                                            <a class="example-image-link" href="{{asset('\img\integracion\integracion_2019 (1).jpeg')}}" data-lightbox="example-set"  data-title="Integración Alta Especialidad 2019">
+                                                            <img class="example-image" src="{{asset('\img\integracion\integracion_2019 (1).jpeg')}}" alt="" /></a>
+
+                                                        
+                                                            <a class="example-image-link" href="{{asset('\img\integracion\integracion_2019 (2).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2019">
+                                                            <img class="example-image" src="{{asset('\img\integracion\integracion_2019 (2).jpeg')}}" alt="" /></a>
+                                                            <br>
+                                                            <a class="example-image-link" href="{{asset('\img\integracion\integracion_2019 (3).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2019">
+                                                            <img class="example-image" src="{{asset('\img\integracion\integracion_2019 (3).jpeg')}}" alt="" /></a>
+                                                
+                                                            <a class="example-image-link" href="{{asset('\img\integracion\integracion_2019 (4).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2019">
+                                                            <img class="example-image" src="{{asset('\img\integracion\integracion_2019 (4).jpeg')}}" alt="" /></a>
+                                                
+                       </div>
+
 
                         </div>
 
