@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Inscripcion;
 use App\Model\Curso;
-use App\Model\User;
+use App\User;
 use App\Model\Departamento;
 use App\Model\Ciudad;
 use App\Model\CursoInscripcion;
@@ -71,7 +71,7 @@ class InscripcionController extends Controller
         if($curso){
             // Auth::login($user);
             // Mail::to($user->email)->send(new WelcomeMail($user));
-    	   return redirect('/home');
+    	   return redirect('/homeCursos');
         } else{
            return redirect('/');
         }   

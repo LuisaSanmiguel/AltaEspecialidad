@@ -111,7 +111,7 @@
 
                     
                    <div class="col-sm-4 col-lg-offset-8">
-                             <a class="ingresoAulaTx" href="/home">
+                             <a class="ingresoAulaTx" href="/homeCursos">
                              <div class="ingresoAula bounceInUp" data-wow-delay="0.2s">
                            
                               

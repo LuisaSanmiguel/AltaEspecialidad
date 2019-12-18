@@ -31,38 +31,25 @@
 
        
       
-  @foreach($inscripcions as $inscripcion)
-      
-
-         @foreach($cursoInscs as $cursoInsc)
-
-       
-             @if($cursoInsc->inscripcion_id == $inscripcion->id)
-            
-
               @foreach($cursos as $curso)
-                @if($cursoInsc->curso_id == $curso->id)
+               
                    
                             <div class="row">
                                 <div class="col-lg-12 ">
-                                    <a href="{{route("detalleCurso", $curso->id) }}">
+                                    <a href="{{route("contenido", $curso->id) }}">
                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                             <p class="tituloProgramaDisp">
                                             {{ $curso->curso }}
+                                            {{ $curso->id }}
                                             </p>
                                         </div>
                                     </a>
                                 </div>
                            </div>
-                    @else
-                    @endif
+                  
                 @endforeach
-             @else
-             @endif
-
-
-            @endforeach 
-    @endforeach
+         
+         
                    {{-- @foreach($cursos as $curso) --}}
                     {{-- @if($cursoInsc->curso_id == $curso->id) --}}
                    

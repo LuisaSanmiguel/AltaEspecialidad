@@ -9,6 +9,7 @@ use App\Model\CursoInscripcion;
 use App\Model\Curso;
 use App\Model\Carrera;
 use Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeCursosController extends Controller
 {
@@ -33,18 +34,27 @@ class HomeCursosController extends Controller
 
         $id = Auth::user()->id;
 
-        $carreras = Carrera::all();
+        // $carreras = Carrera::all();
 
-        $inscripcions = inscripcion::where('user_id','=',$id)->get();
+        // $inscripcions = inscripcion::where('user_id','=',$id)->get();
+      
+        // $cursoInscs = CursoInscripcion::all();
       
 
-        $cursoInscs = CursoInscripcion::all();
-      
-
-        $cursos = Curso::all();
+        // $cursos = Curso::all();
         
 
-        return view('homeCursos', compact('carreras','inscripcions','cursoInscs','cursos')); 
+        $cursos = DB::table('users')
+                     ->where('user_id','=',$id)
+                    ->join('inscripcions', 'users.id', '=', 'inscripcions.user_id')
+                    ->join('curso_inscripcions', 'inscripcions.id', '=', 'curso_inscripcions.inscripcion_id')
+                    ->join('cursos', 'curso_inscripcions.curso_id', '=', 'cursos.id')
+                    ->distinct('cursos.id')
+                    ->select('cursos.id','cursos.curso')
+            ->get();
+
+        
+        return view('homeCursos', compact('cursos')); 
     
     }
 }

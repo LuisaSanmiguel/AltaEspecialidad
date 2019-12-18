@@ -50,3 +50,4 @@ Route::get('/escuela','Plataforma\EscuelaController@index')->name('escuela');
 Route::get('/curso','Plataforma\CursoController@index')->name('cursos');
 Route::get('/usuario','Plataforma\UsuarioController@index')->name('usuarios');
 Route::get('/inscripciones','Plataforma\InscripcionController@index')->name('inscripciones');
+Route::get('/contenido/{id}','Plataforma\ContenidoCursoController@index')->name('contenido');
