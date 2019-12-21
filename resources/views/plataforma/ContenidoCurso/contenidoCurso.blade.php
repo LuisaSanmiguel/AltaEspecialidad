@@ -25,9 +25,12 @@
                                     <ul class="nav nav-tabs" id="myTab">
                               
                                         <li class=" tabs active"><a class="tituloTabs" data-toggle="tab" href="#home">{{strtoupper($curso->nombre)}}</a></li>
-                                  @if($curso->id==1)
+                                  @if($curso->curso_id==1)
                                         <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#menu1">Capacitaciones</a></li>
                                 @endif
+                             @if($curso->aprobo==1)
+                                 <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#certificacion">Certificación</a></li>
+                                   @endif
                                     </ul>
 
                             </div>
@@ -57,7 +60,7 @@
                         <br><br>
                         <div class="col-md-12">
 
-                         @if($curso->id==1)
+                         @if($curso->curso_id==1)
                             <a href="{{asset('file/cartillas/cartilla_comunicacion_asertiva.pdf')}}" target="_blank">Cartilla comunicación asertiva</a><br>
                             <a href="{{asset('file/cartillas/Cartilla_trabajo_en_equipo.pdf')}}" target="_blank">Cartilla trabajo en equipo</a>
                         @else
@@ -105,6 +108,16 @@
 
                 <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (8).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
                 <img class="example-image" src="{{asset('\img\capacitacion\Capacitacion (8).jpeg')}}" alt="" /></a>
+
+
+                       </div>
+
+
+
+         <div id="certificacion" class="tab-pane">
+                <iframe width="100%" height="400" 
+
+                src="{{asset('\file\diplomas/'.$curso->curso_id."/".$curso->numDc.'.pdf')}}"  frameborder="0"></iframe>
 
 
                        </div>
