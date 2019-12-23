@@ -36,6 +36,7 @@
                                  <th class="text-center">No</th>
 								<th class="text-center">Nombre</th>
                                 <th class="text-center">Correo</th>
+                                   <th class="text-center">Rol</th>
 							
 							</tr>
 						</thead>
@@ -48,12 +49,13 @@
                      <td>  {{ $user->id}}</td>   
                      <td>  {{ $user->name }}</td>     
                      <td> {{ $user->email }} </td> 
+                      <td> {{ $user->nombre }} </td> 
           
              
 
          
-</tr>@endforeach  
-
+</tr>
+@endforeach 
               </table>      
                             <div class="row">
                                 <div class="col-lg-12 ">

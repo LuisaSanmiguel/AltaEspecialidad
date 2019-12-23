@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Model\Roles_users;
 use App\Model\Curso;
 use App\Model\Tipo;
+
 class ContenidoCursoController extends Controller
 {
    /**
@@ -30,6 +32,12 @@ class ContenidoCursoController extends Controller
 
         $id_user = Auth::user()->id;
           
+        $roles = Roles_users::where('users_id', '=', $id_user)
+        ->join('roles', 'roles_id', '=', 'roles.id')
+        ->select('roles.nombre','roles_users.*')
+        ->get();
+      
+
         $cursos = Curso::where('cursos.id','=', $id)
         ->join('tipos', 'cursos.id_tipo', '=', 'tipos.id') 
         ->join('curso_inscripcions', 'cursos.id', '=', 'curso_inscripcions.curso_id')
@@ -40,7 +48,7 @@ class ContenidoCursoController extends Controller
         ->get();
        
 //  return $cursos;
-        return view('plataforma\ContenidoCurso\contenidoCurso', compact('cursos')); 
+        return view('plataforma\ContenidoCurso\contenidoCurso', compact('cursos','roles')); 
     
     }
     

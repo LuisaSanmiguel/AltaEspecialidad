@@ -10,6 +10,7 @@ use App\Model\Departamento;
 use App\Model\Ciudad;
 use App\Model\CursoInscripcion;
 use App\Mail\WelcomeMail;
+use App\Model\Roles_users;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 use Auth;
@@ -45,6 +46,13 @@ class InscripcionController extends Controller
                 $user->password = Hash::make($request->password);
                 $user->save();
                 $usr= $user->id;
+
+                $roles_users = new Roles_users;
+                $roles_users->roles_id = '2';
+                $roles_users->users_id = $usr;
+                $roles_users->save();
+               
+
 
             }
         

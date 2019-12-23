@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <center>
                     <div class="card-header">
@@ -42,46 +42,35 @@
                                  {{-- @foreach($cursos as $curso) --}}
 
                                 <th class="text-center">Inscrito</th>
+                                   <th class="text-center">Estado</th>
                                 {{-- @endforeach --}}
       
 							
 							</tr>
 						</thead>
 
- @foreach($users as $user)
-       @foreach($inscripcions as $inscripcion) 
-          @foreach($cursoinscs as $cursoinsc)
+ 
            @foreach($cursos as $curso)
 
-        @if ($inscripcion->user_id == $user->id)
-           @if ($inscripcion->id == $cursoinsc->inscripcion_id)
-             @if ($curso->id == $cursoinsc->curso_id)
       
 		<tr>
             {{-- <td>  {{ $user->id }}</td>  --}}
-                     <td>  {{ $inscripcion->typeDoc}}</td>   
-                     <td>  {{ $inscripcion->numDc }}</td>     
+                     <td>  {{ $curso->typeDoc}}</td>   
+                     <td>  {{ $curso->numDc }}</td>     
                      {{-- <td> {{ $inscripcion->user_id }} </td>   --}}
-                     <td>  {{ $user->name }}</td>     
-                     <td> {{ $user->email }} </td> 
+                     <td>  {{ $curso->name }}</td>     
+                     <td> {{ $curso->email }} </td> 
                         <td> {{ $curso->curso }} </td> 
-                     
+                        @if($curso->aprobo == 0)
+                          <td> {{ __('En curso') }} </td> 
+                          @else
+                           <td> {{ __('Aprobo') }} </td> 
+                        @endif
                      </tr>
-             @endif
-             @endif
-         @endif
+         
 @endforeach
       
-@endforeach
 
-
-      @endforeach
-                    
-
-     
-       	
-
-@endforeach  
 
 
 

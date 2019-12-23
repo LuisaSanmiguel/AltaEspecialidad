@@ -1,19 +1,23 @@
 <?php
 
-namespace App\Http\Controllers;
 
+namespace App\Http\Controllers\Plataforma;
+
+use App\Http\Controllers\Controller;
+use Auth;
 use Illuminate\Http\Request;
+
+use App\Model\Curso;
 use App\Model\User;
 use App\Model\Roles_users;
 use App\Model\Rol;
 use App\Model\inscripcion;
 use App\Model\CursoInscripcion;
-use App\Model\Curso;
 use App\Model\Carrera;
-use Auth;
+
 use Illuminate\Support\Facades\DB;
 
-class HomeCursosController extends Controller
+class AdministrarController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -40,14 +44,14 @@ class HomeCursosController extends Controller
 
         // $inscripcions = inscripcion::where('user_id','=',$id)->get();
       
+        // $cursoInscs = CursoInscripcion::all();
+      
+
+        // $cursos = Curso::all();
         $roles = Roles_users::where('users_id', '=', $id_user)
         ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
         ->select('roles.nombre','roles_users.roles_id')
         ->get();
-      
-
-        // $cursos = Curso::all();
-        
 
         $cursos = DB::table('users')
                      ->where('user_id','=',$id_user)
@@ -60,7 +64,7 @@ class HomeCursosController extends Controller
             ->get();
 
             // return $cursos;
-        return view('homeCursos', compact('cursos','roles')); 
+        return view('plataforma\Administrar\administrar', compact('cursos','roles')); 
     
     }
 }

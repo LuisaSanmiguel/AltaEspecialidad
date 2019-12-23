@@ -45,9 +45,18 @@ Route::get('/detalleCurso/{id}','PaginaInicio\CursosController@show')->name('det
 
 // PLATAFORMA------------------------------------------------------------------------------------------------
 
-
+// Route::group(['middleware' => 'auth'], function () {
+    //
+    Route::group(['prefix' => 'Plataforma'], function() {
+      
+ 
 Route::get('/escuela','Plataforma\EscuelaController@index')->name('escuela');
 Route::get('/curso','Plataforma\CursoController@index')->name('cursos');
 Route::get('/usuario','Plataforma\UsuarioController@index')->name('usuarios');
 Route::get('/inscripciones','Plataforma\InscripcionController@index')->name('inscripciones');
 Route::get('/contenido/{id}','Plataforma\ContenidoCursoController@index')->name('contenido');
+Route::get('/administrar','Plataforma\AdministrarController@index')->name('administrar'); 
+
+});
+// });
+
