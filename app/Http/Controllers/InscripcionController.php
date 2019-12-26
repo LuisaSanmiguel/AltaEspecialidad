@@ -19,10 +19,27 @@ class InscripcionController extends Controller
 {
 
 	public function inscripcionForm($id){
+
+
     $departamentos = Departamento::all();
          $cursos = Curso::where('id','=',$id)->get();
+         if (Auth::check()) {
+            // The user is logged in...
 
-		return view('auth.register', compact('cursos', 'departamentos'));
+            $id_user = Auth::user()->id;
+
+         
+            $roles = Roles_users::where('users_id', '=', $id_user)
+            ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
+            ->select('roles.nombre','roles_users.roles_id')
+            ->get();
+
+            return view('auth.register', compact('cursos', 'departamentos','roles'));
+                        
+        }
+        else{
+        return view('auth.register', compact('cursos', 'departamentos'));
+        }
 	}
 
     public function inscripcionSave(Request $request){
