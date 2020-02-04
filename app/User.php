@@ -39,6 +39,10 @@ class User extends Authenticatable
 
     public function inscripcion()
     {
-        return $this->hasOne('App\Inscripcion');
+        return $this->hasOne('App\Model\Inscripcion');
     }
+
+    public function Rol_user(){
+        return $this->belongsToMany('App\Model\Roles_users');
+    }     
 }

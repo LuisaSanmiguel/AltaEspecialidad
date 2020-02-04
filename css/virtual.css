@@ -231,6 +231,10 @@ font-size: 120px;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc4f4f', endColorstr='#bd4646', GradientType=0 );
 }
 
+td{
+    border-right: #efb827 2px solid !important;
+}
+
 #lightbox .modal-content {
     display: inline-block;
     text-align: center;   

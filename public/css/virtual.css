@@ -1,5 +1,7 @@
 
-
+       .list-group {
+        width: 100% !important;
+    }
 .programas{
     padding-top: 10px;
 border-top: 4px solid #efb827;
@@ -153,7 +155,7 @@ box-shadow: -7px 8px 5px 0px rgba(128,124,128,1);
   
         }
 
-
+ 
         .ingresoAulaTx2{
    
             text-decoration:none;

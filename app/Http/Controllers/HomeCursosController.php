@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\inscripcion;
-use App\CursoInscripcion;
-use App\Curso;
-use App\Carrera;
+use App\Model\User;
+use App\Model\Roles_users;
+use App\Model\Rol;
+use App\Model\inscripcion;
+use App\Model\CursoInscripcion;
+use App\Model\Curso;
+use App\Model\Carrera;
 use Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeCursosController extends Controller
 {
@@ -31,20 +34,33 @@ class HomeCursosController extends Controller
     {
         
 
-        $id = Auth::user()->id;
+        $id_user = Auth::user()->id;
 
-        $carreras = Carrera::all();
+        // $carreras = Carrera::all();
 
-        $inscripcions = inscripcion::where('user_id','=',$id)->get();
+        // $inscripcions = inscripcion::where('user_id','=',$id)->get();
+      
+        $roles = Roles_users::where('users_id', '=', $id_user)
+        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
+        ->select('roles.nombre','roles_users.roles_id')
+        ->get();
       
 
-        $cursoInscs = CursoInscripcion::all();
-      
-
-        $cursos = Curso::all();
+        // $cursos = Curso::all();
         
 
-        return view('homeCursos', compact('carreras','inscripcions','cursoInscs','cursos')); 
+        $cursos = DB::table('users')
+                     ->where('user_id','=',$id_user)
+                    ->join('inscripcions', 'users.id', '=', 'inscripcions.user_id')
+                    ->join('curso_inscripcions', 'inscripcions.id', '=', 'curso_inscripcions.inscripcion_id')
+                    ->join('cursos', 'curso_inscripcions.curso_id', '=', 'cursos.id')
+                    ->join('tipos', 'cursos.id_tipo', '=', 'tipos.id')
+                    ->distinct('cursos.id')
+                    ->select('cursos.id','cursos.curso','tipos.nombre')
+            ->get();
+
+            // return $cursos;
+        return view('homeCursos', compact('cursos','roles')); 
     
     }
 }
