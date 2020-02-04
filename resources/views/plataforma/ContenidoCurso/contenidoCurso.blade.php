@@ -81,33 +81,33 @@
                   <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (1).mp4')}}" data-lightbox="example-set" data-title="Primer Piso">
                 <video class="example-image" src="{{asset('\img\capacitacion\Capacitacion (1).mp4')}}" alt=""></video></a> --}}
                  
-                <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (1).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
-                <img class="example-image" src="{{asset('\img\capacitacion\Capacitacion (1).jpeg')}}" alt="" /></a>
+                <a class="example-image-link" href="{{asset('/img/capacitacion/Capacitacion(1).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
+                <img class="example-image" src="{{asset('/img/capacitacion/Capacitacion(1).jpeg')}}" alt="" /></a>
 
-                <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (2).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
-                <img class="example-image" src="{{asset('\img\capacitacion\Capacitacion (2).jpeg')}}" alt="" /></a>
+                <a class="example-image-link" href="{{asset('/img/capacitacion/Capacitacion(2).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
+                <img class="example-image" src="{{asset('/img/capacitacion/Capacitacion(2).jpeg')}}" alt="" /></a>
 
  
-                <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (3).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
-                <img class="example-image" src="{{asset('\img\capacitacion\Capacitacion (3).jpeg')}}" alt="" /></a>
+                <a class="example-image-link" href="{{asset('/img/capacitacion/Capacitacion(3).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
+                <img class="example-image" src="{{asset('/img/capacitacion/Capacitacion(3).jpeg')}}" alt="" /></a>
 
-                <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (4).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
-                <img class="example-image" src="{{asset('\img\capacitacion\Capacitacion (4).jpeg')}}" alt="" /></a>
+                <a class="example-image-link" href="{{asset('/img/capacitacion/Capacitacion(4).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
+                <img class="example-image" src="{{asset('/img/capacitacion/Capacitacion(4).jpeg')}}" alt="" /></a>
 
-                <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (5).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
-                <img class="example-image" src="{{asset('\img\capacitacion\Capacitacion (5).jpeg')}}" alt="" /></a>
+                <a class="example-image-link" href="{{asset('/img/capacitacion/Capacitacion(5).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
+                <img class="example-image" src="{{asset('/img/capacitacion/Capacitacion(5).jpeg')}}" alt="" /></a>
 
 
-                <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (7).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
-                <img class="example-image" src="{{asset('\img\capacitacion\Capacitacion (7).jpeg')}}" alt="" /></a>
+                <a class="example-image-link" href="{{asset('/img/capacitacion/Capacitacion(7).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
+                <img class="example-image" src="{{asset('/img/capacitacion/Capacitacion(7).jpeg')}}" alt="" /></a>
 
-                <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (6).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
-                <img class="example-image" src="{{asset('\img\capacitacion\Capacitacion (6).jpeg')}}" alt="" /></a>
+                <a class="example-image-link" href="{{asset('/img/capacitacion/Capacitacion(6).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
+                <img class="example-image" src="{{asset('/img/capacitacion/Capacitacion(6).jpeg')}}" alt="" /></a>
 
              
 
-                <a class="example-image-link" href="{{asset('\img\capacitacion\Capacitacion (8).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
-                <img class="example-image" src="{{asset('\img\capacitacion\Capacitacion (8).jpeg')}}" alt="" /></a>
+                <a class="example-image-link" href="{{asset('/img/capacitacion/Capacitacion(8).jpeg')}}" data-lightbox="example-set" data-title="Capacitación Alta Especialidad">
+                <img class="example-image" src="{{asset('/img/capacitacion/Capacitacion(8).jpeg')}}" alt="" /></a>
 
 
                        </div>
@@ -117,7 +117,7 @@
          <div id="certificacion" class="tab-pane">
                 <iframe width="100%" height="400" 
 
-                src="{{asset('\file\diplomas/'.$curso->curso_id."/".$curso->numDc.'.pdf')}}"  frameborder="0"></iframe>
+                src="{{asset('/file/diplomas/'.$curso->curso_id."/".$curso->numDc.'.pdf')}}"  frameborder="0"></iframe>
 
 
                        </div>

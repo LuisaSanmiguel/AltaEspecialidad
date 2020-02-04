@@ -242,7 +242,7 @@
                                                                                                 </p>
 
                                                                                                 <div class="avatar">
-                                                                                                    <img alt="" class="img-responsive img-circle" src="{{asset('img/team/MG_LUIS_GILBERTO_MOYA.jpg')}}"/>
+                                                                                                    <img alt="" class="img-responsive img-circle" src="{{asset('/img/Team/MG_LUIS_GILBERTO_MOYA.jpg')}}"/>
                                                                                                 </div>
 
                                                                                                 </div>
@@ -261,7 +261,7 @@
                                                                                             Subgerente
                                                                                         </p>
                                                                                         <div class="avatar">
-                                                                                            <img alt="" class="img-responsive img-circle" src="{{asset('img/team/Fernanda_Castro_Rubiano.jpg')}}"/>
+                                                                                            <img alt="" class="img-responsive img-circle" src="{{asset('/img/Team/Fernanda_Castro_Rubiano.jpg')}}"/>
                                                                                         </div>
 
                                                                                     </div>
@@ -281,7 +281,7 @@
                                                                                             Contadora
                                                                                         </p>
                                                                                         <div class="avatar">
-                                                                                            <img class="img-responsive img-circle" src="{{asset('img/team/GLORIA_MARIA_YEPES.jpg')}}" width="200"/>
+                                                                                            <img class="img-responsive img-circle" src="{{asset('/img/Team/GLORIA_MARIA_YEPES.jpg')}}" width="200"/>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -299,7 +299,7 @@
                                                                                             Dirección Administrativa
                                                                                         </p>
                                                                                         <div class="avatar">
-                                                                                            <img alt="" class="img-responsive img-circle" src="{{asset('img/team/YURY_ALEJANDRA_RODRIGUEZ.png')}}"/>
+                                                                                            <img alt="" class="img-responsive img-circle" src="{{asset('/img/Team/YURY_ALEJANDRA_RODRIGUEZ.png')}}"/>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -332,7 +332,7 @@
                                                                                 <div class="team boxed-grey">
                                                                                     <div class="inner">
                                                                                         <div class="avatar">
-                                                                                            <img alt="" class="img-responsive img-circle" src="{{asset('img/team/OSCAR_JAVIER_AMORTEGUI.png')}}"/>
+                                                                                            <img alt="" class="img-responsive img-circle" src="{{asset('/img/Team/OSCAR_JAVIER_AMORTEGUI.png')}}"/>
                                                                                         </div>
                                                                                         <h5>
                                                                                             Oscar Javier Amortegui
@@ -351,7 +351,7 @@
                                                                                 <div class="team boxed-grey">
                                                                                     <div class="inner">
                                                                                             <div class="avatar">
-                                                                                                <img alt="" class="img-responsive img-circle" src="{{asset('img/team/DEIVITH_BECERRA.png')}}"/>
+                                                                                                <img alt="" class="img-responsive img-circle" src="{{asset('/img/Team/DEIVITH_BECERRA.png')}}"/>
                                                                                             </div>
                                                                                             <h5>
                                                                                                 Deivith Becerra
@@ -371,7 +371,7 @@
                                                                                     <div class="inner">
 
                                                                                             <div class="avatar">
-                                                                                                <img alt="" class="img-responsive img-circle" src="{{asset('img/team/LUISA_SANMIGUEL.jpg')}}"/>
+                                                                                                <img alt="" class="img-responsive img-circle" src="{{asset('/img/Team/LUISA_SANMIGUEL.jpg')}}"/>
                                                                                             </div>
 
                                                                                             <h5>
@@ -414,12 +414,12 @@
                                                                         
                                                                     </div>
                                                     
-                                                        <a class="example-image-link" href="{{asset('\img\integracion\integracion 2017 (1).jpeg')}}" data-lightbox="example-set"  data-title="Integración Alta Especialidad 2017">
-                                                        <img class="example-image" src="{{asset('\img\integracion\integracion 2017 (2).jpeg')}}" alt="" /></a>
+                                                        <a class="example-image-link" href="{{asset('/img/integracion/integracion 2017 (1).jpeg')}}" data-lightbox="example-set"  data-title="Integración Alta Especialidad 2017">
+                                                        <img class="example-image" src="{{asset('/img/integracion/integracion 2017 (2).jpeg')}}" alt="" /></a>
 
                                                     
-                                                        <a class="example-image-link" href="{{asset('\img\integracion\integracion 2017 (3).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2017">
-                                                        <img class="example-image" src="{{asset('\img\integracion\integracion 2017 (3).jpeg')}}" alt="" /></a>
+                                                        <a class="example-image-link" href="{{asset('/img/integracion/integracion 2017 (3).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2017">
+                                                        <img class="example-image" src="{{asset('/img/integracion/integracion 2017 (3).jpeg')}}" alt="" /></a>
                                             
 
 
@@ -432,18 +432,18 @@
                                                                         
                                                                     </div>
                                                         
-                                                            <a class="example-image-link" href="{{asset('\img\integracion\integracion_2019 (1).jpeg')}}" data-lightbox="example-set"  data-title="Integración Alta Especialidad 2019">
-                                                            <img class="example-image" src="{{asset('\img\integracion\integracion_2019 (1).jpeg')}}" alt="" /></a>
+                                                            <a class="example-image-link" href="{{asset('/img/integracion/integracion_2019 (1).jpeg')}}" data-lightbox="example-set"  data-title="Integración Alta Especialidad 2019">
+                                                            <img class="example-image" src="{{asset('/img/integracion/integracion_2019 (1).jpeg')}}" alt="" /></a>
 
                                                         
-                                                            <a class="example-image-link" href="{{asset('\img\integracion\integracion_2019 (2).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2019">
-                                                            <img class="example-image" src="{{asset('\img\integracion\integracion_2019 (2).jpeg')}}" alt="" /></a>
+                                                            <a class="example-image-link" href="{{asset('/img/integracion/integracion_2019 (2).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2019">
+                                                            <img class="example-image" src="{{asset('/img/integracion/integracion_2019 (2).jpeg')}}" alt="" /></a>
                                                             <br>
-                                                            <a class="example-image-link" href="{{asset('\img\integracion\integracion_2019 (3).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2019">
-                                                            <img class="example-image" src="{{asset('\img\integracion\integracion_2019 (3).jpeg')}}" alt="" /></a>
+                                                            <a class="example-image-link" href="{{asset('/img/integracion/integracion_2019 (3).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2019">
+                                                            <img class="example-image" src="{{asset('/img/integracion/integracion_2019 (3).jpeg')}}" alt="" /></a>
                                                 
-                                                            <a class="example-image-link" href="{{asset('\img\integracion\integracion_2019 (4).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2019">
-                                                            <img class="example-image" src="{{asset('\img\integracion\integracion_2019 (4).jpeg')}}" alt="" /></a>
+                                                            <a class="example-image-link" href="{{asset('/img/integracion/integracion_2019 (4).jpeg')}}" data-lightbox="example-set" data-title="Integración Alta Especialidad 2019">
+                                                            <img class="example-image" src="{{asset('/img/integracion/integracion_2019 (4).jpeg')}}" alt="" /></a>
                                                 
                        </div>
 

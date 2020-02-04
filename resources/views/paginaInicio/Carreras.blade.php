@@ -210,7 +210,11 @@
                                  
 
                          
-                     </div>  @else  @endif
+                     </div>  @else  
+                     
+                     
+                     
+                     @endif
 						@endforeach
                         <br><br>
                   

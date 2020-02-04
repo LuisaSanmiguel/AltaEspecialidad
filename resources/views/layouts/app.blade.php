@@ -20,22 +20,22 @@
     <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
    
 
-    <link href="{{asset('\assets\font-awesome\css\font-awesome.css')}}" rel="stylesheet">
+    <link href="{{asset('/assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
 
     
   
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <!-- Styles -->
-    <link href="{{asset('css\navStyle.css')}}" rel="stylesheet">
-     <link href="{{asset('css\inicio.css')}}" rel="stylesheet">
-      <link href="{{asset('css\team.css')}}" rel="stylesheet">
-      <link href="{{asset('css\servicios.css')}}" rel="stylesheet">
-      <link href="{{asset('css\virtual.css')}}" rel="stylesheet">
+    <link href="{{asset('css/navStyle.css')}}" rel="stylesheet">
+     <link href="{{asset('css/inicio.css')}}" rel="stylesheet">
+      <link href="{{asset('css/team.css')}}" rel="stylesheet">
+      <link href="{{asset('css/servicios.css')}}" rel="stylesheet">
+      <link href="{{asset('css/virtual.css')}}" rel="stylesheet">
 
 
-        <link href="{{asset('\css\lightbox.css')}}" rel="stylesheet">
-        <link href="{{asset('\css\screen.css')}}" rel="stylesheet">
+        <link href="{{asset('css/lightbox.css')}}" rel="stylesheet">
+        <link href="{{asset('css/screen.css')}}" rel="stylesheet">
         {{-- <link href="{{asset('\css\foundation.css')}}" rel="stylesheet"> --}}
 
       

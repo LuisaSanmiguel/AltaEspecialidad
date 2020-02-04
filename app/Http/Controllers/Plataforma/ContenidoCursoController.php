@@ -48,7 +48,7 @@ class ContenidoCursoController extends Controller
         ->get();
        
 //  return $cursos;
-        return view('plataforma\ContenidoCurso\contenidoCurso', compact('cursos','roles')); 
+        return view('/plataforma/ContenidoCurso/contenidoCurso', compact('cursos','roles')); 
     
     }
     
