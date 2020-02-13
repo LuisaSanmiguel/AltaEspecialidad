@@ -40,7 +40,7 @@ class UsuarioController extends Controller
 
     //   return $users;
 
-        return view('plataforma\Usuarios\UsuariosIndex', compact('users','roles')); 
+        return view('plataforma/Usuarios/Index', compact('users','roles')); 
     
     }
     

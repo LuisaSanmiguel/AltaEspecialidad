@@ -51,7 +51,7 @@ class InscripcionController extends Controller
                     ->select('users.id','users.name','users.email','inscripcions.typeDoc','inscripcions.numDc','inscripcions.aprobo','cursos.id','cursos.curso','tipos.nombre')
             ->get();
 //  return $cursos;
-        return view('plataforma\Inscripciones\InscripcionesIndex', compact('cursos','roles')); 
+        return view('plataforma/Inscripciones/Index', compact('cursos','roles')); 
     
     }
     

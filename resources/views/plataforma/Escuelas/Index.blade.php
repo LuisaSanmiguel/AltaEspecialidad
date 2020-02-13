@@ -74,7 +74,7 @@
                                    
                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                             <p class="tituloProgramaDisp">
-                                          
+                                          Nueva Escuela
                                             </p>
                                         </div>
                                 

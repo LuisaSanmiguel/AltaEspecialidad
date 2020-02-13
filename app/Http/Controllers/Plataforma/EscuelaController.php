@@ -39,7 +39,7 @@ class EscuelaController extends Controller
           
         $carreras = Carrera::all();
 
-        return view('plataforma\Escuelas\EscuelaIndex', compact('carreras','roles')); 
+        return view('plataforma/Escuelas/Index', compact('carreras','roles')); 
     
     }
     

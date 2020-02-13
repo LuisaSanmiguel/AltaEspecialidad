@@ -64,7 +64,7 @@ class AdministrarController extends Controller
             ->get();
 
             // return $cursos;
-        return view('plataforma\Administrar\administrar', compact('cursos','roles')); 
+        return view('plataforma/Administrar/administrar', compact('cursos','roles')); 
     
     }
 }

@@ -38,7 +38,7 @@ class CursoController extends Controller
         ->get();
         $cursos = Curso::all();
 
-        return view('plataforma\Cursos\CursoIndex', compact('cursos','roles')); 
+        return view('plataforma/Cursos/Index', compact('cursos','roles')); 
     
     }
     
