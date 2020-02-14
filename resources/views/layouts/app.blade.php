@@ -147,15 +147,15 @@
     
     </div>
 
-        
+               
     
 </body>
-
+ 
 
 
 {{-- <script src="/js/bootstrap.min.js"></script>    --}}
    <script src="/js/jquery.min.js"></script> 
-   	
+   	 @yield('js')
     <!-- Custom Theme JavaScript -->
 
  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -164,8 +164,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>     
    <script type="text/javascript" src="\js\jquery.smint.js" ></script>
     <script type="text/javascript" src="\js\lightbox.js" ></script>
-  <script type="text/javascript" src="\js\foundation.min.js" ></script>
-       
+   
+  {{-- <script type="text/javascript" src="\js\foundation.min.js" ></script> --}}
+ 
     <script type="text/javascript">
         $(document).ready(function(){
             ciudades()

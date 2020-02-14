@@ -58,7 +58,7 @@ class AdministrarController extends Controller
                     ->join('inscripcions', 'users.id', '=', 'inscripcions.user_id')
                     ->join('curso_inscripcions', 'inscripcions.id', '=', 'curso_inscripcions.inscripcion_id')
                     ->join('cursos', 'curso_inscripcions.curso_id', '=', 'cursos.id')
-                    ->join('tipos', 'cursos.id_tipo', '=', 'tipos.id')
+                    ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
                     ->distinct('cursos.id')
                     ->select('cursos.id','cursos.curso','tipos.nombre')
             ->get();

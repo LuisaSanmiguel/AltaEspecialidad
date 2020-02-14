@@ -8,7 +8,14 @@ class Carrera extends Model
 {
     //
 
+
+    protected $fillable = ['nombre','activo','costo']; 
+
+
     public function cursos(){
         return $this->hasMany('App\Model\Curso');
     }
+
+
+    
 }

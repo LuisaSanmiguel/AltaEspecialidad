@@ -34,9 +34,10 @@
       <thead>
 							<tr class="active">
                                 
-								<th class="text-center">Nombre</th>
-                                <th class="text-center">Estado</th>
-								<th class="text-center">Costo</th>
+							   <th class="text-center">Nombre</th>
+                               <th class="text-center">Costo</th> 
+                               <th class="text-center">Estado</th>
+								
 							</tr>
 						</thead>
 
@@ -71,12 +72,12 @@
               </table>      
                             <div class="row">
                                 <div class="col-lg-12 ">
-                                   
+                                   <a href="{{route('escuela.create')}}" style="text-decoration:none;color:white;" >
                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
-                                            <p class="tituloProgramaDisp">
-                                          Nueva Escuela
-                                            </p>
-                                        </div>
+                                           
+                                         Nueva Escuela
+                                           
+                                        </div></a>
                                 
                                 </div>
                            </div>

@@ -42,5 +42,52 @@ class EscuelaController extends Controller
         return view('plataforma/Escuelas/Index', compact('carreras','roles')); 
     
     }
+    public function create()
+    {   
+        $id_user = Auth::user()->id;
+
+
+        $roles = Roles_users::where('users_id', '=', $id_user)
+        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
+        ->select('roles.nombre','roles_users.roles_id')
+        ->get();
+      
+
+        return view('plataforma/Escuelas/create', compact('roles')); 
+    
+    }
+
+    public function store(Request $request)
+    {   
+        
+        
+         $escuela = new Carrera();
+         $escuela->nombre = $request->nombre;
+         $escuela->activo = 1;
+         $escuela->costo = $request->costo;
+         $escuela->save();
+   //
+     return redirect()->route('escuela.index')->with('success','Se creo una nueva escuela');
+    }
+
+    public function edit($id)
+    {   
+        
+   //
+    
+    }
+    public function update()
+    {   
+        
+   //
+    
+    }
+
+    public function destroy()
+    {   
+        
+   //
+    
+    }
     
 }

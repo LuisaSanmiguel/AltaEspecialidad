@@ -51,5 +51,41 @@ class ContenidoCursoController extends Controller
         return view('/plataforma/ContenidoCurso/contenidoCurso', compact('cursos','roles')); 
     
     }
+
+
+    public function create()
+    {   
+        
+       
+        return view('plataforma/ContenidoCurso/create'); 
+    
+    }
+
+    public function store()
+    {   
+        
+   //
+    
+    }
+
+    public function edit($id)
+    {   
+        
+   //
+    
+    }
+    public function update()
+    {   
+        
+   //
+    
+    }
+
+    public function destroy()
+    {   
+        
+   //
+    
+    }
     
 }
