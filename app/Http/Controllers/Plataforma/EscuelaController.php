@@ -72,15 +72,33 @@ class EscuelaController extends Controller
 
     public function edit($id)
     {   
-        
+
+        $carrera = Carrera::where('id','=',$id)->first();
    //
+   $id_user = Auth::user()->id;
+
+
+   $roles = Roles_users::where('users_id', '=', $id_user)
+   ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
+   ->select('roles.nombre','roles_users.roles_id')
+   ->get();
+ 
+
+   return view('plataforma/Escuelas/edit', compact('roles','carrera')); 
     
     }
-    public function update()
+    public function update(Request $request, $id)
     {   
         
    //
+
+   $escuela = Carrera::findOrFail($id);
+   $escuela->nombre = $request->nombre;
+   $escuela->activo = $request->estado;
+   $escuela->costo = $request->costo;
+   $escuela->save();
     
+   return redirect()->route('escuela');
     }
 
     public function destroy()

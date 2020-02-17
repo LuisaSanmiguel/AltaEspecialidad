@@ -55,14 +55,11 @@
 
 
 
-                //cursos---------------------------------------------------------------------------------------
-                // Route::get('/curso/create','Plataforma\CursoController@create')->name('curso.create');
-                
-
+                //cursos--------------------------------------------------------------------------------------     
                 Route::Resource('/curso','Plataforma\CursoController');
-                // Route::get('/curso','Plataforma\CursoController@index')->name('curso');
-                // Route::get('/curso/update/{id}','Plataforma\CursoController@edit')->name('curso.update');
-
+          
+                //fichas-------------------------------------------------------------------------------------- 
+                Route::Resource('/ficha','Plataforma\FichaController');
 
                 Route::get('/usuario','Plataforma\UsuarioController@index')->name('usuarios');
                 Route::get('/inscripciones','Plataforma\InscripcionController@index')->name('inscripciones');

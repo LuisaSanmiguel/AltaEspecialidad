@@ -108,14 +108,6 @@ class CursoController extends Controller
     {   
         
    //  
-    }
-
-
-    public function show(Request $request, $id)
-    {   
-        
-   //       
-         
             $curso = Curso::findOrFail($id);
             $curso->curso = $request->curso;
             $curso->duracion = $request->duracion;
@@ -131,6 +123,14 @@ class CursoController extends Controller
 
             //
             return redirect()->route('curso.index');
+    }
+
+
+    public function show($id)
+    {   
+        
+   //       
+         
     
     }
 

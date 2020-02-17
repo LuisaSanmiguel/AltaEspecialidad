@@ -37,6 +37,7 @@
 							   <th class="text-center">Nombre</th>
                                <th class="text-center">Costo</th> 
                                <th class="text-center">Estado</th>
+                               <th class="text-center" colspan="2">Acciones</th>
 								
 							</tr>
 						</thead>
@@ -65,7 +66,10 @@
       @else 
          <td>Inactivo</td> 
       @endif
-
+         <td >  
+                                                                    <a href="{{route('escuela.edit',$carrera->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-pencil" aria-hidden="true"></span></a></td> 
+                                                                  <td >   <a href="#" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                                                </td> 
          @endforeach  
 </tr>
 

@@ -26,4 +26,7 @@ class Curso extends Model
         return $this->belongsToMany('App\Model\CursoInscripcion');
     }
 
+    public function ficha(){
+        return $this->HasMany('App\Model\Ficha');
+    }
 }

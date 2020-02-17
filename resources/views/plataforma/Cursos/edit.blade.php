@@ -27,9 +27,9 @@
                     </div>
                     {{-- primer programa --}}
    
-      <form   action="{{ route('curso.update',$curso->id )}}" class="form" >
+      <form   action="{{ route('curso.update',$curso->id )}}" class="form" method="POST">
        @csrf
-       @method('_PUT')
+         <input name="_method" type="hidden" value="PUT">
        <table id="example" class="table table-bordered cell-border table-hover" >
       
       <thead>
@@ -68,7 +68,7 @@
                                 </td>
                             </tr>
                         
-
+                    <tr>
                          	<td class="text-center">Estado</td>  
                               <td class="text-center"> <select id="estado" name="estado"class="form-control" >
                                <option value="0" {{($curso->activo==0 ? 'selected' : '')}}>Inactivo</option>  

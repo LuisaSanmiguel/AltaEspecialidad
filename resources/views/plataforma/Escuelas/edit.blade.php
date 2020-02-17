@@ -20,21 +20,22 @@
                         <div class="col-sm-12 ">
                             <strong>
                                 <p class="subtitle">
-                            NUEVA ESCUELA
+                            EDITAR ESCUELA
                                 </p>
                             </strong>
                         </div>
                     </div>
                     {{-- primer programa --}}
    
-      <form   action="{{ route('escuela.store') }}" class="form" method="POST">
-     @csrf
+       <form   action="{{ route('escuela.update',$carrera->id )}}" class="form" method="POST">
+       @csrf
+         <input name="_method" type="hidden" value="PUT">
        <table id="example" class="table table-bordered cell-border table-hover" >
       
       <thead>
 							<tr class="active">
                                 
-								<th colspan="2"class="text-center">Ingrese los datos de la Nueva Escuela</th>
+								<th colspan="2"class="text-center">Modifique los datos de la Escuela</th>
                               
 							
 							</tr>
@@ -45,11 +46,23 @@
 
 
                             <tbody>
-                    <tr>
-                           	<td class="text-center">Nombre</td> <td class="text-center"><input style="width:100%" id="nombre" name="nombre" type="text" placeholder="Nombre de Escuela" required/></td>
+                          <tr>
+                           	<td class="text-center">Nombre</td> <td class="text-center"><input style="width:100%" id="nombre" name="nombre" type="text" placeholder="Nombre de Escuela" value="{{$carrera->nombre}}" required/></td>
                             </tr>
+
+                               <tr>
+                         	<td class="text-center">Estado</td>  
+                              <td class="text-center"> <select id="estado" name="estado"class="form-control" >
+                               <option value="0" {{($carrera->activo==0 ? 'selected' : '')}}>Inactivo</option>  
+                              
+                                 <option value="1" {{($carrera->activo==1 ? 'selected' : '')}}>Activo</option>   
+                               
+                                </select>
+                                </td>
+                            </tr>
+
                            <tr>
-                           <td class="text-center">Costo</td> <td class="text-center"><input style="width:100%" type="text" id="costo" name="costo" placeholder="Costo de Escuela"requiered /></td>
+                           <td class="text-center">Costo</td> <td class="text-center"><input style="width:100%" type="text" id="costo" name="costo" placeholder="Costo de Escuela"  value="{{$carrera->costo}}" required /></td>
                             </tr>
 
 
@@ -61,7 +74,7 @@
                                    
                                         <button type="submit" class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                             <p class="tituloProgramaDisp">
-                                          Crear Escuela
+                                         Guardar
                                             </p>
                                         </button>
                                 
