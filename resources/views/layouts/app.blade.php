@@ -7,10 +7,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Alta ESpecialidad SAS</title>
+    <title>Alta Especialidad SAS</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <link rel="shortcut icon" href="{{ asset('img\favicon.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('img\favicon.png') }}" type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -136,7 +138,7 @@
 
   <div class="row stickyBott">
         <div class="col-4">
-            <span>©Altas Especialidad SAS.
+            <span>©Alta Especialidad SAS.
             Todos los Derechos Reservados.
             </span>
          </div>

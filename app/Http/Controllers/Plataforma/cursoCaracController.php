@@ -12,7 +12,7 @@ use App\Model\Rol;
 use App\Model\Curso;
 use App\Model\Tipo;
 
-class cursoCaracController extends Controller
+class CursoCaracController extends Controller
 {
    /**
      * Create a new controller instance.
@@ -106,7 +106,28 @@ class cursoCaracController extends Controller
             $caracteristicas_curso = caracteristicas_cursos::all();
             $tipos = Tipo::all();
 
+        //    $anexo =  new AttachedHiring;
+          //  $anexo->hiring_id =  $contrato->id;
+            // $anexo->attached_id = $i;
+            // $anexo->descripcion = $request->$descripcion;
 
+        //     if ($request->hasFile($filen))
+        //             {
+        //                     //$file = new FileTraits;
+        //                    // $rutaImg = $file->File($request->file($filen), 'anexosCon/'.$contrato->id.'/', $request->id_type);
+        //                    // $request->file($filen)->store('public/anexosCon/'.$contrato->id);
+
+        //                    // $anexo->ruta =  '/'.$rutaImg;
+        //                     $anexo->ruta =  $request->file($filen)->store('public/anexosCon/'.$contrato->id);
+        //                     $anexo->extension = $request->$filen->getClientOriginalExtension();
+        //             }
+        //             else{
+        //                     $anexo->ruta =  '';
+        //                     $anexo->extension = '';
+        //                 }
+
+        //            $anexo->save();
+        // }
 
 
             return view('plataforma/Cursos/editCarac', compact('carreras','cursos','curso','tipos','caracteristicas','caracteristicas_curso','roles'));

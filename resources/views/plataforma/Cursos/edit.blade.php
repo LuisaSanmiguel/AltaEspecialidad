@@ -14,7 +14,7 @@
                         <ul class="nav nav-tabs" id="myTab">
                             <li class=" tabs active"><a class="tituloTabs" data-toggle="tab" href="#home">Datos Básicos</a></li>
                             <li class="tabs"><a class="tituloTabs"  href="{{ route('cursoCarac.edit',$curso->id )}}">Caracteristicas</a></li>
-                               <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#menu2">Anexos</a></li>
+                               <li class="tabs"><a class="tituloTabs" href="{{ route('AnexoCurso.edit',$curso->id )}}">Anexos</a></li>
 
                         </ul>
 

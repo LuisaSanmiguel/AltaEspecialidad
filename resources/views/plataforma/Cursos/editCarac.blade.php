@@ -9,12 +9,12 @@
                     <div class="card-header">
                         Bienvenido a la Administración del Aula Virtual
                     </div>
-                    <div class="col-lg-12 col-lg-offset-8">
+                    <div class="wow col-lg-12 col-lg-offset-8">
 
                         <ul class="nav nav-tabs" id="myTab">
-                            <li class=" tabs"><a class="tituloTabs" data-toggle="tab" href="#home">Datos Básicos</a></li>
+                            <li class=" tabs"><a class="tituloTabs"  href="{{route('curso.edit',$curso->id)}}">Datos Básicos</a></li>
                             <li class="tabs active"><a class="tituloTabs" data-toggle="tab" href="#menu1">Caracteristicas</a></li>
-                               <li class="tabs"><a class="tituloTabs" data-toggle="tab" href="#menu2">Anexos</a></li>
+                            <li class="tabs"><a class="tituloTabs" href="{{ route('AnexoCurso.edit',$curso->id )}}">Anexos</a></li>
 
                         </ul>
 
@@ -23,7 +23,7 @@
 
   <div class="row">
             <div class="col-md-12 col-lg-offset-8">
-                <div class="wow bounceInUp" data-wow-delay="0.2s">
+                <div class=" bounceInUp" data-wow-delay="0.2s">
 
                     {{-- <div class="row">
                         <div class="col-sm-12 ">
@@ -44,13 +44,13 @@
       <thead>
 							<tr class="active">
 
-								<th colspan="2"class="text-center">Edite los datos del Curso</th>
+								<th colspan="2"class="text-center">Edite los datos del Curso {{$curso->curso}}</th>
 
 
                             </tr>
                             <tr >
 
-								<th class="text-center">Caracteristica</th>
+								<th class="text-center" style="width:40px;">Caracteristica</th>
                                 <th class="text-center">Información</th>
 
                             </tr>
@@ -58,7 +58,6 @@
 						</thead>
 
 
-                            </tr>
 
 
                             <tbody>
@@ -71,10 +70,10 @@
 
                             @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 1)
                                 <tr>
-                                    <strong> <td class="text-center">Objetivos Generales {{$i}}</td></strong>
+                                <td class="text-center"><strong>{{++$i}}- Objetivos Generales </strong></td>
 
                                <td class="text-center">
-                                 <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="3" >{{ $caracteristica_curso->contenido }}</textarea>
+                                 <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="2" >{{ $caracteristica_curso->contenido }}</textarea>
                                     </td>
                                     @else
                                  </tr>
@@ -86,181 +85,118 @@
 
 
 
-                            @foreach($caracteristicas_curso as $caracteristica_curso) <tr>
+             @foreach($caracteristicas_curso as $i => $caracteristica_curso) <tr>
                    @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 1)
-                      <strong> <td class="text-center">Objetivos Especificos</td></strong>
+                      <td class="text-center"> <strong>{{++$i}}- Objetivos Especificos</strong></td>
 
                       <td class="text-center">
-                        <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="3" >{{ $caracteristica_curso->contenido }}</textarea>
+                        <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="2" >{{ $caracteristica_curso->contenido }}</textarea>
                            </td>
                            @else
+                      </tr>
                        @endif
-                     </tr>
+
                 @endforeach
 
 
 
 
                                 @foreach($cursos as $curso)
+                                @foreach($caracteristicas_curso as $caracteristica_curso)
+                                @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 2)
+
+                                <tr>
+                                  <td class="text-center"><strong> Competencias Genéricas</strong></td>
+                                       <td class="text-center">
+                                         <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="2" >{{ $caracteristica_curso->contenido }}</textarea>
+                                            </td>
+                                            @else
+                                      </tr>
+                                       @endif
+
+                                 @endforeach
+
+
+                                 @foreach($caracteristicas_curso as $caracteristica_curso)
+                                 @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 3)
+
+                                 <tr>
+
+                                      <td class="text-center"> <strong> Competencias Específicas</strong></td>
+
+                                        <td class="text-center">
+                                          <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="2" > {{ $caracteristica_curso->contenido }}</textarea>
+                                             </td>
+                                             @else
+                                        </tr>
+                                        @endif
+
+                                  @endforeach
+
+
+                                  @foreach($caracteristicas_curso as $caracteristica_curso)
+                                  @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 4)
+
+                                 <tr>
+
+                                       <td class="text-center"><strong>Ejes Temáticos/ Contenidos:</strong></td>
+
+                                        <td class="text-center">
+                                          <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="2" > {{ $caracteristica_curso->contenido }}</textarea>
+                                             </td>
+                                             @else
+                                        </tr>  @endif
+
+                                  @endforeach
+
+                                  @foreach($caracteristicas_curso as $caracteristica_curso)
+                                  @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 6)
+
+                                 <tr>
+
+                                         <td class="text-center"><strong>Desarrollo:</strong></td>
+
+                                        <td class="text-center">
+                                          <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="3" > {{ $caracteristica_curso->contenido }}</textarea>
+                                             </td>
+                                             @else
+                                        </tr>
+                                         @endif
+
+                                  @endforeach
+
+
+                                  @foreach($caracteristicas_curso as $caracteristica_curso)
+
+                                      @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 6)
+                                       <tr>   <td class="text-center"><strong> Descripción de los materiales de apoyo</strong></td>
+
+                                        <td class="text-center">
+                                          <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="3" > {{ $caracteristica_curso->contenido }}</textarea>
+                                             </td>
+                                             @else
+                                        </tr>
+                                        @endif
+
+                                  @endforeach
+
+                                  @foreach($caracteristicas_curso as $caracteristica_curso)
+                                  @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 7)
+
+                                 <tr>
+
+                                         <td class="text-center"><strong>Bibliografía:</strong></td>
+
+                                        <td class="text-center">
+                                          <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="3" > {{ $caracteristica_curso->contenido }}</textarea>
+                                             </td>
+                                             @else
+                                         @endif
+                                            </tr>
+                                  @endforeach
 
 
 
-                                    <div class="row" style="align-text:left;">
-                                        <div class="col-md-12 col-lg-offset-8 contenidoPrograma">
-                                            <div class=" bounceInUp" data-wow-delay="0.2s">
-
-
-
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-lg-offset-8">
-                                                        <div class=" bounceInUp" data-wow-delay="0.2s">
-                                                            <p>
-                                                                <strong>
-                                                                    Competencias Genéricas:
-                                                                </strong>
-
-                                                                 @foreach($caracteristicas_curso as $caracteristica_curso)
-                                                                        @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 2)
-
-                                                                        <li>
-                                                                        {{ $caracteristica_curso->contenido }}
-                                                                            </li>
-                                                                        @else
-                                                                        @endif
-
-                                                                 @endforeach
-
-
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-lg-offset-8">
-                                                        <div class=" bounceInUp" data-wow-delay="0.2s">
-                                                            <p>
-                                                                <strong>
-                                                                    Competencias Específicas:
-                                                                </strong>
-
-                                                                 @foreach($caracteristicas_curso as $caracteristica_curso)
-                                                                        @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 3)
-
-                                                                        <li>
-                                                                        {{ $caracteristica_curso->contenido }}
-                                                                            </li>
-                                                                        @else
-                                                                        @endif
-
-                                                                 @endforeach
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-lg-offset-8">
-                                                        <div class=" bounceInUp" data-wow-delay="0.2s">
-                                                            <p>
-                                                                <strong>
-                                                                    Ejes Temáticos/ Contenidos:
-                                                                </strong>
-                                                                       @foreach($caracteristicas_curso as $caracteristica_curso)
-                                                                        @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 4)
-
-                                                                        <li>
-                                                                        {{ $caracteristica_curso->contenido }}
-                                                                            </li>
-                                                                        @else
-                                                                        @endif
-
-                                                                 @endforeach
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-lg-offset-8">
-                                                        <div class=" bounceInUp" data-wow-delay="0.2s">
-                                                            <p>
-                                                                <strong>
-                                                                    Desarrollo:
-                                                                </strong>
-
-                                                                 @foreach($caracteristicas_curso as $caracteristica_curso)
-                                                                        @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 5)
-
-                                                                        <li>
-                                                                        {{ $caracteristica_curso->contenido }}
-                                                                            </li>
-                                                                        @else
-                                                                        @endif
-
-                                                                 @endforeach
-
-                                                                </br>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-lg-offset-8">
-                                                        <div class=" bounceInUp" data-wow-delay="0.2s">
-                                                            <p>
-                                                                <strong>
-                                                                    Descripción de los materiales de apoyo didáctico contemplados en el Módulo:
-                                                                </strong>
-
-                                                                 @foreach($caracteristicas_curso as $caracteristica_curso)
-                                                                        @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 6)
-
-                                                                        <li>
-                                                                        {{ $caracteristica_curso->contenido }}
-                                                                            </li>
-                                                                        @else
-                                                                        @endif
-
-                                                                 @endforeach
-
-                                                                </br>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-                                             <div class="row">
-                                                    <div class="col-sm-12 col-lg-offset-8">
-                                                        <div class=" bounceInUp" data-wow-delay="0.2s">
-                                                            <p>
-                                                                <strong>
-                                                                    Bibliografía:
-                                                                </strong>
-
-                                                                 @foreach($caracteristicas_curso as $caracteristica_curso)
-                                                                        @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 7)
-
-                                                                        <li>
-                                                                        {{ $caracteristica_curso->contenido }}
-                                                                            </li>
-                                                                        @else
-                                                                        @endif
-
-                                                                 @endforeach
-
-                                                                </br>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
                                               @endforeach
 
                             </tbody>

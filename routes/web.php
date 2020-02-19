@@ -63,8 +63,9 @@
                 Route::get('/fichasCurso/{id}','Plataforma\FichaController@fichasCurso')->name('fichasCurso');
 
                 // 'cursoCarac.edit',$curso->id
-                Route::Resource('/cursoCarac','Plataforma\cursoCaracController');
-
+                Route::Resource('/cursoCarac','Plataforma\CursoCaracController');
+                Route::Resource('/AnexoCurso','Plataforma\AnexoCursoController');
+                Route::get('/AnexoCurso/{id}/create','Plataforma\AnexoCursoController@create');
 
                 Route::get('/usuario','Plataforma\UsuarioController@index')->name('usuarios');
                 Route::get('/inscripciones','Plataforma\InscripcionController@index')->name('inscripciones');
