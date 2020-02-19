@@ -32,35 +32,35 @@ class HomeCursosController extends Controller
      */
     public function index()
     {
-        
+
 
         $id_user = Auth::user()->id;
 
         // $carreras = Carrera::all();
 
         // $inscripcions = inscripcion::where('user_id','=',$id)->get();
-      
+
         $roles = Roles_users::where('users_id', '=', $id_user)
         ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
         ->select('roles.nombre','roles_users.roles_id')
         ->get();
-      
+
 
         // $cursos = Curso::all();
-        
+
 
         $cursos = DB::table('users')
                      ->where('user_id','=',$id_user)
                     ->join('inscripcions', 'users.id', '=', 'inscripcions.user_id')
                     ->join('curso_inscripcions', 'inscripcions.id', '=', 'curso_inscripcions.inscripcion_id')
                     ->join('cursos', 'curso_inscripcions.curso_id', '=', 'cursos.id')
-                    ->join('tipos', 'cursos.id_tipo', '=', 'tipos.id')
+                    ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
                     ->distinct('cursos.id')
                     ->select('cursos.id','cursos.curso','tipos.nombre')
             ->get();
 
             // return $cursos;
-        return view('homeCursos', compact('cursos','roles')); 
-    
+        return view('homeCursos', compact('cursos','roles'));
+
     }
 }

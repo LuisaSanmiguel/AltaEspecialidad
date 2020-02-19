@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Plataforma;
 use Auth;
 use App\Http\Controllers\Controller;
+use App\Model\Caracteristica;
+use App\Model\caracteristicas_cursos;
 use App\Model\Carrera;
 use Illuminate\Http\Request;
 use App\Model\Roles_users;
@@ -10,7 +12,7 @@ use App\Model\Rol;
 use App\Model\Curso;
 use App\Model\Tipo;
 
-class CursoController extends Controller
+class cursoCaracController extends Controller
 {
    /**
      * Create a new controller instance.
@@ -40,42 +42,27 @@ class CursoController extends Controller
         $cursos = Curso::all();
 
 
-        return view('plataforma/Cursos/Index', compact('cursos','roles'));
+      //  return view('plataforma/Cursos/indexc', compact('cursos','roles'));
 
     }
 
 
-    public function escuela($id)
-    {
-
-        $id_user = Auth::user()->id;
-
-
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
-        $cursos = Curso::where('carrera_id','=',$id)->get();
-        $carrera = Carrera::where('id','=',$id)->first();
-        return view('plataforma/Cursos/escuela', compact('cursos','roles','carrera'));
-
-    }
 
     public function create()
     {
 
-        $id_user = Auth::user()->id;
+        // $id_user = Auth::user()->id;
 
 
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
+        // $roles = Roles_users::where('users_id', '=', $id_user)
+        // ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
+        // ->select('roles.nombre','roles_users.roles_id')
+        // ->get();
 
-        $tipos = Tipo::all();
-        $carreras = Carrera::where('activo','=',1)->get();
+        // $tipos = Tipo::all();
+        // $carreras = Carrera::where('activo','=',1)->get();
 
-        return view('plataforma/Cursos/create', compact('roles','tipos','carreras'));
+        // return view('plataforma/Cursos/createCarac', compact('roles','tipos','carreras'));
 
     }
 
@@ -84,21 +71,21 @@ class CursoController extends Controller
 
    //
 
-         $curso = new Curso();
-         $curso->curso = $request->curso;
-         $curso->duracion = $request->duracion;
-         $curso->presentacion = $request->presentacion;
-         $curso->obj_general = $request->obj_general;
-         $curso->tipo_id = $request->tipo;
-         $curso->carrera_id = $request->carrera;
-         $curso->activo = 1;
-         $curso->perfil_entrada = $request->perfil_entrada;
-         $curso->perfil_salida = $request->perfil_salida;
-         $curso->save();
+        //  $curso = new Curso();
+        //  $curso->curso = $request->curso;
+        //  $curso->duracion = $request->duracion;
+        //  $curso->presentacion = $request->presentacion;
+        //  $curso->obj_general = $request->obj_general;
+        //  $curso->tipo_id = $request->tipo;
+        //  $curso->carrera_id = $request->carrera;
+        //  $curso->activo = 1;
+        //  $curso->perfil_entrada = $request->perfil_entrada;
+        //  $curso->perfil_salida = $request->perfil_salida;
+        //  $curso->save();
 
 
-        //
-        return redirect()->route('curso');
+        // //
+        // return redirect()->route('curso');
     }
 
     public function edit($id)
@@ -113,10 +100,16 @@ class CursoController extends Controller
             ->select('roles.nombre','roles_users.roles_id')
             ->get();
 
+            $carreras = Carrera::all();
+            $cursos = Curso::where('id','=',$id)->get();
+            $caracteristicas = Caracteristica::all();
+            $caracteristicas_curso = caracteristicas_cursos::all();
             $tipos = Tipo::all();
-            $carreras = Carrera::where('activo','=',1)->get();
 
-            return view('plataforma/Cursos/edit', compact('curso','roles','tipos','carreras'));
+
+
+
+            return view('plataforma/Cursos/editCarac', compact('carreras','cursos','curso','tipos','caracteristicas','caracteristicas_curso','roles'));
 
     }
 

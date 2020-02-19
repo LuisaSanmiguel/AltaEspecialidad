@@ -70,15 +70,25 @@
 
               </table>      
                             <div class="row">
-                                <div class="col-lg-12 ">
-                                   
-                                        <button type="submit" class="programasDisp bounceInUp" data-wow-delay="0.2s">
-                                            <p class="tituloProgramaDisp">
-                                         Guardar
-                                            </p>
-                                        </button>
-                                
-                                </div>
+
+                                    <div class="col-lg-4 ">
+                                    </div>
+
+                                    <div class="col-lg-2 ">
+                                    
+                                            <button type="submit" class="programasDisp bounceInUp" data-wow-delay="0.2s">
+                                                <p class="tituloProgramaDisp">
+                                            Guardar
+                                                </p>
+                                            </button>
+                                    </div>
+
+                                    <div class="col-lg-2 ">
+                                        <a href="{{route('escuela')}}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
+                                        position: absolute;" class="programasDisp bounceInUp" data-wow-delay="0.2s">
+                                        Volver 
+                                        </a>
+                                    </div>
                            </div>
                 
            </form>

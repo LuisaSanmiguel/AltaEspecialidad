@@ -3,23 +3,23 @@
 @section('content')
 <section class="home-section text-center" id="about">
     <div class="container">
-      
-               
-                                                 
+
+
+
         <div class="row">
             <div class="col-lg-12 col-lg-offset-8">
                 <br>
                     <br>
                         <h2>
-                        
+
                         {{-- strtoupper() --}}
-                              {{ $carreras->nombre  }} 
-                           
+                              {{ $carreras->nombre  }}
+
                         </h2>
                     </br>
                 </br>
             </div>
-        </div>  
+        </div>
         {{-- @foreach($carreras as $carrera)
         @endforeach --}}
         <div class="row">
@@ -37,7 +37,7 @@
                     {{-- primer programa --}}
 
                      @foreach($cursos as $curso)
-                    @if($curso->id_tipo==1 && $curso->activo==1)
+                    @if($curso->tipo_id==1 && $curso->activo==1)
                     <div class="row">
                         <div class="col-lg-8 ">
                              <a href="{{route("detalleCurso", $curso->id)}}">
@@ -48,10 +48,10 @@
                                 </div>
                             </a>
                         </div>
-                   
+
 
                              <div class="col-lg-4 ">
-                            <a class="ingresoAulaTx" href="{{route("registro", $curso->id)}}"> 
+                            <a class="ingresoAulaTx" href="{{route("registro", $curso->id)}}">
                                 <div class="ingresoAula bounceInUp" data-wow-delay="0.2s">
                                     <strong>
                                         <p class="ingresoAulaTx">
@@ -60,15 +60,15 @@
                                     </strong>
                                 </div>
                             </a>
-                        </div> 
-                        
+                        </div>
+
                         </div>
 
                             @endif
 						@endforeach
 
                     @foreach($cursos as $curso)
-                    @if($curso->id_tipo==1 && $curso->activo==0)
+                    @if($curso->tipo_id==1 && $curso->activo==0)
                     {{-- programa 2---------------------------------------------- --}}
                     <div class="row">
                         <div class="col-sm-8 ">
@@ -80,7 +80,7 @@
                         </div>
 
 
-                        
+
                              <div class="col-lg-4 ">
                             <a class="ingresoAulaTx2" href="#">
                                 <div class="ingresoAula2 bounceInUp" data-wow-delay="0.2s">
@@ -91,7 +91,7 @@
                                     </strong>
                                 </div>
                             </a>
-                        </div> 
+                        </div>
                     </div>
 
                             @endif
@@ -119,7 +119,7 @@
                     {{-- primer programa --}}
 
                      @foreach($cursos as $curso)
-                    @if($curso->id_tipo==2 && $curso->activo==1)
+                    @if($curso->tipo_id==2 && $curso->activo==1)
                     <div class="row">
                         <div class="col-lg-8 ">
                              <a href="{{route("detalleCurso", $curso->id)}}">
@@ -130,7 +130,7 @@
                                 </div>
                             </a>
                         </div>
-                   
+
 
                              <div class="col-lg-4 ">
                             <a class="ingresoAulaTx" href="{{route("registro", $curso->id)}}">
@@ -142,15 +142,15 @@
                                     </strong>
                                 </div>
                             </a>
-                        </div> 
-                        
+                        </div>
+
                         </div>
 
                             @endif
 						@endforeach
 
                     @foreach($cursos as $curso)
-                    @if($curso->id_tipo==2 && $curso->activo==0)
+                    @if($curso->tipo_id==2 && $curso->activo==0)
                     {{-- programa 2---------------------------------------------- --}}
                     <div class="row">
                         <div class="col-sm-8 ">
@@ -162,7 +162,7 @@
                         </div>
 
 
-                        
+
                              <div class="col-lg-4 ">
                             <a class="ingresoAulaTx2" href="#">
                                 <div class="ingresoAula2 bounceInUp" data-wow-delay="0.2s">
@@ -173,7 +173,7 @@
                                     </strong>
                                 </div>
                             </a>
-                        </div> 
+                        </div>
                     </div>
 
                             @endif

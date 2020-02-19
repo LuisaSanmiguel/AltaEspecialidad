@@ -19,7 +19,7 @@ class InscripcionController extends Controller
      *
      * @return void
      */
-  
+
 
     /**
      * Show the application dashboard.
@@ -42,17 +42,17 @@ class InscripcionController extends Controller
         // $cursos = Curso::all();
 
         $cursos = DB::table('users')
-                    ->orderBy ('users.id', 'ASC') 
+                    ->orderBy ('users.id', 'ASC')
                     ->join('inscripcions', 'users.id', '=', 'inscripcions.user_id')
                     ->join('curso_inscripcions', 'inscripcions.id', '=', 'curso_inscripcions.inscripcion_id')
                     ->join('cursos', 'curso_inscripcions.curso_id', '=', 'cursos.id')
-                    ->join('tipos', 'cursos.id_tipo', '=', 'tipos.id')
+                    ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
                     ->distinct('cursos.id')
                     ->select('users.id','users.name','users.email','inscripcions.typeDoc','inscripcions.numDc','inscripcions.aprobo','cursos.id','cursos.curso','tipos.nombre')
             ->get();
 //  return $cursos;
-        return view('plataforma/Inscripciones/Index', compact('cursos','roles')); 
-    
+        return view('plataforma/Inscripciones/Index', compact('cursos','roles'));
+
     }
-    
+
 }

@@ -11,11 +11,11 @@
                     </div>
 
 
-                    
+
   <div class="row">
             <div class="col-md-12 col-lg-offset-8">
                 <div class="wow bounceInUp" data-wow-delay="0.2s">
-                   
+
                     <div class="row">
                         <div class="col-sm-12 ">
                             <strong>
@@ -26,61 +26,68 @@
                         </div>
                     </div>
                     {{-- primer programa --}}
-   
-      
+
+
 
        <table id="example" class="table table-bordered cell-border table-hover" >
-      
+
       <thead>
 							<tr class="active">
                                  <th class="text-center">No</th>
 								<th class="text-center">Nombre</th>
                                 <th class="text-center">Correo</th>
                                    <th class="text-center">Rol</th>
-							
+
 							</tr>
 						</thead>
   @foreach($users as $user)
-      
 
-     
+
+
        			<tr>
 
-                     <td>  {{ $user->id}}</td>   
-                     <td>  {{ $user->name }}</td>     
-                     <td> {{ $user->email }} </td> 
-                      <td> {{ $user->nombre }} </td> 
-          
-             
+                     <td>  {{ $user->id}}</td>
+                     <td>  {{ $user->name }}</td>
+                     <td> {{ $user->email }} </td>
+                      <td> {{ $user->nombre }} </td>
 
-         
+
+
+
 </tr>
-@endforeach 
-              </table>      
+@endforeach
+              </table>
                             <div class="row">
-                                <div class="col-lg-12 ">
-                                   
+                                <div class="col-lg-6 ">
+
                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                             <p class="tituloProgramaDisp">
-                                          
+
                                             </p>
                                         </div>
-                                
-                                </div>
-                           </div>
-                
-           
-    
 
-   
-                
+                                </div>
+                                <div class="col-lg-6 ">
+                                    <a href="{{route('administrar')}}" style="text-decoration:none;color:white;" >
+                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
+                                         Volver
+                                         </div>
+                                        </a>
+                                 </div>
+                           </div>
+
+
+
+
+
+
                      </div>
-            
-                   
+
+
  </div>
   </div>
    </div>
-              
+
                         <br><br><br><br>
                     </div>
                 </div>
@@ -108,11 +115,11 @@
                },
                "sProcessing":"Procesando...",
           },
-      //para usar los botones   
+      //para usar los botones
       "pageLength": 5,
       responsive: "true",
-      dom: 'Bfrtilp',       
-      buttons:[ 
+      dom: 'Bfrtilp',
+      buttons:[
               {
               extend:    'copyHtml5',
               text:      '<i class="fa fa-clone"></i> ',
@@ -128,7 +135,7 @@
           {
               extend:    'pdfHtml5',
               text:      '<i class="fa fa-file-pdf-o"></i> ',
-              titleAttr: 'Exportar a PDF',     
+              titleAttr: 'Exportar a PDF',
               message : 'SIEX',
               header :true,
                 exportOptions: {
@@ -143,7 +150,7 @@
               titleAttr: 'Imprimir',
               className: 'btn btn-info'
           },
-      ]              
+      ]
 
          });
 
@@ -151,6 +158,6 @@
             var table = $('#example').DataTable();
         } );
 
-        
+
    </script>
 @stop

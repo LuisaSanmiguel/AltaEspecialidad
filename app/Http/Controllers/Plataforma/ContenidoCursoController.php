@@ -31,61 +31,61 @@ class ContenidoCursoController extends Controller
     {
 
         $id_user = Auth::user()->id;
-          
+
         $roles = Roles_users::where('users_id', '=', $id_user)
         ->join('roles', 'roles_id', '=', 'roles.id')
         ->select('roles.nombre','roles_users.*')
         ->get();
-      
+
 
         $cursos = Curso::where('cursos.id','=', $id)
-        ->join('tipos', 'cursos.id_tipo', '=', 'tipos.id') 
+        ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
         ->join('curso_inscripcions', 'cursos.id', '=', 'curso_inscripcions.curso_id')
         ->join('inscripcions', 'curso_inscripcions.inscripcion_id', '=', 'inscripcions.id')
         ->where('inscripcions.user_id', '=', $id_user)
         ->distinct('cursos.id')
-        ->select('inscripcions.id','curso_inscripcions.curso_id','cursos.curso','cursos.fecha_ini','tipos.nombre','inscripcions.*')
+        ->select('inscripcions.id','curso_inscripcions.curso_id','cursos.curso','tipos.nombre','inscripcions.*')
         ->get();
-       
+
 //  return $cursos;
-        return view('/plataforma/ContenidoCurso/contenidoCurso', compact('cursos','roles')); 
-    
+        return view('/plataforma/ContenidoCurso/contenidoCurso', compact('cursos','roles'));
+
     }
 
 
     public function create()
-    {   
-        
-       
-        return view('plataforma/ContenidoCurso/create'); 
-    
+    {
+
+
+        return view('plataforma/ContenidoCurso/create');
+
     }
 
     public function store()
-    {   
-        
+    {
+
    //
-    
+
     }
 
     public function edit($id)
-    {   
-        
+    {
+
    //
-    
+
     }
     public function update()
-    {   
-        
+    {
+
    //
-    
+
     }
 
     public function destroy()
-    {   
-        
+    {
+
    //
-    
+
     }
-    
+
 }

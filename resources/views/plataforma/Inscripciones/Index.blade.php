@@ -11,11 +11,11 @@
                     </div>
 
 
-                    
+
   <div class="row">
             <div class="col-md-12 col-lg-offset-8">
                 <div class="wow bounceInUp" data-wow-delay="0.2s">
-                   
+
                     <div class="row">
                         <div class="col-sm-12 ">
                             <strong>
@@ -26,11 +26,11 @@
                         </div>
                     </div>
                     {{-- primer programa --}}
-   
-      
+
+
 
        <table id="example" class="table table-bordered cell-border table-hover" >
-      
+
       <thead>
 							<tr class="active">
                              {{-- <th class="text-center">No</th> --}}
@@ -44,61 +44,68 @@
                                 <th class="text-center">Inscrito</th>
                                    <th class="text-center">Estado</th>
                                 {{-- @endforeach --}}
-      
-							
+
+
 							</tr>
 						</thead>
 
- 
+
            @foreach($cursos as $curso)
 
-      
+
 		<tr>
             {{-- <td>  {{ $user->id }}</td>  --}}
-                     <td>  {{ $curso->typeDoc}}</td>   
-                     <td>  {{ $curso->numDc }}</td>     
+                     <td>  {{ $curso->typeDoc}}</td>
+                     <td>  {{ $curso->numDc }}</td>
                      {{-- <td> {{ $inscripcion->user_id }} </td>   --}}
-                     <td>  {{ $curso->name }}</td>     
-                     <td> {{ $curso->email }} </td> 
-                        <td> {{ $curso->curso }} </td> 
+                     <td>  {{ $curso->name }}</td>
+                     <td> {{ $curso->email }} </td>
+                        <td> {{ $curso->curso }} </td>
                         @if($curso->aprobo == 0)
-                          <td> {{ __('En curso') }} </td> 
+                          <td> {{ __('En curso') }} </td>
                           @else
-                           <td> {{ __('Aprobo') }} </td> 
+                           <td> {{ __('Aprobo') }} </td>
                         @endif
                      </tr>
-         
+
 @endforeach
-      
 
 
 
 
-              </table>      
+
+              </table>
                             <div class="row">
-                                <div class="col-lg-12 ">
-                                   
+                                <div class="col-lg-6 ">
+
                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                             <p class="tituloProgramaDisp">
-                                          
+
                                             </p>
                                         </div>
-                                
-                                </div>
-                           </div>
-                
-           
-    
 
-   
-                
+                                </div>
+                                <div class="col-lg-6 ">
+                                    <a href="{{route('administrar')}}" style="text-decoration:none;color:white;" >
+                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
+                                         Volver
+                                         </div>
+                                        </a>
+                                 </div>
+                           </div>
+
+
+
+
+
+
                      </div>
-            
-                   
+
+
  </div>
   </div>
    </div>
-              
+
                         <br><br><br><br>
                     </div>
                 </div>
@@ -126,11 +133,11 @@
                },
                "sProcessing":"Procesando...",
           },
-      //para usar los botones   
+      //para usar los botones
       "pageLength": 5,
       responsive: "true",
-      dom: 'Bfrtilp',       
-      buttons:[ 
+      dom: 'Bfrtilp',
+      buttons:[
               {
               extend:    'copyHtml5',
               text:      '<i class="fa fa-clone"></i> ',
@@ -146,7 +153,7 @@
           {
               extend:    'pdfHtml5',
               text:      '<i class="fa fa-file-pdf-o"></i> ',
-              titleAttr: 'Exportar a PDF',     
+              titleAttr: 'Exportar a PDF',
               message : 'SIEX',
               header :true,
                 exportOptions: {
@@ -161,7 +168,7 @@
               titleAttr: 'Imprimir',
               className: 'btn btn-info'
           },
-      ]              
+      ]
 
          });
 
@@ -169,6 +176,6 @@
             var table = $('#example').DataTable();
         } );
 
-        
+
    </script>
 @stop

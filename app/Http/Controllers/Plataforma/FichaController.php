@@ -31,7 +31,23 @@ class FichaController extends Controller
         ->get();
         $fichas = Ficha::all();
         $cursos = Curso::all();
-        return view('plataforma/Fichas/index', compact('cursos','fichas','roles')); 
+        return view('plataforma/Fichas/index', compact('cursos','fichas','roles'));
+    }
+
+    public function fichasCurso($id)
+    {
+        //
+        $id_user = Auth::user()->id;
+
+
+        $roles = Roles_users::where('users_id', '=', $id_user)
+        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
+        ->select('roles.nombre','roles_users.roles_id')
+        ->get();
+
+        $fichas = Ficha::where('curso_id','=',$id)->get();
+        $curso = Curso::where('id','=',$id)->first();
+        return view('plataforma/Fichas/curso', compact('curso','fichas','roles'));
     }
 
     /**
@@ -43,7 +59,7 @@ class FichaController extends Controller
     {
         //
 
-         
+
         $id_user = Auth::user()->id;
 
 
@@ -55,8 +71,8 @@ class FichaController extends Controller
         $tipos = Tipo::all();
         $carreras = Carrera::where('activo','=',1)->get();
         $cursos = Curso::where('activo','=',1)->get();
-      
-        return view('plataforma/Fichas/create', compact('cursos','tipos','roles','carreras')); 
+
+        return view('plataforma/Fichas/create', compact('cursos','tipos','roles','carreras'));
     }
 
     /**
@@ -75,9 +91,9 @@ class FichaController extends Controller
         $carrera = Curso::select('carrera_id')->where('id','=',$request->curso)->first();
         $numero = Ficha::where('curso_id','=',$request->curso)->get()->count()+1;
         $ficha->codigo = 'AE0'.$carrera->carrera_id.'0'.$request->curso.'0'.$numero;
-        $ficha->modalidad = $request->modalidad; 
+        $ficha->modalidad = $request->modalidad;
         $ficha->oferta = $request->oferta;
-        $ficha->cuenta = $request->cuenta; 
+        $ficha->cuenta = $request->cuenta;
         $ficha->fecha_ini = $request->fecha_ini;
         $ficha->fecha_fin = $request->fecha_fin;
         $ficha->cupo = $request->cupo;
@@ -109,7 +125,7 @@ class FichaController extends Controller
     {
         //
 
-       $ficha = Ficha::findOrFail($id); 
+       $ficha = Ficha::findOrFail($id);
        $id_user = Auth::user()->id;
 
 
@@ -121,7 +137,7 @@ class FichaController extends Controller
        $tipos = Tipo::all();
        $cursos = Curso::all();
 
-       return view('plataforma/Fichas/edit', compact('ficha','cursos','tipos','roles')); 
+       return view('plataforma/Fichas/edit', compact('ficha','cursos','tipos','roles'));
     }
 
     /**
@@ -134,14 +150,14 @@ class FichaController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $ficha = Ficha::findOrFail($id); 
+        $ficha = Ficha::findOrFail($id);
         $carrera = Curso::select('carrera_id')->where('id','=',$request->curso)->first();
         $numero = Ficha::where('curso_id','=',$request->curso)->get()->count()+1;
         $ficha->codigo =  'AE0'.$carrera->carrera_id.'0'.$request->curso.'0'.$numero;
         $ficha->curso_id = $request->curso;
-        $ficha->modalidad = $request->modalidad; 
+        $ficha->modalidad = $request->modalidad;
         $ficha->oferta = $request->oferta;
-        $ficha->cuenta = $request->cuenta; 
+        $ficha->cuenta = $request->cuenta;
         $ficha->fecha_ini = $request->fecha_ini;
         $ficha->fecha_fin = $request->fecha_fin;
         $ficha->cupo = $request->cupo;

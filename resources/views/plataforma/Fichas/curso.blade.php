@@ -18,11 +18,11 @@
 
                                 <div class="row">
                                     <div class="col-sm-12 ">
-                                        <strong>
+
                                             <p class="subtitle">
-                                        FICHAS
+                                        <strong> Fichas del Curso: {{$curso->curso}}</strong>
                                             </p>
-                                        </strong>
+
                                     </div>
                                 </div>
 
@@ -35,7 +35,7 @@
                                                     <tr class="active">
                                                         <th class="text-center">id</th>
                                                         <th class="text-center">Codigo</th>
-                                                        <th class="text-center">Curso</th>
+                                                        {{-- <th class="text-center">Curso</th> --}}
                                                         <th class="text-center">Modalidad</th>
                                                         <th class="text-center">Oferta</th>
                                                         <th class="text-center">Cuenta Bancaria</th>
@@ -54,7 +54,7 @@
                                                         <tr>
                                                                 <td>  {{ $ficha->id}}</td>
                                                                 <td>  {{ $ficha->codigo }}</td>
-                                                                <td>  {{ $ficha->curso->curso}}</td>
+                                                                {{-- <td>  {{ $ficha->curso->curso}}</td> --}}
                                                                  <td>  {{ $ficha->modalidad }}</td>
                                                                   <td>  {{ $ficha->oferta }}</td>
                                                                    <td>  {{ $ficha->cuenta }}</td>
@@ -87,7 +87,7 @@
 
                                 </div>
                                 <div class="col-lg-6 ">
-                                    <a href="{{route('administrar')}}" style="text-decoration:none;color:white;" >
+                                    <a href="{{route('curso.index')}}" style="text-decoration:none;color:white;" >
                                          <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                          Volver
                                          </div>

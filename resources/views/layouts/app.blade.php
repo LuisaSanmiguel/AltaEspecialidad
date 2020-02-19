@@ -14,16 +14,16 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/6e800e0ea1aabedc7054eafa1d6ae693?family=FelixTitlingW00" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
-   
+
 
     <link href="{{asset('/assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
 
-    
-  
+
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <!-- Styles -->
@@ -38,14 +38,14 @@
         <link href="{{asset('css/screen.css')}}" rel="stylesheet">
         {{-- <link href="{{asset('\css\foundation.css')}}" rel="stylesheet"> --}}
 
-      
-  
+
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky">
             <div class="container">
-               
+
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ asset('/img/logoOrigin.png') }}" width="80px"/>
                 </a>
@@ -103,14 +103,14 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
                                    <a class="dropdown-item" href="{{ route('homeCursos') }}">Mis Cursos</a>
-                              
+
                                     @foreach($roles as $rol)
                                             @if($rol->roles_id == 1)
                                         <a class="dropdown-item" href="{{ route('administrar') }}">Administrar Plataforma</a>
 
                                             @endif
                                     @endforeach
-                                
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -127,16 +127,16 @@
                 </div>
             </div>
         </nav>
-        
+
  <div style="height:85px;"></div>
         <main class="py-4">
             @yield('content')
         </main>
     </div>
 
-  <div class="row stickyBott"> 
+  <div class="row stickyBott">
         <div class="col-4">
-            <span>©Altas Especialidad SAS. 
+            <span>©Altas Especialidad SAS.
             Todos los Derechos Reservados.
             </span>
          </div>
@@ -144,29 +144,29 @@
             <div class="col-4 "><span>
             ¡Garantizamos tu seguridad jurídica…! </span>
             </div>
-    
+
     </div>
 
-               
-    
+
+
 </body>
- 
+
 
 
 {{-- <script src="/js/bootstrap.min.js"></script>    --}}
-   <script src="/js/jquery.min.js"></script> 
+
    	 @yield('js')
     <!-- Custom Theme JavaScript -->
-
+ <script src="/js/jquery.min.js"></script>
  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  
+
 {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>     
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    <script type="text/javascript" src="\js\jquery.smint.js" ></script>
     <script type="text/javascript" src="\js\lightbox.js" ></script>
-   
+
   {{-- <script type="text/javascript" src="\js\foundation.min.js" ></script> --}}
- 
+
     <script type="text/javascript">
         $(document).ready(function(){
             ciudades()
