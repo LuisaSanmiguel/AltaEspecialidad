@@ -32,23 +32,18 @@ class ContenidoCursoController extends Controller
 
         $id_user = Auth::user()->id;
 
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.*')
-        ->get();
-
 
         $cursos = Curso::where('cursos.id','=', $id)
         ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
-        ->join('curso_inscripcions', 'cursos.id', '=', 'curso_inscripcions.curso_id')
-        ->join('inscripcions', 'curso_inscripcions.inscripcion_id', '=', 'inscripcions.id')
-        ->where('inscripcions.user_id', '=', $id_user)
+        ->join('fichas_users', 'cursos.id', '=', 'fichas_users.curso_id')
+       ->join('fichas', 'fichas_users.ficha_id', '=', 'fichas.id')
+        ->where('fichas_users.user_id', '=', $id_user)
         ->distinct('cursos.id')
-        ->select('inscripcions.id','curso_inscripcions.curso_id','cursos.curso','tipos.nombre','inscripcions.*')
+        ->select('cursos.curso','tipos.nombre','fichas_users.*')
         ->get();
 
 //  return $cursos;
-        return view('/plataforma/ContenidoCurso/contenidoCurso', compact('cursos','roles'));
+        return view('/plataforma/ContenidoCurso/contenidoCurso', compact('cursos'));
 
     }
 

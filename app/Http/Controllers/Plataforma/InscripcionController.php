@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Model\Roles_users;
 use App\Model\Rol;
 use App\User;
-use App\Model\Inscripcion;
+use App\Model\FichasUser;
 use App\Model\CursoInscripcion;
 use App\Model\Curso;
 

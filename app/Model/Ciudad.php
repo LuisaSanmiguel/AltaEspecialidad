@@ -13,7 +13,7 @@ class Ciudad extends Model
 
     public function inscripcion()
     {
-        return $this->belongsToMany('App\Model\Inscripcion');
+        return $this->belongsToMany('App\Model\FichasUser');
     }
 
     public function departamento()

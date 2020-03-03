@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function inscripcion()
     {
-        return $this->hasOne('App\Model\Inscripcion');
+        return $this->hasOne('App\Model\FichasUser');
     }
 
     public function Rol(){
