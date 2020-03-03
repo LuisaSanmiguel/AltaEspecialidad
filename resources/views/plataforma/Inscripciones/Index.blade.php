@@ -60,12 +60,9 @@
                      {{-- <td> {{ $inscripcion->user_id }} </td>   --}}
                      <td>  {{ $curso->name }}</td>
                      <td> {{ $curso->email }} </td>
-                        <td> {{ $curso->curso }} </td>
-                        @if($curso->aprobo == 0)
-                          <td> {{ __('En curso') }} </td>
-                          @else
-                           <td> {{ __('Aprobo') }} </td>
-                        @endif
+                     <td> {{ $curso->curso }} </td>
+                     <td> {{ __($curso->estado) }} </td>
+
                      </tr>
 
 @endforeach

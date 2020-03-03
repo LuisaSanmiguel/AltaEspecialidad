@@ -106,12 +106,12 @@
 
                                    <a class="dropdown-item" href="{{ route('homeCursos') }}">Mis Cursos</a>
 
-                                    @foreach($roles as $rol)
-                                            @if($rol->roles_id == 1)
+
+                                            @if(Auth::user()->Rol->roles_id  == 1)
                                         <a class="dropdown-item" href="{{ route('administrar') }}">Administrar Plataforma</a>
 
                                             @endif
-                                    @endforeach
+
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

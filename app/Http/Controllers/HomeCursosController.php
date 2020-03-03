@@ -40,27 +40,28 @@ class HomeCursosController extends Controller
 
         // $inscripcions = inscripcion::where('user_id','=',$id)->get();
 
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
 
 
         // $cursos = Curso::all();
 
 
-        $cursos = DB::table('users')
-                     ->where('user_id','=',$id_user)
-                    ->join('inscripcions', 'users.id', '=', 'inscripcions.user_id')
-                    ->join('curso_inscripcions', 'inscripcions.id', '=', 'curso_inscripcions.inscripcion_id')
-                    ->join('cursos', 'curso_inscripcions.curso_id', '=', 'cursos.id')
-                    ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
-                    ->distinct('cursos.id')
-                    ->select('cursos.id','cursos.curso','tipos.nombre')
-            ->get();
+       $cursos = DB::table('users')
+                    ->where('user_id','=',$id_user)
+                    ->join('fichas_users', 'users.id', '=', 'fichas_users.user_id')
+                    ->join('fichas', 'fichas_users.ficha_id', '=', 'fichas.id')
+                    ->join('cursos','cursos.id','=','fichas.curso_id')
+                   ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
+                   ->distinct('cursos.id')
+                   ->select('cursos.id','cursos.curso','tipos.nombre')
+           ->get();
+
+
+
+
 
             // return $cursos;
-        return view('homeCursos', compact('cursos','roles'));
+
+      return view('homeCursos', compact('cursos','allcursos'));
 
     }
 }

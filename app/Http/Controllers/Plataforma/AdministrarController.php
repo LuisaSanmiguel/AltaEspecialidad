@@ -27,6 +27,7 @@ class AdministrarController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('user');
     }
 
     /**
@@ -36,35 +37,32 @@ class AdministrarController extends Controller
      */
     public function index()
     {
-        
+
 
         $id_user = Auth::user()->id;
 
         // $carreras = Carrera::all();
 
         // $inscripcions = inscripcion::where('user_id','=',$id)->get();
-      
+
         // $cursoInscs = CursoInscripcion::all();
-      
+
 
         // $cursos = Curso::all();
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
+
 
         $cursos = DB::table('users')
                      ->where('user_id','=',$id_user)
-                    ->join('inscripcions', 'users.id', '=', 'inscripcions.user_id')
-                    ->join('curso_inscripcions', 'inscripcions.id', '=', 'curso_inscripcions.inscripcion_id')
-                    ->join('cursos', 'curso_inscripcions.curso_id', '=', 'cursos.id')
+                    ->join('fichas_users', 'users.id', '=', 'fichas_users.user_id')
+                    ->join('fichas', 'fichas_users.ficha_id', '=', 'fichas.id')
+                    ->join('cursos','cursos.id','=','fichas.curso_id')
                     ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
                     ->distinct('cursos.id')
                     ->select('cursos.id','cursos.curso','tipos.nombre')
             ->get();
 
-            // return $cursos;
-        return view('plataforma/Administrar/administrar', compact('cursos','roles')); 
-    
+// return $cursos;
+    return view('plataforma/Administrar/administrar', compact('cursos'));
+
     }
 }

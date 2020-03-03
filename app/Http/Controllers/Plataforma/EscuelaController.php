@@ -19,6 +19,7 @@ class EscuelaController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('user')->except('index','show');
     }
 
     /**
@@ -27,40 +28,24 @@ class EscuelaController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {   
-        
-        $id_user = Auth::user()->id;
+    {
 
-
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
-          
         $carreras = Carrera::all();
 
-        return view('plataforma/Escuelas/Index', compact('carreras','roles')); 
-    
+        return view('plataforma/Escuelas/Index', compact('carreras'));
+
     }
     public function create()
-    {   
-        $id_user = Auth::user()->id;
+    {
 
+        return view('plataforma/Escuelas/create');
 
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
-      
-
-        return view('plataforma/Escuelas/create', compact('roles')); 
-    
     }
 
     public function store(Request $request)
-    {   
-        
-        
+    {
+
+
          $escuela = new Carrera();
          $escuela->nombre = $request->nombre;
          $escuela->activo = 1;
@@ -71,41 +56,31 @@ class EscuelaController extends Controller
     }
 
     public function edit($id)
-    {   
+    {
 
         $carrera = Carrera::where('id','=',$id)->first();
    //
-   $id_user = Auth::user()->id;
+   return view('plataforma/Escuelas/edit', compact('carrera'));
 
-
-   $roles = Roles_users::where('users_id', '=', $id_user)
-   ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-   ->select('roles.nombre','roles_users.roles_id')
-   ->get();
- 
-
-   return view('plataforma/Escuelas/edit', compact('roles','carrera')); 
-    
     }
-    public function update(Request $request, $id)
-    {   
-        
-   //
 
-   $escuela = Carrera::findOrFail($id);
-   $escuela->nombre = $request->nombre;
-   $escuela->activo = $request->estado;
-   $escuela->costo = $request->costo;
-   $escuela->save();
-    
-   return redirect()->route('escuela');
+    public function update(Request $request, $id)
+    {
+
+            $escuela = Carrera::findOrFail($id);
+            $escuela->nombre = $request->nombre;
+            $escuela->activo = $request->estado;
+            $escuela->costo = $request->costo;
+            $escuela->save();
+
+            return redirect()->route('escuela');
     }
 
     public function destroy()
-    {   
-        
+    {
+
    //
-    
+
     }
-    
+
 }

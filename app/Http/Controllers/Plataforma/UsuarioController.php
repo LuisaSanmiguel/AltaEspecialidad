@@ -16,7 +16,7 @@ class UsuarioController extends Controller
      *
      * @return void
      */
-  
+
 
     /**
      * Show the application dashboard.
@@ -25,13 +25,6 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $id_user = Auth::user()->id;
-
-
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
 
         $users = User::join('roles_users', 'users.id', '=', 'roles_users.users_id')
         ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
@@ -40,8 +33,8 @@ class UsuarioController extends Controller
 
     //   return $users;
 
-        return view('plataforma/Usuarios/Index', compact('users','roles')); 
-    
+        return view('plataforma/Usuarios/Index', compact('users'));
+
     }
-    
+
 }

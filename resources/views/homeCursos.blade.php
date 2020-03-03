@@ -11,11 +11,11 @@
                     </div>
 
 
-                    
+
   <div class="row">
             <div class="col-md-12 col-lg-offset-8">
                 <div class="wow bounceInUp" data-wow-delay="0.2s">
-                   
+
                     <div class="row">
                         <div class="col-sm-12 ">
                             <strong>
@@ -26,14 +26,14 @@
                         </div>
                     </div>
                     {{-- primer programa --}}
-   
-      
 
-       
-      
+
+
+
+
               @foreach($cursos as $curso)
-               
-                   
+
+
                             <div class="row">
                                 <div class="col-lg-12 ">
                                     <a href="{{route("contenido", $curso->id) }}">
@@ -42,36 +42,38 @@
                                              {{ $curso->nombre }}
                                              en
                                             {{ $curso->curso }}
-                                           
+
                                             </p>
                                         </div>
                                     </a>
                                 </div>
                            </div>
-                  
+
                 @endforeach
-         
-         
+
+
+
+
                    {{-- @foreach($cursos as $curso) --}}
                     {{-- @if($cursoInsc->curso_id == $curso->id) --}}
-                   
-                     
+
+
 
                         {{-- @else
                         @endif --}}
 
-                        
+
                    {{-- @else
                    @endif --}}
-                   
+
               {{-- @endforeach --}}
                      </div>
-            
-                   
+
+
  </div>
   </div>
    </div>
-              
+
                         <br><br><br><br>
                     </div>
                 </div>

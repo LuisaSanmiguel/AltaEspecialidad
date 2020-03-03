@@ -10,6 +10,7 @@ use App\Model\Departamento;
 use App\Model\Ciudad;
 use App\Model\CursoInscripcion;
 use App\Mail\WelcomeMail;
+use App\Model\FichasUser;
 use App\Model\Roles_users;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
@@ -28,14 +29,14 @@ class InscripcionController extends Controller
 
             $id_user = Auth::user()->id;
 
-         
+
             $roles = Roles_users::where('users_id', '=', $id_user)
             ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
             ->select('roles.nombre','roles_users.roles_id')
             ->get();
 
             return view('auth.register', compact('cursos', 'departamentos','roles'));
-                        
+
         }
         else{
         return view('auth.register', compact('cursos', 'departamentos'));
@@ -44,22 +45,28 @@ class InscripcionController extends Controller
 
     public function inscripcionSave(Request $request){
 
-        
+ if (Auth::check()) {  $id_user = Auth::user()->id;}
+ else{
         $usuario = User::where('email','=',$request->email)->get();
 
-             
+
            if($usuario->isNotEmpty())
-                {   
+                {
                     $usuario = User::where('email','=',$request->email)->first();
                     $usr= $usuario->id;
                     $user = User::find($usr);
-                }   
+                }
 
             else{
             //creacion del usuario
                 $user = new User;
                 $user->name = $request->name;
                 $user->email = $request->email;
+                $user->direccion = $request->direccion;
+                $user->telefono = $request->telefono;
+                $user->ciudad_id = $request->ciudad;
+                $user->typeDoc = $request->typeDoc;
+                $user->numDc = $request->numDc;
                 $user->password = Hash::make($request->password);
                 $user->save();
                 $usr= $user->id;
@@ -68,38 +75,32 @@ class InscripcionController extends Controller
                 $roles_users->roles_id = '2';
                 $roles_users->users_id = $usr;
                 $roles_users->save();
-               
+
 
 
             }
-        
+        }
 
     	// creacion de inscripcion
-    	$inscripcion = new Inscripcion;
-    	$inscripcion->direccion = $request->direccion;
-    	$inscripcion->telefono = $request->telefono;
-        $inscripcion->ciudad_id = $request->ciudad;
-    	$inscripcion->typeDoc = $request->typeDoc;
-    	$inscripcion->numDc = $request->numDc;
+    	$inscripcion = new FichasUser;
         $inscripcion->user_id = $usr;
+        $inscripcion->ficha_id =  0;
+        $inscripcion->curso_id =  $request->cursos;
+        $inscripcion->estado =  'inscrito';
+        $inscripcion->activo =  0;
 
     	$inscripcion->save();
 
-        //creacion del curso
-        $curso =  new CursoInscripcion;
-        $curso->curso_id = $request->cursos;
-
-        $curso->inscripcion_id = $inscripcion->id;
-        $curso->save();
 
 
-        if($curso){
+
+        if($inscripcion){
             // Auth::login($user);
             // Mail::to($user->email)->send(new WelcomeMail($user));
     	   return redirect('/homeCursos');
         } else{
            return redirect('/');
-        }   
+        }
 
     }
 

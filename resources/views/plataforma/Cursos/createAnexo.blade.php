@@ -43,16 +43,12 @@
 
       <thead>
 							<tr class="active">
-
 								<th colspan="2"class="text-center">Edite los Anexos del Curso {{$curso->curso}}</th>
-
-
                             </tr>
-                            <tr >
 
+                            <tr>
 								<th class="text-center" style="width:40px;">Caracteristica</th>
                                 <th class="text-center">Información</th>
-
                             </tr>
 
 						</thead>

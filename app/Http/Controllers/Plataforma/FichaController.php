@@ -37,17 +37,10 @@ class FichaController extends Controller
     public function fichasCurso($id)
     {
         //
-        $id_user = Auth::user()->id;
-
-
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
 
         $fichas = Ficha::where('curso_id','=',$id)->get();
         $curso = Curso::where('id','=',$id)->first();
-        return view('plataforma/Fichas/curso', compact('curso','fichas','roles'));
+        return view('plataforma/Fichas/curso', compact('curso','fichas'));
     }
 
     /**
@@ -59,20 +52,11 @@ class FichaController extends Controller
     {
         //
 
-
-        $id_user = Auth::user()->id;
-
-
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
-
         $tipos = Tipo::all();
         $carreras = Carrera::where('activo','=',1)->get();
         $cursos = Curso::where('activo','=',1)->get();
 
-        return view('plataforma/Fichas/create', compact('cursos','tipos','roles','carreras'));
+        return view('plataforma/Fichas/create', compact('cursos','tipos','carreras'));
     }
 
     /**

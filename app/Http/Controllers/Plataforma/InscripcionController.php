@@ -28,13 +28,7 @@ class InscripcionController extends Controller
      */
     public function index()
     {
-        $id_user = Auth::user()->id;
 
-
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
 
         // $users = User::all();
         // $inscripcions = Inscripcion::all();
@@ -43,15 +37,15 @@ class InscripcionController extends Controller
 
         $cursos = DB::table('users')
                     ->orderBy ('users.id', 'ASC')
-                    ->join('inscripcions', 'users.id', '=', 'inscripcions.user_id')
-                    ->join('curso_inscripcions', 'inscripcions.id', '=', 'curso_inscripcions.inscripcion_id')
-                    ->join('cursos', 'curso_inscripcions.curso_id', '=', 'cursos.id')
+                    ->join('fichas_users', 'users.id', '=', 'fichas_users.user_id')
+                    ->join('fichas', 'fichas_users.ficha_id', '=', 'fichas.id')
+                    ->join('cursos','cursos.id','=','fichas.curso_id')
                     ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
                     ->distinct('cursos.id')
-                    ->select('users.id','users.name','users.email','inscripcions.typeDoc','inscripcions.numDc','inscripcions.aprobo','cursos.id','cursos.curso','tipos.nombre')
+                    ->select('users.id','users.name','users.email','users.typeDoc','users.numDc','fichas_users.estado','cursos.id','cursos.curso','tipos.nombre')
             ->get();
 //  return $cursos;
-        return view('plataforma/Inscripciones/Index', compact('cursos','roles'));
+        return view('plataforma/Inscripciones/Index', compact('cursos'));
 
     }
 

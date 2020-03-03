@@ -4,20 +4,20 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Inscripcion extends Model
+class FichasUser extends Model
 {
     //
 
     public function user(){
         return $this->belongsToMany('App\Model\User');
-    }   
+    }
 
-    public function curso(){
+    public function ficha(){
         return $this->belongsToMany('App\Model\Curso');
-    }      
+    }
 
-    public function cursoinscripcion(){
-        return $this->belongsToMany('App\Model\CursoInscripcion');
-    }   
+    // public function cursoinscripcion(){
+    //     return $this->belongsToMany('App\Model\CursoInscripcion');
+    // }
 
 }
