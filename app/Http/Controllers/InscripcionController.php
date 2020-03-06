@@ -45,17 +45,19 @@ class InscripcionController extends Controller
 
     public function inscripcionSave(Request $request){
 
- if (Auth::check()) {  $id_user = Auth::user()->id;}
+ if (Auth::check()){
+      $usr = Auth::user()->id;
+}
  else{
         $usuario = User::where('email','=',$request->email)->get();
 
 
-           if($usuario->isNotEmpty())
-                {
+          if($usuario->isNotEmpty())
+               {
                     $usuario = User::where('email','=',$request->email)->first();
                     $usr= $usuario->id;
                     $user = User::find($usr);
-                }
+               }
 
             else{
             //creacion del usuario
@@ -78,7 +80,7 @@ class InscripcionController extends Controller
 
 
 
-            }
+             }
         }
 
     	// creacion de inscripcion
@@ -97,7 +99,8 @@ class InscripcionController extends Controller
         if($inscripcion){
             // Auth::login($user);
             // Mail::to($user->email)->send(new WelcomeMail($user));
-    	   return redirect('/homeCursos');
+            
+    	   return redirect('/homeCursos')->with('success','Se inscribio exitosamente al curso ');
         } else{
            return redirect('/');
         }

@@ -10,8 +10,10 @@ use App\Model\inscripcion;
 use App\Model\CursoInscripcion;
 use App\Model\Curso;
 use App\Model\Carrera;
+use App\Model\Ficha;
 use Auth;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Stmt\Return_;
 
 class HomeCursosController extends Controller
 {
@@ -45,23 +47,30 @@ class HomeCursosController extends Controller
         // $cursos = Curso::all();
 
 
-       $cursos = DB::table('users')
-                    ->where('user_id','=',$id_user)
-                    ->join('fichas_users', 'users.id', '=', 'fichas_users.user_id')
-                    ->join('fichas', 'fichas_users.ficha_id', '=', 'fichas.id')
-                    ->join('cursos','cursos.id','=','fichas.curso_id')
-                   ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
-                   ->distinct('cursos.id')
-                   ->select('cursos.id','cursos.curso','tipos.nombre')
-           ->get();
+        $cursos = DB::table('users')
+                     ->where('user_id','=',$id_user)
+                     ->where('cursos.activo','=',1)
+                     ->join('fichas_users', 'users.id', '=', 'fichas_users.user_id')
+                     ->join('cursos','cursos.id','=','fichas_users.curso_id')
+                     ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
+                     ->distinct('cursos.id')
+                     ->select('cursos.id','cursos.curso','tipos.nombre')
+                     ->get();
+
+
+         $tcursos = Curso::select('cursos.id','cursos.curso','tipos.nombre')
+                    ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
+                    ->where('cursos.activo','=',1)
+                     ->get();
+
+
+        $noinscritos =  $tcursos->diffKeys($cursos);
+        $noinscritos->all();
 
 
 
 
-
-            // return $cursos;
-
-      return view('homeCursos', compact('cursos','allcursos'));
+    return view('homeCursos', compact('cursos','noinscritos'));
 
     }
 }

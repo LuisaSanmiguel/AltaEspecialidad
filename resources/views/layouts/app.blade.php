@@ -20,6 +20,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/6e800e0ea1aabedc7054eafa1d6ae693?family=FelixTitlingW00" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!--alertas con toast-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
 
     <link href="{{asset('/assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
@@ -132,6 +136,7 @@
 
  <div style="height:85px;"></div>
         <main class="py-4">
+
             @yield('content')
         </main>
     </div>
@@ -154,22 +159,24 @@
 </body>
 
 
-
 {{-- <script src="/js/bootstrap.min.js"></script>    --}}
 
-   	 @yield('js')
-    <!-- Custom Theme JavaScript -->
- <script src="/js/jquery.min.js"></script>
- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+@yield('js')
+<!-- Custom Theme JavaScript -->
+<script src="/js/jquery.min.js"></script> 
+<!--toast-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+ @include('layouts/toastRequest')
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="\js\jquery.smint.js" ></script>
-    <script type="text/javascript" src="\js\lightbox.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="\js\jquery.smint.js" ></script>
+<script type="text/javascript" src="\js\lightbox.js" ></script>
 
-  {{-- <script type="text/javascript" src="\js\foundation.min.js" ></script> --}}
 
-    <script type="text/javascript">
+{{-- <script type="text/javascript" src="\js\foundation.min.js" ></script> --}}
+<script type="text/javascript">
         $(document).ready(function(){
             ciudades()
         })

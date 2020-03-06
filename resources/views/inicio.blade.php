@@ -8,7 +8,9 @@
                 <p class="msgEmpresa">
                     ALTA ESPECIALIDAD SAS,
                      es una empresa líder en Asesoría y Consultorías especializadas en las diferentes ramas del Derecho, Contable y Financiero, capaz de ofrecer a nuestros clientes herramientas especializadas para el manejo integral de sus negocios jurídicos en forma directa o a través de la web
-                </p>
+                     Contamos con un grupo de trabajo
+                     especializados, que brindan servicios de alta calidad en:
+                    </p>
                 <div class="row servicios">
                     <div class="col-sm-12 col-md-1">
                         <div class="cajaicono">

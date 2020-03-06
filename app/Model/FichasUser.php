@@ -8,11 +8,11 @@ class FichasUser extends Model
 {
     //
 
-    public function user(){
+    public function users(){
         return $this->belongsToMany('App\Model\User');
     }
 
-    public function ficha(){
+    public function curso(){
         return $this->belongsToMany('App\Model\Curso');
     }
 
