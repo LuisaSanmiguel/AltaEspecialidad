@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <center>
                     <div class="card-header">
@@ -39,7 +39,8 @@
                                    <th class="text-center">Rol</th>
 
 							</tr>
-						</thead>
+                        </thead>
+                        <tbody>
   @foreach($users as $user)
 
 
@@ -56,9 +57,10 @@
 
 </tr>
 @endforeach
+</tbody>
               </table>
                             <div class="row">
-                                <div class="col-lg-6 ">
+                                {{-- <div class="col-lg-6 ">
 
                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                             <p class="tituloProgramaDisp">
@@ -66,8 +68,8 @@
                                             </p>
                                         </div>
 
-                                </div>
-                                <div class="col-lg-6 ">
+                                </div> --}}
+                                <div class="col-lg-12 ">
                                     <a href="{{route('administrar')}}" style="text-decoration:none;color:white;" >
                                          <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                          Volver
@@ -97,6 +99,14 @@
 </div>
 @endsection
 
+@section('css')
+    <style>
+        label{
+            margin: 15px !important;
+        }
+        </style>
+@stop
+
 @section('js')
    <script>
              $('#example').DataTable( {
@@ -116,7 +126,7 @@
                "sProcessing":"Procesando...",
           },
       //para usar los botones
-      "pageLength": 5,
+      "pageLength": 3,
       responsive: "true",
       dom: 'Bfrtilp',
       buttons:[

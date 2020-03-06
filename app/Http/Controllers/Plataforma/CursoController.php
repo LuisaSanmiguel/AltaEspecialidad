@@ -98,7 +98,7 @@ class CursoController extends Controller
 
 
         //
-        return redirect()->route('curso');
+        return redirect()->route('curso')->with('success','Se guardo un nuevo curso');;
     }
 
     public function edit($id)
@@ -139,7 +139,7 @@ class CursoController extends Controller
 
 
             //
-            return redirect()->route('curso.index');
+            return redirect()->route('curso.index')->with('success','La información del curso se modifico satisfatoriamente ');;
     }
 
 

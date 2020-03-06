@@ -10,6 +10,7 @@ use App\Model\Rol;
 use App\Model\Carrera;
 use App\Model\Ficha;
 use App\Model\Curso;
+use App\Model\FichasUser;
 use App\Model\Tipo;
 
 class FichaController extends Controller
@@ -38,9 +39,13 @@ class FichaController extends Controller
     {
         //
 
-        $fichas = Ficha::where('curso_id','=',$id)->get();
+        $fichas = Ficha::where('fichas.curso_id','=',$id)
+        ->get();
+
         $curso = Curso::where('id','=',$id)->first();
-        return view('plataforma/Fichas/curso', compact('curso','fichas'));
+
+        //return $inscritos;
+         return view('plataforma/Fichas/curso', compact('curso','fichas'));
     }
 
     /**

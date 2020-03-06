@@ -73,7 +73,7 @@ class EscuelaController extends Controller
             $escuela->costo = $request->costo;
             $escuela->save();
 
-            return redirect()->route('escuela');
+            return redirect()->route('escuela')->with('success','Se modificarón los datos de la escuela');;
     }
 
     public function destroy()

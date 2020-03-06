@@ -36,7 +36,6 @@ class InscripcionController extends Controller
             ->get();
 
             return view('auth.register', compact('cursos', 'departamentos','roles'));
-
         }
         else{
         return view('auth.register', compact('cursos', 'departamentos'));
@@ -99,7 +98,7 @@ class InscripcionController extends Controller
         if($inscripcion){
             // Auth::login($user);
             // Mail::to($user->email)->send(new WelcomeMail($user));
-            
+
     	   return redirect('/homeCursos')->with('success','Se inscribio exitosamente al curso ');
         } else{
            return redirect('/');

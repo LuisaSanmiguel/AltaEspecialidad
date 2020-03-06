@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -17,6 +19,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
+
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/6e800e0ea1aabedc7054eafa1d6ae693?family=FelixTitlingW00" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
@@ -26,7 +29,14 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
 
+    {{-- <link rel="stylesheet" type="text/css" href=""> --}}
+
     <link href="{{asset('/assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
 
 
@@ -157,13 +167,18 @@
 
 
 </body>
-
+@yield('css')
 
 {{-- <script src="/js/bootstrap.min.js"></script>    --}}
 
-@yield('js')
 <!-- Custom Theme JavaScript -->
-<script src="/js/jquery.min.js"></script> 
+<script src="/js/jquery.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
 <!--toast-->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
  @include('layouts/toastRequest')
@@ -175,10 +190,16 @@
 <script type="text/javascript" src="\js\lightbox.js" ></script>
 
 
+
+
+@yield('js')
+
 {{-- <script type="text/javascript" src="\js\foundation.min.js" ></script> --}}
 <script type="text/javascript">
         $(document).ready(function(){
             ciudades()
+
+
         })
         $('#departamento').on('click', function(){
           ciudades()
