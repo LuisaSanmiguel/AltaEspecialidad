@@ -21,7 +21,8 @@ class CreateInscripcionsTable extends Migration
             $table->enum('typeDoc',['CC','TI']);
             $table->string('numDc');
             $table->unsignedBigInteger('user_id');
-            
+            $table->Integer('aprobo');
+           
             $table->foreign('ciudad_id')->references('id')->on('ciudades');
             $table->foreign('user_id')->references('id')->on('users');
 

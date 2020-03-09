@@ -18,3 +18,19 @@ font-size: 120px;
 .tituloServicio{
     color:white;
 }
+
+            .SImg{
+
+                margin-left:20px !important;
+                width:200px !important;
+            } 
+            
+         @media (min-width: 768px) {
+ 
+                     .SImg{
+ 
+                     margin-left:120px !important;
+                     width:700px !important;
+                     } 
+ 
+         }
