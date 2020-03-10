@@ -32,14 +32,7 @@ class CursoCaracController extends Controller
     public function index()
     {
 
-        $id_user = Auth::user()->id;
 
-
-        $roles = Roles_users::where('users_id', '=', $id_user)
-        ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        ->select('roles.nombre','roles_users.roles_id')
-        ->get();
-        $cursos = Curso::all();
 
 
       //  return view('plataforma/Cursos/indexc', compact('cursos','roles'));
@@ -48,21 +41,12 @@ class CursoCaracController extends Controller
 
 
 
-    public function create()
+    public function create($id)
     {
+        $curso = Curso::where('id',$id)->first();
+        $caracteristicas = Caracteristica::OrderBy('nombre','ASC')->get();
 
-        // $id_user = Auth::user()->id;
-
-
-        // $roles = Roles_users::where('users_id', '=', $id_user)
-        // ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-        // ->select('roles.nombre','roles_users.roles_id')
-        // ->get();
-
-        // $tipos = Tipo::all();
-        // $carreras = Carrera::where('activo','=',1)->get();
-
-        // return view('plataforma/Cursos/createCarac', compact('roles','tipos','carreras'));
+         return view('plataforma/Cursos/createCarac', compact('curso','caracteristicas'));
 
     }
 
@@ -71,21 +55,15 @@ class CursoCaracController extends Controller
 
    //
 
-        //  $curso = new Curso();
-        //  $curso->curso = $request->curso;
-        //  $curso->duracion = $request->duracion;
-        //  $curso->presentacion = $request->presentacion;
-        //  $curso->obj_general = $request->obj_general;
-        //  $curso->tipo_id = $request->tipo;
-        //  $curso->carrera_id = $request->carrera;
-        //  $curso->activo = 1;
-        //  $curso->perfil_entrada = $request->perfil_entrada;
-        //  $curso->perfil_salida = $request->perfil_salida;
-        //  $curso->save();
+         $caracteristica = new caracteristicas_cursos();
+         $caracteristica->curso_id = $request->curso_id;
+         $caracteristica->caracteristica_id = $request->caracteristica_id;
+         $caracteristica->contenido = $request->contenido;
+         $caracteristica->save();
 
 
         // //
-        // return redirect()->route('curso');
+       return back()->with('success','La nueva característica se agrego al curso');
     }
 
     public function edit($id)
@@ -106,29 +84,6 @@ class CursoCaracController extends Controller
             $caracteristicas_curso = caracteristicas_cursos::all();
             $tipos = Tipo::all();
 
-        //    $anexo =  new AttachedHiring;
-          //  $anexo->hiring_id =  $contrato->id;
-            // $anexo->attached_id = $i;
-            // $anexo->descripcion = $request->$descripcion;
-
-        //     if ($request->hasFile($filen))
-        //             {
-        //                     //$file = new FileTraits;
-        //                    // $rutaImg = $file->File($request->file($filen), 'anexosCon/'.$contrato->id.'/', $request->id_type);
-        //                    // $request->file($filen)->store('public/anexosCon/'.$contrato->id);
-
-        //                    // $anexo->ruta =  '/'.$rutaImg;
-        //                     $anexo->ruta =  $request->file($filen)->store('public/anexosCon/'.$contrato->id);
-        //                     $anexo->extension = $request->$filen->getClientOriginalExtension();
-        //             }
-        //             else{
-        //                     $anexo->ruta =  '';
-        //                     $anexo->extension = '';
-        //                 }
-
-        //            $anexo->save();
-        // }
-
 
             return view('plataforma/Cursos/editCarac', compact('carreras','cursos','curso','tipos','caracteristicas','caracteristicas_curso','roles'));
 
@@ -138,22 +93,23 @@ class CursoCaracController extends Controller
     public function update(Request $request, $id)
     {
 
-   //
-            $curso = Curso::findOrFail($id);
-            $curso->curso = $request->curso;
-            $curso->duracion = $request->duracion;
-            $curso->presentacion = $request->presentacion;
-            $curso->obj_general = $request->obj_general;
-            $curso->tipo_id = $request->tipo;
-            $curso->carrera_id = $request->carrera;
-            $curso->activo = $request->estado;
-            $curso->perfil_entrada = $request->perfil_entrada;
-            $curso->perfil_salida = $request->perfil_salida;
-            $curso->save();
+        return $request;
+//    //
+//             $curso = Curso::findOrFail($id);
+//             $curso->curso = $request->curso;
+//             $curso->duracion = $request->duracion;
+//             $curso->presentacion = $request->presentacion;
+//             $curso->obj_general = $request->obj_general;
+//             $curso->tipo_id = $request->tipo;
+//             $curso->carrera_id = $request->carrera;
+//             $curso->activo = $request->estado;
+//             $curso->perfil_entrada = $request->perfil_entrada;
+//             $curso->perfil_salida = $request->perfil_salida;
+//             $curso->save();
 
 
-            //
-            return redirect()->route('curso.index');
+//             //
+//             return redirect()->route('curso.index');
     }
 
 

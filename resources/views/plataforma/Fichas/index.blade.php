@@ -44,6 +44,7 @@
                                                         <th class="text-center">Cupo</th>
                                                         <th class="text-center">Estado</th>
                                                         <th class="text-center" >Editar</th>
+                                                        <th class="text-center" >Inscritos</th>
                                                         <th class="text-center" >Inactivar</th>
                                                     </tr>
                                                 </thead>
@@ -62,6 +63,7 @@
                                                                     <td>  {{ $ficha->cupo}}</td>
                                                                     <td>{{$ficha->estado}}</td>
                                                                     <td><a href="{{route('ficha.edit', $ficha->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-pencil" aria-hidden="true"></span></a></td>
+                                                                    <td><a href="{{route('inscripciones.show', $ficha->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-child" aria-hidden="true"></span></a></td>
                                                                     <td><a href="#" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a></td>
                                                                 </tr>
                                                         @endforeach

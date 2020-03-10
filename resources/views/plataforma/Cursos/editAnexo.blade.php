@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card">
                 <center>
                     <div class="card-header">
@@ -35,7 +35,17 @@
                         </div>
                     </div> --}}
 
+                    <table id="" class="table table-bordered cell-border table-hover" >
 
+                        <thead>
+                                              <tr class="active">
+
+                                                  <th colspan="4"class="text-right">Agregue nuevo anexo para el Curso  <a href="{{route('crearAnexo',$curso->id)}}"  class="btn btn-sm btn-rojo"><span class="fa fa-plus" aria-hidden="true"></span></a></th>
+                                                </tr>
+
+
+                        </thead>
+                    </table>
       <form   action="{{ route('curso.update',$curso->id )}}" class="form" method="POST">
        @csrf
          <input name="_method" type="hidden" value="PUT">
@@ -64,15 +74,14 @@
 
 
                             <tbody>
-                                @foreach ($anexos as $anexo)
+                                @foreach ($anexos as $i => $anexo)
 
 
                                 <tr>
 
                                     <input style="width:100%" class="form-control" id="curso_id" name="curso_id" type="hidden" value="{{$curso->id}}" required/>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">
-                                    <input style="width:100%" class="form-control" id="nombre" name="nombre" type="text" placeholder="Ingrese el Nombre del anexo" value="{{$anexo->nombre}}" required/>
+                                    <td class="text-center">{{++$i}}</td>
+                                    <td class="text-center"><input style="width:100%" class="form-control" id="nombre" name="nombre" type="text" placeholder="Ingrese el Nombre del anexo" value="{{$anexo->nombre}}" required/>
                                 </td>
 
                                 {{-- fa fa-file-pdf-o
@@ -113,7 +122,7 @@
                                     </a>
                                 </div>
                            </div>
-
+ <br><br><br><br>
            </form>
 
 
@@ -125,7 +134,7 @@
 
    </div>
 
-                        <br><br><br><br>
+
                     </div>
                 </div>
             </div>

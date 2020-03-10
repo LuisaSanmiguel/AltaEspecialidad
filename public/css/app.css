@@ -6445,6 +6445,18 @@ a.close.disabled {
   margin-bottom: 0.75rem;
 }
 
+.toast-success {
+    background-color: #51A351;
+}
+
+.toast-warning {
+    background-color: #F89406;
+}
+
+.toast-error {
+    background-color: #BD362F;
+}
+
 .toast.showing {
   opacity: 1;
 }

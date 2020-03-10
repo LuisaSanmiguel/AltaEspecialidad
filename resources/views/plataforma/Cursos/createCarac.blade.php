@@ -36,20 +36,20 @@
                     </div> --}}
 
 
-      <form   action="{{ route('AnexoCurso.store' )}}" class="form" method="POST" enctype="multipart/form-data">
+      <form   action="{{ route('cursoCarac.store' )}}" class="form" method="POST" enctype="multipart/form-data">
        @csrf
 
        <table id="example" class="table table-bordered cell-border table-hover" >
 
       <thead>
 							<tr class="active">
-								<th colspan="2"class="text-center">Crear nuevo anexo para el Curso {{$curso->curso}}</th>
+								<th colspan="2"class="text-center">Crear nueva Característica para el Curso {{$curso->curso}}</th>
                             </tr>
-
+{{--
                             <tr>
-								<th class="text-center" style="width:40px;">Característica</th>
+								<th class="text-center" style="width:40px;"></th>
                                 <th class="text-center">Información</th>
-                            </tr>
+                            </tr> --}}
 
 						</thead>
 
@@ -58,10 +58,18 @@
 
                                 <tr>
                                     <input style="width:100%" class="form-control" id="curso_id" name="curso_id" type="hidden" value="{{$curso->id}}" required/>
-                                    <td class="text-center">Nombre</td> <td class="text-center"><input style="width:100%" class="form-control" id="nombre" name="nombre" type="text" placeholder="Ingrese el Nombre del anexo" required/></td>
+                                    <td class="text-center">Tipo de Característica</td>
+                                    <td class="text-center"><select style="width:100%" class="form-control" id="caracteristica_id" name="caracteristica_id" type="text"  required >
+                                        <option value="0">Seleccione el tipo de característica</option>
+                                        @foreach($caracteristicas as $caracteristica)
+                                          <option value="{{$caracteristica->id}}">{{$caracteristica->nombre}}</option>
+                                             @endforeach
+                                         </select>
+                                </td>
                                  </tr>
                                  <tr>
-                                    <td class="text-center">Anexe documento</td> <td class="text-center"><input style="width:100%" class="form-control" id="file" name="file" type="file"  required/></td>
+                                    <td class="text-center">Contenido de la característica </td>
+                                    <td class="text-center"><textarea style="width:100%" class="form-control" id="contenido" name="contenido" type="text" rows="3" required> </textarea></td>
                                  </tr>
 
 
@@ -82,7 +90,7 @@
                                 </div>
 
                                 <div class="col-lg-2 ">
-                                    <a href="{{route('AnexoCurso.edit',$curso->id)}}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
+                                    <a href="{{route('cursoCarac.edit',$curso->id)}}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
                                     position: absolute;" class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                       Volver
                                     </a>

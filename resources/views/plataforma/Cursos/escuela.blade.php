@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card">
                 <center>
                     <div class="card-header">
@@ -49,6 +49,7 @@
                                         @else<td>Inactivo</td>
                                     @endif
                                     <td><a href="{{route('curso.edit',$curso->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-pencil" aria-hidden="true"></span></a></td>
+                                    <td><a href="{{route('fichasCurso',$curso->id)}}" class="btn btn-sm btn-amarillo" title="Fichas"><span class="fa fa-object-group" aria-hidden="true"></span></a></td>
                                     <td><a href="#" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
                                     </td>
                                 </tr>

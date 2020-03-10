@@ -49,4 +49,22 @@ class InscripcionController extends Controller
 
     }
 
+    public function show($id)
+    {
+
+        $inscripciones = DB::table('users')
+                    ->orderBy ('users.id', 'ASC')
+                    ->join('fichas_users', 'users.id', '=', 'fichas_users.user_id')
+                    ->join('fichas', 'fichas_users.ficha_id', '=', 'fichas.id')
+                    ->join('cursos','cursos.id','=','fichas.curso_id')
+                    ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
+                    ->where('fichas.id','=',$id)
+                    ->distinct('cursos.id')
+                    ->select('users.id','users.name','users.email','users.typeDoc','users.numDc','fichas_users.estado','fichas.codigo','cursos.id as curso_id','cursos.curso','tipos.nombre')
+                    ->get();
+//   return $inscripciones;
+       return view('plataforma/Inscripciones/InscripcionesFicha', compact('inscripciones'));
+
+    }
+
 }

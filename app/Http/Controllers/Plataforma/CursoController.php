@@ -96,9 +96,10 @@ class CursoController extends Controller
          $curso->perfil_salida = $request->perfil_salida;
          $curso->save();
 
+        $curso_id = $curso->id;
 
         //
-        return redirect()->route('curso')->with('success','Se guardo un nuevo curso');;
+        return redirect()->route('curso.edit',$curso_id)->with('success','Se guardo un nuevo curso');;
     }
 
     public function edit($id)

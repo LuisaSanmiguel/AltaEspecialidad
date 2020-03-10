@@ -70,7 +70,7 @@
                                                                 <td >
                                                                     <a href="{{route('ficha.edit', $ficha->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-pencil" aria-hidden="true"></span></a></td>
                                                                     <td >
-                                                                        <a href="#" class="btn btn-sm btn-amarillo"><span class="fa fa-child" aria-hidden="true"></span></a></td>
+                                                                        <a href="{{route('inscripciones.show', $ficha->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-child" aria-hidden="true"></span></a></td>
                                                                     <td >   <a href="#" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
                                                                 </td>
 

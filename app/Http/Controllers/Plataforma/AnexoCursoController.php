@@ -86,7 +86,7 @@ class AnexoCursoController extends Controller
                     }
                    $anexo->save();
 
-         return back();
+         return back()->with('success','Se agrego satisfactoriamente un anexo al curso ');
     }
 
     public function edit($id)

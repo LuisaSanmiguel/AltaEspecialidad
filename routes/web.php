@@ -64,10 +64,14 @@
 
                 // 'cursoCarac.edit',$curso->id
                 Route::Resource('/cursoCarac','Plataforma\CursoCaracController');
+                Route::get('/cursoCarac/{id}/create','Plataforma\CursoCaracController@create')->name('crearCarac');
+
                 Route::Resource('/AnexoCurso','Plataforma\AnexoCursoController');
-                Route::get('/AnexoCurso/{id}/create','Plataforma\AnexoCursoController@create');
+                Route::get('/AnexoCurso/{id}/create','Plataforma\AnexoCursoController@create')->name('crearAnexo');
 
                 Route::get('/usuario','Plataforma\UsuarioController@index')->name('usuarios');
+
+                Route::Resource('/inscripciones','Plataforma\InscripcionController');
                 Route::get('/inscripciones','Plataforma\InscripcionController@index')->name('inscripciones');
                 Route::get('/contenido/{id}','Plataforma\ContenidoCursoController@index')->name('contenido');
                 Route::get('/administrar','Plataforma\AdministrarController@index')->name('administrar');

@@ -121,7 +121,7 @@
                                 </div>
 
                                 <div class="col-lg-2 ">
-                                    <a href="{{route('ficha.index')}}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
+                                    <a href="{{ URL::previous() }}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
                                     position: absolute;" class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                       Volver
                                     </a>
