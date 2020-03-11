@@ -167,4 +167,9 @@ class FichaController extends Controller
     {
         //
     }
+
+    public function inscritos($id){
+        $ficha = Ficha::find($id);
+        return view('plataforma.Fichas.inscritos', compact('ficha')); 
+    }
 }

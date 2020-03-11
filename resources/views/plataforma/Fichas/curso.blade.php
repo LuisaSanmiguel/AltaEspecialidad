@@ -57,16 +57,23 @@
                                                                 <td>  {{ $ficha->id}}</td>
                                                                 <td>  {{ $ficha->codigo }}</td>
                                                                 {{-- <td>  {{ $ficha->curso->curso}}</td> --}}
-                                                                 <td>  {{ $ficha->modalidad }}</td>
-                                                                  <td>  {{ $ficha->oferta }}</td>
-                                                                   <td>  {{ $ficha->cuenta }}</td>
-                                                                    <td>  {{ $ficha->fecha_ini }}</td>
-                                                                     <td>  {{ $ficha->fecha_fin}}</td>
-                                                                     <td>  {{ $ficha->cupo}}</td>
-
-
-                                                                        <td>{{$ficha->estado}}</td>
-
+                                                                <td>  {{ $ficha->modalidad }}</td>
+                                                                <td>  {{ $ficha->oferta }}</td>
+                                                                <td>  {{ $ficha->cuenta }}</td>
+                                                                <td>  {{ $ficha->fecha_ini }}</td>
+                                                                <td>  {{ $ficha->fecha_fin}}</td>
+                                                                <td>  {{ $ficha->cupo}}</td>
+                                                                <td>{{$ficha->estado}}</td>
+                                                                <td >
+                                                                  <a href="{{route('ficha.edit', $ficha->id)}}" class="btn btn-sm btn-amarillo">
+                                                                    <span class="fa fa-pencil" aria-hidden="true"></span>
+                                                                  </a>
+                                                                </td>
+                                                                <td >
+                                                                  <a href="{{route('ficha.users', $ficha->id)}}" class="btn btn-sm btn-amarillo">
+                                                                    <span class="fa fa-child" aria-hidden="true"></span>
+                                                                  </a>
+                                                                </td>
                                                                 <td >
                                                                     <a href="{{route('ficha.edit', $ficha->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-pencil" aria-hidden="true"></span></a></td>
                                                                     <td >

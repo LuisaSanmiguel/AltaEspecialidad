@@ -66,6 +66,7 @@
                 //fichas--------------------------------------------------------------------------------------
                 Route::Resource('/ficha','Plataforma\FichaController');
                 Route::get('/fichasCurso/{id}','Plataforma\FichaController@fichasCurso')->name('fichasCurso');
+                Route::get('/fichasCurso/{id}/inscritos','Plataforma\FichaController@inscritos')->name('ficha.users');
 
                 // 'cursoCarac.edit',$curso->id
                 Route::Resource('/cursoCarac','Plataforma\CursoCaracController');

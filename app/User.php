@@ -45,4 +45,13 @@ class User extends Authenticatable
     public function Rol(){
         return $this->hasOne('App\Model\Roles_users','users_id');
     }
+
+    public function usersFicha()
+    {
+       return $this->hasMany(FichasUser::class);
+    }
+
+    public function ciudad(){
+        return $this->belongsTo('App\Model\Ciudad');
+    } 
 }
