@@ -8,16 +8,15 @@ class FichasUser extends Model
 {
     //
 
-    public function users(){
-        return $this->belongsToMany('App\Model\User');
+    public function user(){
+        return $this->belongsTo('App\User', 'user_id');
     }
 
     public function curso(){
         return $this->belongsToMany('App\Model\Curso');
     }
 
-    // public function cursoinscripcion(){
-    //     return $this->belongsToMany('App\Model\CursoInscripcion');
-    // }
-
+    public function fichas(){
+        return $this->belongsTo('App\Model\Ficha', 'ficha_id');
+    }
 }

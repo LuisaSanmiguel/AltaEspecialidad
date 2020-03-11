@@ -61,8 +61,16 @@
                                                                     <td>  {{ $ficha->fecha_fin}}</td>
                                                                     <td>  {{ $ficha->cupo}}</td>
                                                                     <td>{{$ficha->estado}}</td>
-                                                                    <td><a href="{{route('ficha.edit', $ficha->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-pencil" aria-hidden="true"></span></a></td>
-                                                                    <td><a href="#" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a></td>
+                                                                    <td>
+                                                                      <a href="{{route('ficha.edit', $ficha->id)}}" class="btn btn-sm btn-amarillo">
+                                                                        <span class="fa fa-pencil" aria-hidden="true"></span>
+                                                                      </a>
+                                                                    </td>
+                                                                    <td>
+                                                                      <a href="#" class="btn btn-sm btn-amarillo">
+                                                                        <span class="fa fa-close" aria-hidden="true"></span>
+                                                                      </a>
+                                                                    </td>
                                                                 </tr>
                                                         @endforeach
                                                     </tbody>
