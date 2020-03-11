@@ -74,19 +74,23 @@
                                                                                                     <tr>
                                                                                                             <th class="text-center" style="width:40px;">Caracteristica</th>
                                                                                                             <th class="text-center">Información</th>
+                                                                                                            <th class="text-center">Eliminar</th>
                                                                                                         </tr>
                                                                                                 </thead>
                                                                                             <tbody>
-                                                                                        @foreach($caracteristicas_curso as $i => $caracteristica_curso)
+                                                                                        @foreach($caracteristicas_curso as  $caracteristica_curso)
 
                                                                                             @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 1)
                                                                                                 <tr>
 
-                                                                                                <td class="text-center"><strong>{{++$i}}- Objetivos Específicos </strong></td>
+                                                                                                <td class="text-center"><strong> Objetivos Específicos </strong></td>
 
-                                                                                            <td class="text-center">  <input name="id[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
-                                                                                                <textarea style="width:100%" class="form-control" id="carac[]" name="carac[]" type="text"  placeholder="Ingrese el Nombre del curso" required rows="2" >{{ $caracteristica_curso->contenido }}</textarea>
+                                                                                            <td class="text-center">  <input name="ids[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
+                                                                                                <textarea style="width:100%" class="form-control" id="carac.{{$caracteristica_curso->id}}" name="carac.{{$caracteristica_curso->id}}" type="text"  placeholder="Ingrese la característica del curso" required rows="2" >{{ $caracteristica_curso->contenido }}</textarea>
                                                                                                     </td>
+                                                                                                    <td class="text-center">
+                                                                                                        <a href="{{route('cursoCarac.destroy',$caracteristica_curso->id)}}" class="btn btn-sm btn-rojo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                                                                                  </td>
                                                                                                     @else
                                                                                                 </tr>
                                                                                                 @endif
@@ -102,6 +106,7 @@
                                                                                                     <tr>
                                                                                                             <th class="text-center" style="width:40px;">Caracteristica</th>
                                                                                                             <th class="text-center">Información</th>
+                                                                                                            <th class="text-center">Eliminar</th>
                                                                                                         </tr>
                                                                                                 </thead>
                                                                                             <tbody>
@@ -112,9 +117,12 @@
                                                                                                     <tr>
                                                                                                     <td class="text-center"><strong> Competencias Genéricas</strong></td>
                                                                                                         <td class="text-center">
-                                                                                                            <input name="id[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
-                                                                                                            <textarea style="width:100%" class="form-control" id="carac[]" name="carac[]" type="text"  placeholder="Ingrese el Nombre del curso" required rows="2" >{{ $caracteristica_curso->contenido }}</textarea>
+                                                                                                            <input name="ids[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
+                                                                                                            <textarea style="width:100%" class="form-control" id="carac.{{$caracteristica_curso->id}}" name="carac.{{$caracteristica_curso->id}}" type="text"  placeholder="Ingrese la característica del curso" required rows="2" >{{ $caracteristica_curso->contenido }}</textarea>
                                                                                                                 </td>
+                                                                                                                <td class="text-center">
+                                                                                                                    <a href="{{route('cursoCarac.destroy',$caracteristica_curso->id)}}" class="btn btn-sm btn-rojo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                                                                                              </td>
                                                                                                                 @else
                                                                                                         </tr>
                                                                                                         @endif
@@ -130,9 +138,12 @@
                                                                                                         <td class="text-center"> <strong> Competencias Específicas</strong></td>
 
                                                                                                             <td class="text-center">
-                                                                                                                <input name="id[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
-                                                                                                            <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="2" > {{ $caracteristica_curso->contenido }}</textarea>
+                                                                                                                <input name="ids[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
+                                                                                                            <textarea style="width:100%" class="form-control" id="carac.{{$caracteristica_curso->id}}" name="carac.{{$caracteristica_curso->id}}" type="text"  placeholder="Ingrese la característica del curso" required rows="2" > {{ $caracteristica_curso->contenido }}</textarea>
                                                                                                                 </td>
+                                                                                                                <td class="text-center">
+                                                                                                                    <a href="{{route('cursoCarac.destroy',$caracteristica_curso->id)}}" class="btn btn-sm btn-rojo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                                                                                              </td>
                                                                                                                 @else
                                                                                                             </tr>
                                                                                                             @endif
@@ -148,6 +159,7 @@
                                                                                                     <tr>
                                                                                                             <th class="text-center" style="width:40px;">Caracteristica</th>
                                                                                                             <th class="text-center">Información</th>
+                                                                                                            <th class="text-center">Eliminar</th>
                                                                                                         </tr>
                                                                                                 </thead>
                                                                                             <tbody>
@@ -156,9 +168,12 @@
                                                                                                         <tr>
                                                                                                             <td class="text-center"><strong>Ejes Temáticos/ Contenidos:</strong></td>
                                                                                                                 <td class="text-center">
-                                                                                                                    <input name="id[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
-                                                                                                                <textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="2" > {{ $caracteristica_curso->contenido }}</textarea>
+                                                                                                                    <input name="ids[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
+                                                                                                                <textarea style="width:100%" class="form-control" id="carac.{{$caracteristica_curso->id}}" name="carac.{{$caracteristica_curso->id}}" type="text"  placeholder="Ingrese la característica del curso" required rows="2" > {{ $caracteristica_curso->contenido }}</textarea>
                                                                                                                     </td>
+                                                                                                                    <td class="text-center">
+                                                                                                                        <a href="{{route('cursoCarac.destroy',$caracteristica_curso->id)}}" class="btn btn-sm btn-rojo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                                                                                                  </td>
                                                                                                                     @else
                                                                                                         </tr>
                                                                                                                 @endif
@@ -173,6 +188,7 @@
                                                                                                     <tr>
                                                                                                             <th class="text-center" style="width:40px;">Caracteristica</th>
                                                                                                             <th class="text-center">Información</th>
+                                                                                                            <th class="text-center">Eliminar</th>
                                                                                                         </tr>
                                                                                                 </thead>
                                                                                             <tbody>
@@ -180,8 +196,13 @@
                                                                                                 @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 5)
                                                                                                 <tr>
                                                                                                         <td class="text-center"><strong>Desarrollo:</strong></td>
-                                                                                                        <td class="text-center"><input name="id[]" type="hidden" value="{{$caracteristica_curso->id}}"/><textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="3" > {{ $caracteristica_curso->contenido }}</textarea></td>
-                                                                                                        @else
+                                                                                                        <td class="text-center"><input name="ids[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
+                                                                                                            <textarea style="width:100%" class="form-control" id="carac.{{$caracteristica_curso->id}}" name="carac.{{$caracteristica_curso->id}}" type="text"  placeholder="Ingrese la característica del curso" required rows="3" > {{ $caracteristica_curso->contenido }}</textarea></td>
+
+                                                                                                            <td class="text-center">
+                                                                                                                <a href="{{route('cursoCarac.destroy',$caracteristica_curso->id)}}" class="btn btn-sm btn-rojo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                                                                                          </td>
+                                                                                                            @else
                                                                                                     </tr>
                                                                                                 @endif
                                                                                             @endforeach
@@ -195,6 +216,7 @@
                                                                                                     <tr>
                                                                                                             <th class="text-center" style="width:40px;">Caracteristica</th>
                                                                                                             <th class="text-center">Información</th>
+                                                                                                            <th class="text-center">Eliminar</th>
                                                                                                         </tr>
                                                                                                 </thead>
                                                                                             <tbody>
@@ -202,7 +224,12 @@
                                                                                                 @if($caracteristica_curso->curso_id == $curso->id and $caracteristica_curso->caracteristica_id == 6)
                                                                                                 <tr>   <td class="text-center"><strong> Descripción de los materiales de apoyo</strong></td>
 
-                                                                                                    <td class="text-center"><input name="id[]" type="hidden" value="{{$caracteristica_curso->id}}"/><textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="3" > {{ $caracteristica_curso->contenido }}</textarea></td>
+                                                                                                    <td class="text-center"><input name="ids[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
+                                                                                                        <textarea style="width:100%" class="form-control" id="carac.{{$caracteristica_curso->id}}" name="carac.{{$caracteristica_curso->id}}" type="text"  placeholder="Ingrese la característica del curso" required rows="3" > {{ $caracteristica_curso->contenido }}</textarea></td>
+                                                                                                        <td class="text-center">
+                                                                                                            <a href="{{route('cursoCarac.destroy',$caracteristica_curso->id)}}" class="btn btn-sm btn-rojo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                                                                                      </td>
+
                                                                                                         @else
                                                                                                     </tr>
                                                                                                     @endif
@@ -219,6 +246,7 @@
                                                                                                     <tr>
                                                                                                             <th class="text-center" style="width:40px;">Caracteristica</th>
                                                                                                             <th class="text-center">Información</th>
+                                                                                                            <th class="text-center">Eliminar</th>
                                                                                                         </tr>
                                                                                                 </thead>
                                                                                             <tbody>
@@ -227,7 +255,12 @@
 
                                                                                             <tr>
                                                                                                     <td class="text-center"><strong>Bibliografía:</strong></td>
-                                                                                                    <td class="text-center"><input name="id[]" type="hidden" value="{{$caracteristica_curso->id}}"/><textarea style="width:100%" class="form-control" id="curso" name="curso" type="text"  placeholder="Ingrese el Nombre del curso" required rows="3" > {{ $caracteristica_curso->contenido }}</textarea></td>
+                                                                                                    <td class="text-center"><input name="ids[]" type="hidden" value="{{$caracteristica_curso->id}}"/>
+                                                                                                        <textarea style="width:100%" class="form-control" id="carac.{{$caracteristica_curso->id}}" name="carac.{{$caracteristica_curso->id}}" type="text"  placeholder="Ingrese la característica del curso" required rows="3" > {{ $caracteristica_curso->contenido }}</textarea></td>
+
+                                                                                                        <td class="text-center">
+                                                                                                            <a href="{{route('cursoCarac.destroy',$caracteristica_curso->id)}}" class="btn btn-sm btn-rojo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                                                                                      </td>
                                                                                                         @else
                                                                                                     @endif
                                                                                                 </tr>
@@ -236,7 +269,10 @@
 
                                                                                     </tbody>
                                                                                 </table>
-                                                                                <div class="row">
+                                                                         
+                                                                                 </div>
+
+       <div class="row">
                                                                                                 <div class="col-lg-4 "> </div>
                                                                                                 <div class="col-lg-2 ">
                                                                                                         <button type="submit" class="programasDisp bounceInUp" data-wow-delay="0.2s">
@@ -252,11 +288,8 @@
                                                                                                     </a>
                                                                                                 </div>
                                                                                         </div>
-                                                                                 </div>
-
-<br><br><br>
-
-                                                </div>
+                                       
+<br><br><br>         </div>
     </form>
 
                                 </div>

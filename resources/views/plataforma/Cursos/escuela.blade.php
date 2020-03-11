@@ -66,7 +66,7 @@
                                 </div>
 
                                 <div class="col-lg-6 ">
-                                    <a href="{{route('escuela')}}" style="text-decoration:none;color:white;" >
+                                    <a href="{{route('escuela.index')}}" style="text-decoration:none;color:white;" >
                                          <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
 
                                          Volver

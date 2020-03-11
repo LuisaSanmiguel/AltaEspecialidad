@@ -54,7 +54,7 @@
       <thead>
 							<tr class="active">
 
-								<th colspan="4"class="text-center">Edite los Anexos del Curso {{$curso->curso}}</th>
+								<th colspan="5"class="text-center">Edite los Anexos del Curso {{$curso->curso}}</th>
 
 
                             </tr>
@@ -64,6 +64,7 @@
                                 <th class="text-center">Nombre</th>
                                 <th class="text-center">Descargar</th>
                                 <th class="text-center">Reemplazar archivo</th>
+                                <th class="text-center">Eliminar</th>
 
                             </tr>
 
@@ -95,7 +96,11 @@
                                     </td>
 
                                    <td class="text-center"><input style="width:100%" class="form-control" id="file" name="file" type="file"  required/></td>
-                                 </tr>
+                                   <td class="text-center">
+                                    <a href="{{route('AnexoCurso.destroy',$anexo->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                              </td>
+
+                                </tr>
 
 
                             @endforeach

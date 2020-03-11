@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Model\Roles_users;
 use App\Model\Rol;
 use App\Model\Carrera;
+use App\Model\Curso;
+use Illuminate\Support\Facades\DB;
 
 class EscuelaController extends Controller
 {
@@ -73,14 +75,38 @@ class EscuelaController extends Controller
             $escuela->costo = $request->costo;
             $escuela->save();
 
-            return redirect()->route('escuela')->with('success','Se modificarón los datos de la escuela');;
+            return redirect()->route('escuela.index')->with('success','Se modificarón los datos de la escuela');
     }
 
-    public function destroy()
+    // public function show()
+    // {
+
+
+    // }
+
+    public function destroy($id)
     {
 
-   //
+            // $escuela = Carrera::findOrFail($id);
+            // $escuela->activo = 0;
+            // $escuela->save();
 
+            $cursos = Curso::where("carrera_id","=",$id)->get();
+            $cursosCount = $cursos->count();
+
+
+            if($cursosCount>0){
+
+            return
+            redirect()->route('escuela.index')
+                            ->with('error','La escuela no se puede borrar, porque existen '.$cursosCount.' cursos asociados');
+            }else{
+
+                DB::table("carreras")->where('id',$id)->delete();
+                        return redirect()->route('escuela.index')
+                                        ->with('success','La escuela ha sido borrada Satisfactoriamente');
+
+            }
     }
 
 }

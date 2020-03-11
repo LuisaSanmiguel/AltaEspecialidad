@@ -12,6 +12,7 @@ use App\Model\Roles_users;
 use App\Model\Rol;
 use App\Model\Curso;
 use App\Model\Tipo;
+use Illuminate\Support\Facades\DB;
 
 class AnexoCursoController extends Controller
 {
@@ -96,15 +97,10 @@ class AnexoCursoController extends Controller
             $id_user = Auth::user()->id;
 
 
-            $roles = Roles_users::where('users_id', '=', $id_user)
-            ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-            ->select('roles.nombre','roles_users.roles_id')
-            ->get();
-
 
             $anexos = Anexo::where('curso_id','=',$id)->get();
 
-            return view('plataforma/Cursos/editAnexo', compact('curso','roles','anexos'));
+            return view('plataforma/Cursos/editAnexo', compact('curso','anexos'));
 
     }
 
@@ -113,21 +109,7 @@ class AnexoCursoController extends Controller
     {
 
    //
-            $curso = Curso::findOrFail($id);
-            $curso->curso = $request->curso;
-            $curso->duracion = $request->duracion;
-            $curso->presentacion = $request->presentacion;
-            $curso->obj_general = $request->obj_general;
-            $curso->tipo_id = $request->tipo;
-            $curso->carrera_id = $request->carrera;
-            $curso->activo = $request->estado;
-            $curso->perfil_entrada = $request->perfil_entrada;
-            $curso->perfil_salida = $request->perfil_salida;
-            $curso->save();
-
-
-            //
-            return redirect()->route('curso.index');
+        
     }
 
 
@@ -140,11 +122,13 @@ class AnexoCursoController extends Controller
     }
 
 
-    public function destroy()
+    public function destroy($id)
     {
 
    //
-
+   DB::table("anexos")->where('id',$id)->delete();
+   return redirect()->back()
+                   ->with('success','El anexo ha sido borrado satisfactoriamente');
     }
 
 }

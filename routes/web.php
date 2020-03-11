@@ -49,14 +49,19 @@
             //
         Route::group(['prefix' => 'Plataforma'], function() {
 
-                Route::get('/escuela/create','Plataforma\EscuelaController@create')->name('escuela.create');
                 Route::Resource('/escuela','Plataforma\EscuelaController');
-                Route::get('/escuela','Plataforma\EscuelaController@index')->name('escuela');
+                // Route::get('/escuela/create','Plataforma\EscuelaController@create')->name('escuela.create');
+                // Route::get('/escuela','Plataforma\EscuelaController@index')->name('escuela');
 
 
+                Route::get('/escuela/delete/{id}','Plataforma\EscuelaController@destroy')->name('escuela.destroy');
 
-                //cursos--------------------------------------------------------------------------------------
+ //cursos--------------------------------------------------------------------------------------
+
+
                 Route::Resource('/curso','Plataforma\CursoController');
+                Route::get('/curso/delete/{id}','Plataforma\CursoController@destroy')->name('curso.destroy');
+
                 Route::get('/cursosEscuela/{id}','Plataforma\CursoController@escuela')->name('cursosEscuela');
                 //fichas--------------------------------------------------------------------------------------
                 Route::Resource('/ficha','Plataforma\FichaController');
@@ -65,9 +70,12 @@
                 // 'cursoCarac.edit',$curso->id
                 Route::Resource('/cursoCarac','Plataforma\CursoCaracController');
                 Route::get('/cursoCarac/{id}/create','Plataforma\CursoCaracController@create')->name('crearCarac');
+                Route::get('/cursoCarac/delete/{id}','Plataforma\CursoCaracController@destroy')->name('cursoCarac.destroy');
+
 
                 Route::Resource('/AnexoCurso','Plataforma\AnexoCursoController');
                 Route::get('/AnexoCurso/{id}/create','Plataforma\AnexoCursoController@create')->name('crearAnexo');
+                Route::get('/AnexoCurso/delete/{id}','Plataforma\AnexoCursoController@destroy')->name('AnexoCurso.destroy');
 
                 Route::get('/usuario','Plataforma\UsuarioController@index')->name('usuarios');
 

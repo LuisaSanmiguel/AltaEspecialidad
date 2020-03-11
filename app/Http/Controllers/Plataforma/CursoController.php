@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 use App\Model\Roles_users;
 use App\Model\Rol;
 use App\Model\Curso;
+use App\Model\Ficha;
 use App\Model\Tipo;
+use Illuminate\Support\Facades\DB;
 
 class CursoController extends Controller
 {
@@ -99,7 +101,7 @@ class CursoController extends Controller
         $curso_id = $curso->id;
 
         //
-        return redirect()->route('curso.edit',$curso_id)->with('success','Se guardo un nuevo curso');;
+        return redirect()->route('cursoCarac.edit',$curso_id)->with('success','Se guardo un nuevo curso');;
     }
 
     public function edit($id)
@@ -153,11 +155,25 @@ class CursoController extends Controller
     }
 
 
-    public function destroy()
+    public function destroy($id)
     {
 
-   //
+        $fichas = Ficha::where("curso_id","=",$id)->get();
+            $fichasCount = $fichas->count();
 
+
+            if($fichasCount>0){
+
+            return
+            redirect()->route('curso.index')
+                            ->with('error','El curso no se puede borrar, porque existen  '.$fichasCount.' fichas asociadas');
+            }else{
+
+                DB::table("cursos")->where('id',$id)->delete();
+                        return redirect()->route('curso.index')
+                                        ->with('success','El curso  ha sido borrado Satisfactoriamente');
+
+            }
     }
 
 }

@@ -33,7 +33,7 @@
 
                             <div class="row">
                                 <div class="col-lg-12 ">
-                                    <a href="{{route('escuela') }}">
+                                    <a href="{{route('escuela.index') }}">
                                         <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                             <p class="tituloProgramaDisp">
                                              {{ __('ESCUELAS') }}

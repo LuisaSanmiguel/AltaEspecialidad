@@ -8,7 +8,7 @@ class Curso extends Model
 {
     //
 
-    protected $fillable = ['curso','curso','fecha_ini','presentacion', 'obj_general' ,'tipo_id' ,'carrera_id' ,'activo' ,'perfil_entrada' ,'perfil_salida'];
+    protected $fillable = ['curso','fecha_ini','presentacion', 'obj_general' ,'tipo_id' ,'carrera_id' ,'activo' ,'perfil_entrada' ,'perfil_salida'];
 
     public function carrera(){
         return $this->belongsTo('App\Model\Carrera');

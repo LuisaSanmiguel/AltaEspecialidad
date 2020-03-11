@@ -11,6 +11,7 @@ use App\Model\Roles_users;
 use App\Model\Rol;
 use App\Model\Curso;
 use App\Model\Tipo;
+use Illuminate\Support\Facades\DB;
 
 class CursoCaracController extends Controller
 {
@@ -93,23 +94,18 @@ class CursoCaracController extends Controller
     public function update(Request $request, $id)
     {
 
-        return $request;
-//    //
-//             $curso = Curso::findOrFail($id);
-//             $curso->curso = $request->curso;
-//             $curso->duracion = $request->duracion;
-//             $curso->presentacion = $request->presentacion;
-//             $curso->obj_general = $request->obj_general;
-//             $curso->tipo_id = $request->tipo;
-//             $curso->carrera_id = $request->carrera;
-//             $curso->activo = $request->estado;
-//             $curso->perfil_entrada = $request->perfil_entrada;
-//             $curso->perfil_salida = $request->perfil_salida;
-//             $curso->save();
+        foreach($request->ids as $i)
+        {
+            $nombre='carac_'.$i;
+        // echo $id.' ';
+                $caracteristica = caracteristicas_cursos::findOrFail($i);
+                $caracteristica ->contenido = $request->$nombre ;
+                $caracteristica->save();
 
+        // return $request->$nombre;
+         }
 
-//             //
-//             return redirect()->route('curso.index');
+       return redirect()->route('cursoCarac.edit',$id)->with('success','Las características del curso, se modificaron correctamente');
     }
 
 
@@ -122,11 +118,13 @@ class CursoCaracController extends Controller
     }
 
 
-    public function destroy()
+    public function destroy($id)
     {
 
    //
-
+   DB::table("caracteristicas_cursos")->where('id',$id)->delete();
+   return redirect()->back()
+                   ->with('success','La característica ha sido borrada Satisfactoriamente');
     }
 
 }

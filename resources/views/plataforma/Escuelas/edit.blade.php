@@ -11,11 +11,11 @@
                     </div>
 
 
-                    
+
   <div class="row">
             <div class="col-md-12 col-lg-offset-8">
                 <div class="wow bounceInUp" data-wow-delay="0.2s">
-                   
+
                     <div class="row">
                         <div class="col-sm-12 ">
                             <strong>
@@ -26,18 +26,18 @@
                         </div>
                     </div>
                     {{-- primer programa --}}
-   
+
        <form   action="{{ route('escuela.update',$carrera->id )}}" class="form" method="POST">
        @csrf
          <input name="_method" type="hidden" value="PUT">
        <table id="example" class="table table-bordered cell-border table-hover" >
-      
+
       <thead>
 							<tr class="active">
-                                
+
 								<th colspan="2"class="text-center">Modifique los datos de la Escuela</th>
-                              
-							
+
+
 							</tr>
 						</thead>
 
@@ -51,12 +51,12 @@
                             </tr>
 
                                <tr>
-                         	<td class="text-center">Estado</td>  
+                         	<td class="text-center">Estado</td>
                               <td class="text-center"> <select id="estado" name="estado"class="form-control" >
-                               <option value="0" {{($carrera->activo==0 ? 'selected' : '')}}>Inactivo</option>  
-                              
-                                 <option value="1" {{($carrera->activo==1 ? 'selected' : '')}}>Activo</option>   
-                               
+                               <option value="0" {{($carrera->activo==0 ? 'selected' : '')}}>Inactivo</option>
+
+                                 <option value="1" {{($carrera->activo==1 ? 'selected' : '')}}>Activo</option>
+
                                 </select>
                                 </td>
                             </tr>
@@ -68,14 +68,14 @@
 
                             </tbody>
 
-              </table>      
+              </table>
                             <div class="row">
 
                                     <div class="col-lg-4 ">
                                     </div>
 
                                     <div class="col-lg-2 ">
-                                    
+
                                             <button type="submit" class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                                 <p class="tituloProgramaDisp">
                                             Guardar
@@ -84,25 +84,25 @@
                                     </div>
 
                                     <div class="col-lg-2 ">
-                                        <a href="{{route('escuela')}}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
+                                        <a href="{{route('escuela.index')}}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
                                         position: absolute;" class="programasDisp bounceInUp" data-wow-delay="0.2s">
-                                        Volver 
+                                        Volver
                                         </a>
                                     </div>
                            </div>
-                
-           </form>
-    
 
-   
-                
+           </form>
+
+
+
+
                      </div>
-            
-                   
+
+
  </div>
   </div>
    </div>
-              
+
                         <br><br><br><br>
                     </div>
                 </div>
@@ -113,5 +113,5 @@
 @endsection
 
 @section('js')
- 
+
 @stop

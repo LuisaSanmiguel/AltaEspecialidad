@@ -11,11 +11,11 @@
                     </div>
 
 
-                    
+
   <div class="row">
             <div class="col-md-12 col-lg-offset-8">
                 <div class="wow bounceInUp" data-wow-delay="0.2s">
-                   
+
                     <div class="row">
                         <div class="col-sm-12 ">
                             <strong>
@@ -26,17 +26,17 @@
                         </div>
                     </div>
                     {{-- primer programa --}}
-   
+
       <form   action="{{ route('escuela.store') }}" class="form" method="POST">
      @csrf
        <table id="example" class="table table-bordered cell-border table-hover" >
-      
+
       <thead>
 							<tr class="active">
-                                
+
 								<th colspan="2"class="text-center">Ingrese los datos de la Nueva Escuela</th>
-                              
-							
+
+
 							</tr>
 						</thead>
 
@@ -55,7 +55,7 @@
 
                             </tbody>
 
-              </table>      
+              </table>
                             <div class="row">
 
                                 <div class="col-lg-4 ">
@@ -68,28 +68,28 @@
                                             </p>
                                         </button>
                                 </div>
-                                
+
                                 <div class="col-lg-2 ">
-                                    <a href="{{route('escuela')}}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
+                                    <a href="{{route('escuela.index')}}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
                                     position: absolute;" class="programasDisp bounceInUp" data-wow-delay="0.2s">
-                                      Volver 
+                                      Volver
                                     </a>
                                 </div>
-                                
-                           </div>
-                
-           </form>
-    
 
-   
-                
+                           </div>
+
+           </form>
+
+
+
+
                      </div>
-            
-                   
+
+
  </div>
   </div>
    </div>
-              
+
                         <br><br><br><br>
                     </div>
                 </div>
@@ -100,5 +100,5 @@
 @endsection
 
 @section('js')
- 
+
 @stop

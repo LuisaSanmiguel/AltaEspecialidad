@@ -54,7 +54,7 @@
                                                             <tr>
                                                                     <td>  {{ $ficha->id}}</td>
                                                                     <td>  {{ $ficha->codigo }}</td>
-                                                                    <td>  {{ $ficha->curso->curso}}</td>
+                                                                    <td>  {{ $ficha->curso ? $ficha->curso->curso :''}}</td>
                                                                     <td>  {{ $ficha->modalidad }}</td>
                                                                     <td>  {{ $ficha->oferta }}</td>
                                                                     <td>  {{ $ficha->cuenta }}</td>

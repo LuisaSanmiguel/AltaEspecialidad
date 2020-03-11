@@ -53,7 +53,7 @@
                                                                 @endif
                                                                 <td><a title="Editar" href="{{route('curso.edit',$curso->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-pencil" aria-hidden="true"></span></a></td>
                                                                     <td><a title="Fichas" href="{{route('fichasCurso',$curso->id)}}" class="btn btn-sm btn-amarillo" title="Fichas"><span class="fa fa-object-group" aria-hidden="true"></span></a></td>
-                                                                    <td><a title="Inactivar" href="#" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                                                    <td><a title="Inactivar" href="{{route('curso.destroy',$curso->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
                                                                 </td>
                                                             </tr>
                                                         @endforeach

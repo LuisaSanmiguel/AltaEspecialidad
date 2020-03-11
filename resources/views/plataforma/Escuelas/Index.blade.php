@@ -69,7 +69,7 @@
                             <span class="fa fa-book" aria-hidden="true"></span></a>
                         </td>
                           <td>
-                              <a href="#" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                              <a href="{{route('escuela.destroy',$carrera->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
                         </td>
                     </tr>
                 @endforeach
