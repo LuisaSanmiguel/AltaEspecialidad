@@ -102,7 +102,7 @@
 
                             
                                             
-                                            <div id="menu1" class="tab-pane fade">
+                                            <div id="menu1" class="tab-pane ">
                                             
                                              <div class="row">
                                                                     <div class="col-lg-4 col-lg-offset-8">
@@ -140,7 +140,7 @@
                                             </div>
 
 
-                                      <div id="menu2" class="tab-pane fade">
+                                      <div id="menu2" class="tab-pane ">
                                             
                                              <div class="row">
                                                                     <div class="col-lg-4 col-lg-offset-8">
@@ -158,27 +158,27 @@
                                                                            <p style="text-align:justify;">
                                                            <br>
                                                            Los funcionarios y estudiantes en general asistentes a esta capacitación ampliarán su conocimientos y habilidades sólidas para:
-<br><br>
-•	Mayor comprensión en la aplicación de las normas jurídicas del derecho Administrativo, Tributario, Penal y Disciplinario y derecho Nacional e internacional comercial corporativo.
-<br>
-•	Auditor y asesor en materia de regímenes especiales administrativos y financieros
-<br>
-•	Realizar investigaciones y evaluaciones de tipo jurídico para generar y evaluar nuevos conocimientos en las relaciones corporativas administrativas internas y externas
-<br>
-•	Planificar y desarrollar las bases jurídico-normativas para la creación y operación de empresas del Estado y alianzas nacionales o extranjeras.
-<br>
-•	Fortalecer las bases jurídicas normativas en la formulación de proyectos y su repercusión en el desarrollo financiero Institucional.
-<br>
-•	Comprender el engranaje presupuestal y financiero de su entidad como eje fundamental en la elaboración de las estrategias de gobierno y cumplimiento de metas
-<br>
-•	Comprensión y cuidados de los bienes del Estado y la adecuada vinculación de funcionarios a las investigaciones fiscales
-<br>
-•	Determinación de los garantes de los derechos de Estado y su responsabilidad jurídica
-<br>
-•	Elaboración de manual de funciones bajo el conocimiento de la responsabilidad como garantes de los bienes del Estado.
-<br>
-•	Generar la cultura del emprendimiento dentro y fuera del personal con quien se relaciona nuestra empresa
-<br>
+                                                                        <br><br>
+                                                                        •	Mayor comprensión en la aplicación de las normas jurídicas del derecho Administrativo, Tributario, Penal y Disciplinario y derecho Nacional e internacional comercial corporativo.
+                                                                        <br>
+                                                                        •	Auditor y asesor en materia de regímenes especiales administrativos y financieros
+                                                                        <br>
+                                                                        •	Realizar investigaciones y evaluaciones de tipo jurídico para generar y evaluar nuevos conocimientos en las relaciones corporativas administrativas internas y externas
+                                                                        <br>
+                                                                        •	Planificar y desarrollar las bases jurídico-normativas para la creación y operación de empresas del Estado y alianzas nacionales o extranjeras.
+                                                                        <br>
+                                                                        •	Fortalecer las bases jurídicas normativas en la formulación de proyectos y su repercusión en el desarrollo financiero Institucional.
+                                                                        <br>
+                                                                        •	Comprender el engranaje presupuestal y financiero de su entidad como eje fundamental en la elaboración de las estrategias de gobierno y cumplimiento de metas
+                                                                        <br>
+                                                                        •	Comprensión y cuidados de los bienes del Estado y la adecuada vinculación de funcionarios a las investigaciones fiscales
+                                                                        <br>
+                                                                        •	Determinación de los garantes de los derechos de Estado y su responsabilidad jurídica
+                                                                        <br>
+                                                                        •	Elaboración de manual de funciones bajo el conocimiento de la responsabilidad como garantes de los bienes del Estado.
+                                                                        <br>
+                                                                        •	Generar la cultura del emprendimiento dentro y fuera del personal con quien se relaciona nuestra empresa
+                                                                        <br>
 
                                                            
                                                            
@@ -188,7 +188,7 @@
                                             </div>
 
 
-                                            <div id="menu3" class="tab-pane fade">          
+                                            <div id="menu3" class="tab-pane ">          
 
 
                                                         <div class="heading-about">
@@ -229,7 +229,7 @@
                                                                     <div class="row">
                                                                 
 
-                                                                        <div class="col-md-3">
+                                                                        <div class="col-md-4">
                                                                                     <div class="wow bounceInUp" data-wow-delay="0.2s">
                                                                                         <div class="team boxed-grey">
                                                                                             <div class="inner">
@@ -250,27 +250,27 @@
                                                                                     </div>
                                                                             </div>
 
-                                                                        <div class="col-md-3">
-                                                                            <div class="wow bounceInUp" data-wow-delay="0.2s">
+                                                          
+
+                                                                        <div class="col-md-4">
+                                                                            <div class="wow bounceInUp" data-wow-delay="1s">
                                                                                 <div class="team boxed-grey">
                                                                                     <div class="inner">
                                                                                         <h5>
-                                                                                            Fernanda Castro Rubiano
+                                                                                            Yury Alejandra Rodriguez
                                                                                         </h5>
                                                                                         <p class="subtitle">
-                                                                                            Subgerente
+                                                                                            Dirección Administrativa
                                                                                         </p>
                                                                                         <div class="avatar">
-                                                                                            <img alt="" class="img-responsive img-circle" src="{{asset('/img/Team/Fernanda_Castro_Rubiano.jpg')}}"/>
+                                                                                            <img alt="" class="img-responsive img-circle" src="{{asset('/img/Team/YURY_ALEJANDRA_RODRIGUEZ.png')}}"/>
                                                                                         </div>
-
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-
-
-                                                                        <div class="col-md-3">
+                                                                        </div> 
+                                                                        
+                                                                        <div class="col-md-4">
                                                                             <div class="wow bounceInUp" data-wow-delay="0.8s">
                                                                                 <div class="team boxed-grey">
                                                                                     <div class="inner">
@@ -288,23 +288,6 @@
                                                                             </div>
                                                                         </div>
 
-                                                                        <div class="col-md-3">
-                                                                            <div class="wow bounceInUp" data-wow-delay="1s">
-                                                                                <div class="team boxed-grey">
-                                                                                    <div class="inner">
-                                                                                        <h5>
-                                                                                            Yury Alejandra Rodriguez
-                                                                                        </h5>
-                                                                                        <p class="subtitle">
-                                                                                            Dirección Administrativa
-                                                                                        </p>
-                                                                                        <div class="avatar">
-                                                                                            <img alt="" class="img-responsive img-circle" src="{{asset('/img/Team/YURY_ALEJANDRA_RODRIGUEZ.png')}}"/>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
                                                                     </div>
 
 
