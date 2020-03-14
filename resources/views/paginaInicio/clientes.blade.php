@@ -66,9 +66,7 @@
 
                         <div class="row">
 
-                         <div class="col-sm-12 col-md-3 col-lg-offset-8">
-                                  
-                                </div>
+                     
 
                             <div class="col-sm-12 col-md-3 col-lg-offset-8">
                                     <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
@@ -99,9 +97,28 @@
                                 </div>
 
                                  <div class="col-sm-12 col-md-3 col-lg-offset-8">
-                                   
+                                      <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
+                                            <img src="{{asset('img\Clientes\melgar.jpg')}}" height="70px">
+                                                    </img>
+                                                    <p class="clienteTitulo" style="font-size:xx-small;">
+                                                     DEPARTAMENTO DEL TOLIMA -MUNICIPIO DE MELGAR 
+
+
+                                                    </p>
+                                    </div>
                                 </div>
 
+                             <div class="col-sm-12 col-md-3 col-lg-offset-8">
+                                     <div class="ContenidoProg bounceInUp" data-wow-delay="0.2s">
+                                            <img src="{{asset('img\Clientes\nilo.png')}}" height="70px">
+                                                    </img>
+                                                    <p class="clienteTitulo" style="font-size:xx-small;">
+                                                      DEPARTAMENTO DEL CUNDINAMARCA -  MUNICIPIO DE NILO
+
+
+                                                    </p>
+                                    </div>
+                                </div>
 
                                 
                         </div>
