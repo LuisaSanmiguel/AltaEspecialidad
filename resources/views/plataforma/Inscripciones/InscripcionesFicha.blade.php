@@ -47,6 +47,7 @@
 
 
                                    <th class="text-center">Estado</th>
+                                   <th class="text-center">Anexos</th>
                                 {{-- @endforeach --}}
 
 
@@ -66,7 +67,7 @@
                      <td> {{ $inscripcion->email }} </td>
 
                      <td> {{ __($inscripcion->estado) }} </td>
-
+                     <td><a href="{{route('AnexoInscripcion.show', $inscripcion->inscripcion)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-folder-open-o" aria-hidden="true"></span></a></td>
                     </tr>
 
                 @endforeach
@@ -79,7 +80,7 @@
                             <div class="row">
 
                                 <div class="col-lg-12 ">
-                                    <a href="{{ URL::previous() }}" style="text-decoration:none;color:white;" >
+                                    <a href="{{ route('fichasCurso',$inscripcion->curso_id) }}" style="text-decoration:none;color:white;" >
                                          <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                          Volver
                                          </div>

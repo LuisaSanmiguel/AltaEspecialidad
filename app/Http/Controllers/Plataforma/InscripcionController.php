@@ -60,7 +60,7 @@ class InscripcionController extends Controller
                     ->join('tipos', 'cursos.tipo_id', '=', 'tipos.id')
                     ->where('fichas.id','=',$id)
                     ->distinct('cursos.id')
-                    ->select('users.id','users.name','users.email','users.typeDoc','users.numDc','fichas_users.estado','fichas.codigo','cursos.id as curso_id','cursos.curso','tipos.nombre')
+                    ->select('users.id','users.name','users.email','users.typeDoc','users.numDc','fichas_users.estado','fichas_users.id as inscripcion','fichas.codigo','cursos.id as curso_id','cursos.curso','tipos.nombre')
                     ->get();
 //   return $inscripciones;
        return view('plataforma/Inscripciones/InscripcionesFicha', compact('inscripciones'));

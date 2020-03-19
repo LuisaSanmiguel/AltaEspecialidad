@@ -85,6 +85,11 @@
                 Route::get('/contenido/{id}','Plataforma\ContenidoCursoController@index')->name('contenido');
                 Route::get('/administrar','Plataforma\AdministrarController@index')->name('administrar');
 
+
+                Route::Resource('/AnexoInscripcion','Plataforma\AnexoInscripcionController');
+                Route::get('/AnexoInscripcion/{id}/create','Plataforma\AnexoInscripcionController@create')->name('crearAnexoEst');
+                Route::get('/AnexoInscripcion/delete/{id}','Plataforma\AnexoInscripcionController@destroy')->name('AnexoCursoEst.destroy');
+
         });
 // });
 

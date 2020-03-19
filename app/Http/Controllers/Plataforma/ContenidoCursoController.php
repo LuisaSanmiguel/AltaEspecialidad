@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Plataforma;
 
 use App\Http\Controllers\Controller;
-
+use App\Model\Caracteristica;
+use App\Model\caracteristicas_cursos;
 use Illuminate\Http\Request;
 use Auth;
 use App\Model\Roles_users;
@@ -39,11 +40,14 @@ class ContenidoCursoController extends Controller
        ->join('fichas', 'fichas_users.ficha_id', '=', 'fichas.id')
         ->where('fichas_users.user_id', '=', $id_user)
         ->distinct('cursos.id')
-        ->select('cursos.curso','tipos.nombre','fichas_users.*')
+        ->select('cursos.*','tipos.nombre','fichas_users.*','fichas.*', 'fichas_users.id as inscripcion')
         ->get();
 
+
+        $caracteristicas = Caracteristica::all();
+        $caracteristicas_curso = caracteristicas_cursos::all();
 //  return $cursos;
-        return view('/plataforma/ContenidoCurso/contenidoCurso', compact('cursos'));
+        return view('/plataforma/ContenidoCurso/contenidoCurso', compact('cursos','caracteristicas','caracteristicas_curso'));
 
     }
 

@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Model\Roles_users;
 use App\Model\Rol;
 use App\Model\Curso;
+use App\Model\FichasUser;
 use App\Model\Tipo;
 use Illuminate\Support\Facades\DB;
 
@@ -55,19 +56,20 @@ class AnexoCursoController extends Controller
     public function create($id)
     {
        //
-            $curso = Curso::where('id','=',$id)->first();
-            $id_user = Auth::user()->id;
+       $curso = Curso::where('id','=',$id)->first();
+       $id_user = Auth::user()->id;
 
 
-            $roles = Roles_users::where('users_id', '=', $id_user)
-            ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
-            ->select('roles.nombre','roles_users.roles_id')
-            ->get();
+       $roles = Roles_users::where('users_id', '=', $id_user)
+       ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
+       ->select('roles.nombre','roles_users.roles_id')
+       ->get();
 
 
 
 
-            return view('plataforma/Cursos/createAnexo', compact('curso','roles'));
+       return view('plataforma/Inscripciones/createAnexo', compact('curso','roles'));
+
 
     }
 
@@ -109,7 +111,7 @@ class AnexoCursoController extends Controller
     {
 
    //
-        
+
     }
 
 

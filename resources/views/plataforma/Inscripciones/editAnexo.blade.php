@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-9">
             <div class="card">
                 <center>
                     <div class="card-header">
@@ -12,9 +12,9 @@
                     <div class="wow col-lg-12 col-lg-offset-8">
 
                         <ul class="nav nav-tabs" id="myTab">
-                            <li class=" tabs"><a class="tituloTabs"  href="{{route('curso.edit',$curso->id)}}">Datos Básicos</a></li>
-                            <li class="tabs "><a class="tituloTabs"  href="{{ route('cursoCarac.edit',$curso->id )}}">Caracteristicas</a></li>
-                               <li class="tabs active"><a class="tituloTabs" data-toggle="tab" href="#editar">Anexos</a></li>
+                            <li class=" tabs active"><a class="tituloTabs" href="{{route('contenido',$curso->id)}}">CURSO</a></li>
+                            <li class="tabs"><a class="tituloTabs"  href="{{route('contenido',$curso->id,'#menu1')}}">DOCUMENTOS DEL CURSO</a></li>
+                            <li class="tabs active"><a class="tituloTabs" data-toggle="tab" href="#editar">SUS DOCUMENTOS</a></li>
 
                         </ul>
 
@@ -40,7 +40,7 @@
                         <thead>
                                               <tr class="active">
 
-                                                  <th colspan="4"class="text-right">Agregue nuevo anexo para el Curso  <a href="{{route('crearAnexo',$curso->id)}}"  class="btn btn-sm btn-rojo"><span class="fa fa-plus" aria-hidden="true"></span></a></th>
+                                                  <th colspan="4"class="text-right">Agregue nuevo un documento al Curso  <a href="{{route('crearAnexoEst',$curso->inscripcion)}}"  class="btn btn-sm btn-rojo"><span class="fa fa-plus" aria-hidden="true"></span></a></th>
                                                 </tr>
 
 
@@ -54,7 +54,7 @@
       <thead>
 							<tr class="active">
 
-								<th colspan="5"class="text-center">Edite los Anexos del Curso {{$curso->curso}}</th>
+								<th colspan="5"class="text-center">Edite sus Anexos <br> Curso {{$curso->curso}}</th>
 
 
                             </tr>
@@ -85,19 +85,13 @@
                                     <td class="text-center"><input style="width:100%" class="form-control" id="nombre" name="nombre" type="text" placeholder="Ingrese el Nombre del anexo" value="{{$anexo->nombre}}" required/>
                                 </td>
 
-                                {{-- fa fa-file-pdf-o
-                                fa fa-file-photo-o
-                                fa fa-file-excel-o
-                                fa fa-file-movie-o
-                                fa fa-file-word-o
-                                fa fa-file-zip-o --}}
                                     <td >
                                         <a href="{{Storage::url($anexo->ruta)}}" target="_blank" class="btn btn-sm btn-amarillo"><span class="fa fa-folder-open-o" aria-hidden="true"></span></a>
                                     </td>
 
                                    <td class="text-center"><input style="width:100%" class="form-control" id="file" name="file" type="file"  required/></td>
                                    <td class="text-center">
-                                    <a href="{{route('AnexoCurso.destroy',$anexo->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
+                                    <a href="{{route('AnexoInscripcion.destroy',$anexo->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
                               </td>
 
                                 </tr>
@@ -109,10 +103,8 @@
               </table>
                             <div class="row">
 
-                                <div class="col-lg-4 ">
-
-                                </div>
-                                {{-- <div class="col-lg-2 ">
+{{--
+                                <div class="col-lg-12 ">
                                         <button type="submit" class="programasDisp bounceInUp" data-wow-delay="0.2s">
                                             <p class="tituloProgramaDisp">
                                          Guardar
@@ -120,12 +112,7 @@
                                         </button>
                                 </div> --}}
 
-                                <div class="col-lg-2 ">
-                                    <a href="{{route('curso.index')}}" style="padding:10px;text-decoration:none;color:white;    margin-top: 10px !important;
-                                    position: absolute;" class="programasDisp bounceInUp" data-wow-delay="0.2s">
-                                      Volver
-                                    </a>
-                                </div>
+
                            </div>
  <br><br><br><br>
            </form>
