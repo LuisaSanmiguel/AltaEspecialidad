@@ -63,7 +63,7 @@
 								<th class="text-center" style="width:40px;">Item</th>
                                 <th class="text-center">Nombre</th>
                                 <th class="text-center">Descargar</th>
-                                <th class="text-center">Reemplazar archivo</th>
+                                {{-- <th class="text-center">Reemplazar archivo</th> --}}
                                 {{-- <th class="text-center">Eliminar</th> --}}
 
                             </tr>
@@ -95,7 +95,7 @@
                                         <a href="{{Storage::url($anexo->ruta)}}" target="_blank" class="btn btn-sm btn-amarillo"><span class="fa fa-folder-open-o" aria-hidden="true"></span></a>
                                     </td>
 
-                                   <td class="text-center"><input style="width:100%" class="form-control" id="file" name="file" type="file"  required/></td>
+                                   {{-- <td class="text-center"><input style="width:100%" class="form-control" id="file" name="file" type="file"  required/></td> --}}
                                    {{-- <td class="text-center">
                                     <a href="{{route('AnexoCurso.destroy',$anexo->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a> --}}
                               {{-- </td> --}}
