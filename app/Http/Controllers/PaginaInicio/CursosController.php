@@ -60,12 +60,10 @@ class CursosController extends Controller
     {
   
         $carreras = Carrera::all();
-        $cursos = Curso::where('id','=',$id)->get();
+        $curso = Curso::find($id);
         $caracteristicas = Caracteristica::all();
         $caracteristicas_curso = caracteristicas_cursos::all();
         $tipos = Tipo::all();
-
-
 
         if (Auth::check()) {
             // The user is logged in...
@@ -78,13 +76,12 @@ class CursosController extends Controller
             ->select('roles.nombre','roles_users.roles_id')
             ->get();
 
-            return view('paginaInicio/detalleCurso', compact('carreras','cursos','tipos','caracteristicas','caracteristicas_curso','roles'));
+            return view('paginaInicio/detalleCurso', compact('carreras','curso','tipos','caracteristicas','caracteristicas_curso','roles'));
             
             
-        }
-        else{
+        }else{
         
-        return view('paginaInicio/detalleCurso', compact('carreras','cursos','tipos','caracteristicas','caracteristicas_curso')); 
+            return view('paginaInicio/detalleCurso', compact('carreras','curso','tipos','caracteristicas','caracteristicas_curso')); 
         }
     }
     

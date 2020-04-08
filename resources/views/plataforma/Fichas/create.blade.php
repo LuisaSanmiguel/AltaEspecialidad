@@ -102,6 +102,15 @@
                                  </select>
                                  </td>
                              </tr>
+                              <tr>
+                                <td class="text-center">Activo</td>
+                               <td class="text-center"> 
+                                <select id="estado" name="activo"class="form-control" >
+                                  <option value="1">Si</option>
+                                  <option value="0">No</option>
+                                </select>
+                                 </td>
+                             </tr>
 
                            </tbody>
 

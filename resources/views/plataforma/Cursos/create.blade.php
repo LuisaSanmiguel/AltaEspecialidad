@@ -60,15 +60,23 @@
                            	<td class="text-center">Tipo de curso</td>
                               <td class="text-center"> <select id="tipo" name="tipo"class="form-control" >
                                <option value="0">Seleccione el tipo de curso</option>
-                               @foreach($tipos as $tipo)
-                                 <option value="{{$tipo->id}}">{{$tipo->nombre}}</option>
-                                    @endforeach
+                                @foreach($tipos as $tipo)
+                                  <option value="{{$tipo->id}}">{{$tipo->nombre}}</option>
+                                @endforeach
                                 </select>
                                 </td>
                             </tr>
-
-
-
+                          <tr>
+                            <td class="text-center">Relacionar hoja de vida</td>
+                              <td class="text-center"> 
+                                <select name="hv"class="form-control" >
+                                   <option value="0">Seleccione la hoja de vida</option>
+                                   @foreach($hvs as $hv)
+                                     <option value="{{$hv->id}}">{{$hv->name_file}}</option>
+                                    @endforeach
+                                </select>
+                              </td>
+                          </tr>
                           <tr>
                            	<td class="text-center">Nombre</td> <td class="text-center"><input style="width:100%" class="form-control" id="curso" name="curso" type="text" placeholder="Ingrese el Nombre del curso" required/></td>
                             </tr>

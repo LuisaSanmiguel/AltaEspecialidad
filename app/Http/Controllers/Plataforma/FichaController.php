@@ -73,13 +73,13 @@ class FichaController extends Controller
     public function store(Request $request)
     {
         //
-
+        $curso = Curso::find($request->curso);
+        $numero = $curso->ficha->count()+1;
+        //$carrera = Curso::select('carrera_id')->where('id','=',$request->curso)->first();
 
         $ficha = new Ficha();
         $ficha->curso_id = $request->curso;
-        $carrera = Curso::select('carrera_id')->where('id','=',$request->curso)->first();
-        $numero = Ficha::where('curso_id','=',$request->curso)->get()->count()+1;
-        $ficha->codigo = 'AE0'.$carrera->carrera_id.'0'.$request->curso.'0'.$numero;
+        $ficha->codigo = 'AE0'.$curso->carrera_id.'0'.$request->curso.'0'.$numero;
         $ficha->modalidad = $request->modalidad;
         $ficha->oferta = $request->oferta;
         $ficha->cuenta = $request->cuenta;
@@ -88,6 +88,8 @@ class FichaController extends Controller
         $ficha->cupo = $request->cupo;
         $ficha->estado = $request->estado;
         $ficha->save();
+
+        $this->activarFicha($curso, $ficha->id, $request->activo);
 
         return redirect()->route('ficha.index')->with('success','Se creo una nueva ficha');
 
@@ -115,6 +117,7 @@ class FichaController extends Controller
         //
 
        $ficha = Ficha::findOrFail($id);
+       //dd($ficha->activo);
        $id_user = Auth::user()->id;
 
 
@@ -139,10 +142,11 @@ class FichaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $curso = Curso::find($request->curso);
+        $numero = $curso->ficha->count()+1;
+        //$carrera = Curso::select('carrera_id')->where('id','=',$request->curso)->first();
         $ficha = Ficha::findOrFail($id);
-        $carrera = Curso::select('carrera_id')->where('id','=',$request->curso)->first();
-        $numero = Ficha::where('curso_id','=',$request->curso)->get()->count()+1;
-        $ficha->codigo =  'AE0'.$carrera->carrera_id.'0'.$request->curso.'0'.$numero;
+        $ficha->codigo =  'AE0'.$curso->carrera_id.'0'.$request->curso.'0'.$numero;
         $ficha->curso_id = $request->curso;
         $ficha->modalidad = $request->modalidad;
         $ficha->oferta = $request->oferta;
@@ -153,6 +157,7 @@ class FichaController extends Controller
         $ficha->estado = $request->estado;
         $ficha->save();
 
+        $this->activarFicha($curso, $ficha->id, $request->activo);
 
        return redirect()->route('ficha.index')->with('success','Se modifico la información de la ficha');
     }
@@ -171,5 +176,12 @@ class FichaController extends Controller
     public function inscritos($id){
         $ficha = Ficha::find($id);
         return view('plataforma.Fichas.inscritos', compact('ficha')); 
+    }
+
+    public function activarFicha($curso, $ficha_id, $validacion){
+        if($validacion == 1){
+            $curso->ficha_principal = $ficha_id;
+            $curso->save();
+        }
     }
 }

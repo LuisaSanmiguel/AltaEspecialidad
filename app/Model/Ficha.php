@@ -20,4 +20,12 @@ class Ficha extends Model
 	   return $this->hasMany('App\Model\FichasUser');
 	}
 
+	public function getActivoAttribute(){
+		if($this->curso->ficha_principal == $this->id){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 }

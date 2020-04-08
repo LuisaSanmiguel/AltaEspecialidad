@@ -34,7 +34,10 @@ class HomeCursosController extends Controller
      */
     public function index()
     {
-
+        if (Auth::user()->is_admin) 
+        {
+            return redirect()->route('administrar');
+        }
 
         $id_user = Auth::user()->id;
 

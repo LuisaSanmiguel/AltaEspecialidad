@@ -44,21 +44,18 @@ class InscripcionController extends Controller
 
     public function inscripcionSave(Request $request){
 
- if (Auth::check()){
-      $usr = Auth::user()->id;
-}
- else{
-        $usuario = User::where('email','=',$request->email)->get();
+        $curso = Curso::find($request->cursos);
 
-
-          if($usuario->isNotEmpty())
-               {
-                    $usuario = User::where('email','=',$request->email)->first();
-                    $usr= $usuario->id;
-                    $user = User::find($usr);
-               }
-
-            else{
+        if (Auth::check()){
+              $usr = Auth::user()->id;
+        }else{
+            $usuario = User::where('email','=',$request->email)->get();
+            if($usuario->isNotEmpty())
+            {
+                 $usuario = User::where('email','=',$request->email)->first();
+                 $usr= $usuario->id;
+                 $user = User::find($usr);
+            }else{
             //creacion del usuario
                 $user = new User;
                 $user->name = $request->name;
@@ -77,31 +74,26 @@ class InscripcionController extends Controller
                 $roles_users->users_id = $usr;
                 $roles_users->save();
 
-
-
-             }
+                 // Mail::to($user->email)->send(new WelcomeMail($user));
+            } 
+            Auth::login($user);
         }
 
     	// creacion de inscripcion
     	$inscripcion = new FichasUser;
         $inscripcion->user_id = $usr;
-        $inscripcion->ficha_id =  0;
-        $inscripcion->curso_id =  $request->cursos;
+        $inscripcion->ficha_id =  $curso->ficha_principal;
+        $inscripcion->curso_id =  $curso->id;
         $inscripcion->estado =  'inscrito';
         $inscripcion->activo =  0;
 
     	$inscripcion->save();
 
 
-
-
         if($inscripcion){
-            // Auth::login($user);
-            // Mail::to($user->email)->send(new WelcomeMail($user));
-
     	   return redirect('/homeCursos')->with('success','Se inscribio exitosamente al curso ');
         } else{
-           return redirect('/');
+           return back();
         }
 
     }

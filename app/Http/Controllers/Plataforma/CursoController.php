@@ -10,6 +10,7 @@ use App\Model\Rol;
 use App\Model\Curso;
 use App\Model\Ficha;
 use App\Model\Tipo;
+use App\HojaDeVida;
 use Illuminate\Support\Facades\DB;
 
 class CursoController extends Controller
@@ -68,7 +69,6 @@ class CursoController extends Controller
 
         $id_user = Auth::user()->id;
 
-
         $roles = Roles_users::where('users_id', '=', $id_user)
         ->join('roles', 'roles_users.roles_id', '=', 'roles.id')
         ->select('roles.nombre','roles_users.roles_id')
@@ -76,28 +76,25 @@ class CursoController extends Controller
 
         $tipos = Tipo::all();
         $carreras = Carrera::where('activo','=',1)->get();
+        $hvs = HojaDeVida::all();
 
-        return view('plataforma/Cursos/create', compact('roles','tipos','carreras'));
-
+        return view('plataforma/Cursos/create', compact('roles','tipos','carreras', 'hvs'));
     }
 
     public function store(Request $request)
     {
-
-   //
-
          $curso = new Curso();
          $curso->curso = $request->curso;
          $curso->duracion = $request->duracion;
          $curso->presentacion = $request->presentacion;
          $curso->obj_general = $request->obj_general;
          $curso->tipo_id = $request->tipo;
+         $curso->hv_id = $request->hv;
          $curso->carrera_id = $request->carrera;
          $curso->activo = 1;
          $curso->perfil_entrada = $request->perfil_entrada;
          $curso->perfil_salida = $request->perfil_salida;
          $curso->save();
-
         $curso_id = $curso->id;
 
         //

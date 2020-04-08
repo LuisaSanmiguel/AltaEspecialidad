@@ -139,7 +139,7 @@
                                         <p class="ingresoAulaTx">
                                             Matricularse
                                         </p>
-                                    </strong>
+                                    </strong> 
                                 </div>
                             </a>
                         </div>

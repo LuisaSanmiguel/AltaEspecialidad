@@ -3,8 +3,8 @@
 @section('content')
 <section class="home-section text-center" id="about">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-lg-offset-8">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-6">
                 <br>
                     <br>
                         <h2>
@@ -14,6 +14,12 @@
                 </br>
             </div>
         </div>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-5">
+                    <img src="{{asset('img/emprende.png')}}" class="img-fluid rounded">
+                </div>
+            </div>
+            <br><br>
 
             <div class="row">
                             <div class="col-lg-12 ">
@@ -103,14 +109,8 @@
                            
                             </div>
                         </div>
-                
-
-                 
-					
-                      
-
-                    
                    <div class="col-sm-4 col-lg-offset-8">
+                        @if (Auth::guest())
                              <a class="ingresoAulaTx" href="/homeCursos">
                              <div class="ingresoAula bounceInUp" data-wow-delay="0.2s">
                            
@@ -122,6 +122,7 @@
                                     </strong>
                                 </div>
                             </a>
+                        @endif
                         </div>	
                         
 

@@ -59,6 +59,20 @@
                                 </div>
                            </div>
 
+                           <div class="row">
+
+                            <div class="col-lg-12 ">
+                                    <a href="{{route('hoja-vida.index') }}">
+                                        <div class="programasDisp bounceInUp" data-wow-delay="0.2s">
+
+                                           <p class="tituloProgramaDisp">
+                                            {{ __('HOJAS DE VIDA ') }}
+                                             </p>
+                                        </div>
+                                    </a>
+                                </div>
+                           </div>
+
 
 
                           <div class="row">

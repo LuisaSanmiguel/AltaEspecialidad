@@ -54,4 +54,18 @@ class User extends Authenticatable
     public function ciudad(){
         return $this->belongsTo('App\Model\Ciudad');
     } 
+
+     public function Roles(){
+        return $this->hasMany('App\Model\Roles_users','users_id');
+    }
+
+    ///functiones
+    public function getIsAdminAttribute(){
+       // $roles = Roles_users::where('users_id', $this->id)->where('roles_id', 1)->get();
+        if($this->roles->where('roles_id', 1)->count() > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

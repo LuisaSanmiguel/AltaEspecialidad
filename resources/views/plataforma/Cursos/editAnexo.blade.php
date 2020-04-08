@@ -97,7 +97,7 @@
 
                                    {{-- <td class="text-center"><input style="width:100%" class="form-control" id="file" name="file" type="file"  required/></td> --}}
                                    <td class="text-center">
-                                    <a href="{{route('AnexoCurso.destroy',$anexo->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a> --}}
+                                    <a href="{{route('AnexoCurso.destroy',$anexo->id)}}" class="btn btn-sm btn-amarillo"><span class="fa fa-close" aria-hidden="true"></span></a>
                                    </td>
 
                                 </tr>

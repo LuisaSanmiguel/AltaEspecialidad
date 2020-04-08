@@ -19,7 +19,7 @@ class Curso extends Model
     }
 
     public function caracteristicas_cursos(){
-        return $this->belongsToMany('App\Model\caracteristicas_cursos');
+        return $this->hasMany('App\Model\caracteristicas_cursos');
     }
 
     public function fichaUser(){
@@ -31,5 +31,17 @@ class Curso extends Model
     }
     public function Anexos(){
         return $this->HasMany('App\Model\Anexo');
+    }
+
+    public function fichaPrincipal(){
+        return $this->belongsTo('App\Model\Ficha', 'ficha_principal');
+    }
+
+    public function caracteristicas($tipo){
+        return $this->caracteristicas_cursos->where('caracteristica_id', $tipo);
+    }
+
+    public function hv(){
+        return $this->belongsTo('App\HojaDeVida', 'hv_id');
     }
 }

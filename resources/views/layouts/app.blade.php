@@ -80,7 +80,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                          <li class="nav-item">
-                                <a class="nav-link" href="/">{{ __('Inicio') }}</a>
+                                <a class="nav-link" href="/inicio">{{ __('Inicio') }}</a>
                             </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="{{route('servicios')}}">Servicios</a>
@@ -118,14 +118,14 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                                   <a class="dropdown-item" href="{{ route('homeCursos') }}">Mis Cursos</a>
 
 
-                                            @if(Auth::user()->Rol->roles_id  == 1)
+                                    @if(Auth::user()->is_admin)
                                         <a class="dropdown-item" href="{{ route('administrar') }}">Administrar Plataforma</a>
-
-                                            @endif
-
+                                        <a class="dropdown-item" href="">Mi Correo</a>
+                                    @else
+                                        <a class="dropdown-item" href="{{ route('homeCursos') }}">Mis Cursos</a>
+                                    @endif
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

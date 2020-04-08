@@ -106,10 +106,13 @@
                             </label>
                             <div class="col-md-6">
                                 <select class="form-control" name="typeDoc">
-                                    <option>
+                                    <option {{ old('typeDoc') == 'CC' ?'selected' : ''}}>
                                         CC
                                     </option>
-                                    <option>
+                                    <option {{ old('typeDoc') == 'CE' ?'selected' : ''}}>
+                                        CE
+                                    </option>
+                                    <option {{ old('typeDoc') == 'TI' ?'selected' : ''}}>
                                         TI
                                     </option>
                                 </select>

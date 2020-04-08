@@ -103,6 +103,15 @@
                                        </select>
                                        </td>
                                    </tr>
+                                   <tr>
+                                      <td class="text-center">Activo</td>
+                                       <td class="text-center"> 
+                                        <select name="activo"class="form-control" >
+                                          <option value="1" {{$ficha->activo ? 'selected' : ''}}>Si</option>
+                                          <option value="0" {{!$ficha->activo ? 'selected' : ''}}>No</option>
+                                        </select>
+                                         </td>
+                                   </tr>
 
                                  </tbody>
 
